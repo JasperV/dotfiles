@@ -1,2 +1,5 @@
-# dotfiles
-Dotfiles for macOS
+# .files
+
+These are my dotfiles.
+
+It targets macOS systems.
