@@ -5,6 +5,7 @@ These are my dotfiles.
 It targets macOS systems.
 
 ## TODO
+- [ ] Use lastpass helper vs osx helper; https://github.com/lastpass/lastpass-cli/blob/master/contrib/examples/git-credential-lastpass
 - [ ] Make sourcing in current shell scope as well
 - [ ] Make short url -> rename install to upstall, put in folder
 
