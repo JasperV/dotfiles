@@ -9,7 +9,7 @@ git clone --bare https://github.com/JasperV/dotfiles.git $HOME/.files
 
 # define dotfiles command
 function dotfiles {
-   /usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME $@
+  /usr/bin/git --git-dir=$HOME/.files/ --work-tree=$HOME $@
 }
 
 # checkout the actual content from repo to $HOME
