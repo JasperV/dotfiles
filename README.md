@@ -2,7 +2,7 @@
 
 These are my dotfiles.
 
-It targets macOS systems.
+They target macOS systems.
 
 ## TODO
 - [ ] Use lastpass helper vs osx helper; https://github.com/lastpass/lastpass-cli/blob/master/contrib/examples/git-credential-lastpass
