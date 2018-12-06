@@ -1,7 +1,8 @@
 apps
 
 nvm
-git
+	node via nvm
+git via xcode developer tools
 chrome
 ms office via existing license
 alfred (3)
@@ -23,7 +24,8 @@ postman
 private internet access
 skype
 space gremlin pro
-speedtest + cli
+speedtest + cli + alfred
+sindre sorhus alfred plugins
 subtitles
 teamviewer host
 transmission
