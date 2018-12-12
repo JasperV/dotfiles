@@ -1,5 +1,3 @@
-# alias dotfiles='/usr/bin/git --git-dir=/Users/prive/.files/ --work-tree=/Users/prive'
-
 # this file gets run in two cases:
 # 1. non-login interactive shell
 # 2. remote shell (over ssh or similar)

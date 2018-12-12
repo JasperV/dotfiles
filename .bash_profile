@@ -1,17 +1,3 @@
-#export JAVA_HOME=$(/usr/libexev/java_home)
-
-# The next line updates PATH for the Google Cloud SDK.
-#source '/Users/prive/google-cloud-sdk/path.bash.inc'
-
-# The next line enables shell command completion for gcloud.
-#source '/Users/prive/google-cloud-sdk/completion.bash.inc'
-
-
-#export PATH=/Library/Frameworks/Python.framework/Versions/2.7/bin:$PATH
-
-
-
-
 # We need to do two things here:
 
 # 1. Ensure ~/.bash/env gets run first

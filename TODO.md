@@ -37,6 +37,7 @@ https://github.com/kcrawford/dockutil
 https://github.com/mas-cli/mas
 zsh
 zsh pure sindre sorhus
+java?
 
 make terminal behave async
 https://www.anishathalye.com/2015/02/07/an-asynchronous-shell-prompt/

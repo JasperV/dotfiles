@@ -1,17 +1,16 @@
 # Put your environment variables here
 
 # Personal information
-export NAME='Jasper Vermeulen'
-#export EMAIL='jaspervermeulen1@gmail.com'
+export NAME='JasperV'
 
 # Preferred programs
 #export PAGER=less
-#export EDITOR=subl
+export EDITOR=subl
 #export VISUAL=$EDITOR
 
 # Language
-#export LANG='en_US.utf8'
-#export LC_ALL=$LANG
+export LANG='en_US.utf8'
+export LC_ALL=$LANG
 #export LC_COLLATE=$LANG
 #export LC_CTYPE=$LANG
 #export LC_MESSAGES=$LANG
@@ -25,8 +24,8 @@ export NAME='Jasper Vermeulen'
 #pathprepend ~/include CPATH
 
 # The current directory should never be in $PATH
-#pathremove . PATH
-#pathremove "" PATH
+pathremove . PATH
+pathremove "" PATH
 
 # For compatibility reasons, remove if this causes issues for you
 TERM=xterm-256color
