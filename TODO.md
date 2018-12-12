@@ -43,6 +43,7 @@ make terminal behave async
 https://www.anishathalye.com/2015/02/07/an-asynchronous-shell-prompt/
 https://github.com/mafredri/zsh-async
 
+verify commands and/or app invokations before they are used, to prevent errors
 behave proper on multiple reruns - e.g. don't error, show info and update - upstall!
 
 find dev alternative for divvy -> hammerspoon?
