@@ -6,8 +6,8 @@ if [ -t 0 ]; then
     mesg n
 
     # enable colours
-    if [ `tput colors` -ge 8 ]; then
-    fi
+#    if [ `tput colors` -ge 8 ]; then
+#    fi
 fi
 
 alias dotfiles='/usr/bin/git --git-dir=/Users/prive/.files/ --work-tree=/Users/prive'
