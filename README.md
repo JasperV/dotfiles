@@ -12,3 +12,4 @@ They target macOS systems.
 ### Inspired by
 https://developer.atlassian.com/blog/2016/02/best-way-to-store-dotfiles-git-bare-repo/
 https://medium.com/@webprolific/getting-started-with-dotfiles-43c3602fd789
+https://blog.flowblok.id.au/2013-02/shell-startup-scripts.html
