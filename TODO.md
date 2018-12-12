@@ -38,6 +38,25 @@ https://github.com/mas-cli/mas
 zsh
 zsh pure sindre sorhus
 java?
+android file transfer
+google backup sync
+chrome remote
+lastpass
+authy
+logitech harmony
+macpaw gemini - specific version license
+office
+google music manager
+onedrive
+private internet access
+space gremlin
+subtitles
+speedtest
+tiptoi
+toast
+sublime
+vlc
+transmission
 
 make terminal behave async
 https://www.anishathalye.com/2015/02/07/an-asynchronous-shell-prompt/
