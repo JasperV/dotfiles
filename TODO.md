@@ -35,11 +35,14 @@ wireshark
 virtualbox
 https://github.com/kcrawford/dockutil
 https://github.com/mas-cli/mas
+zsh
+zsh pure sindre sorhus
 
 make terminal behave async
 https://www.anishathalye.com/2015/02/07/an-asynchronous-shell-prompt/
 https://github.com/mafredri/zsh-async
 
+behave proper on multiple reruns - e.g. don't error, show info and update - upstall!
 
 find dev alternative for divvy -> hammerspoon?
 
