@@ -65,3 +65,5 @@ https://github.com/sindresorhus/pure
 https://github.com/intelfx/pure
 https://github.com/denysdovhan/spaceship-prompt
 
+zsh plugins
+https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins/node
