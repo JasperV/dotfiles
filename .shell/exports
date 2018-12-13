@@ -1,0 +1,42 @@
+# Preferred programs
+#export PAGER=less
+#export EDITOR=subl
+#export VISUAL=$EDITOR
+
+# Language
+export LANG='en_US.UTF-8'
+export LC_ALL=$LANG
+#export LC_COLLATE=$LANG
+#export LC_CTYPE=$LANG
+#export LC_MESSAGES=$LANG
+#export LC_MONETARY=$LANG
+#export LC_NUMERIC=$LANG
+#export LC_TIME=$LANG
+
+# Path settings
+#pathprepend ~/bin PATH
+#pathprepend ~/lib LD_LIBRARY_PATH
+#pathprepend ~/include CPATH
+pathprepend /usr/local/bin PATH
+
+# The current directory should never be in $PATH
+pathremove . PATH
+pathremove "" PATH
+
+# For compatibility reasons, remove if this causes issues for you
+TERM=xterm-256color
+
+# Enable persistent REPL history for `node`.
+export NODE_REPL_HISTORY=~/.node_history
+
+# Allow 32³ entries; the default is 1000.
+export NODE_REPL_HISTORY_SIZE='32768'
+
+# Use sloppy mode by default, matching web browsers.
+export NODE_REPL_MODE='sloppy'
+
+# Make Python use UTF-8 encoding for output to stdin, stdout, and stderr.
+export PYTHONIOENCODING='UTF-8'
+
+# Don’t clear the screen after quitting a manual page
+export MANPAGER='less -X';
