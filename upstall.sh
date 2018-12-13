@@ -15,11 +15,11 @@ sudo -v
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" < /dev/null
 
 # Install zsh and zsh-completions
-brew install zsh zsh-completions
+brew install zsh #zsh-completions
 
 sudo chmod go-w '/usr/local/share'
 
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+#sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 
 
