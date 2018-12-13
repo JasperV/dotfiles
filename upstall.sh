@@ -35,6 +35,9 @@ function dotfiles {
   /usr/bin/git --git-dir=$HOME/.files/ --work-tree=$HOME $@
 }
 
+# Remove default .zshrc install
+rm ~/.zshrc
+
 # Checkout the actual content from repo to $HOME
 dotfiles checkout
 
