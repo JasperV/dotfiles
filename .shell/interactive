@@ -1,26 +1,26 @@
-# put your aliases here
+# Put your aliases here
 
-# if in a terminal
+# If in a terminal
 if [ -t 0 ]; then
-    # other users shouldn't be able to message by default
+    # Other users shouldn't be able to message by default
     mesg n
 
-    # enable colours
+    # Enable colours
 #    if [ `tput colors` -ge 8 ]; then
 #    fi
 fi
 
-# create dotfiles alias
+# Create dotfiles alias
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.files/ --work-tree=$HOME'
 
-# setting preferred options on ls
+# Setting preferred options on ls
 alias ls='ls -lah' 
 alias ll='ls'
 
-## get rid of command not found
+# Get rid of command not found
 alias cd..='cd ..'
  
-## a quick way to get out of current directory
+# A quick way to get out of current directory
 alias ..='cd ..'
 alias ...='cd ../../../'
 alias ....='cd ../../../../'
@@ -28,39 +28,39 @@ alias .....='cd ../../../../'
 alias .4='cd ../../../../'
 alias .5='cd ../../../../..'
 
-# prompt user if overwriting during copy
+# Prompt user if overwriting during copy
 alias cp='cp -i'
 
-# prompt user when deleting a file
+# Prompt user when deleting a file
 alias rm='rm -i'
 
-# always print in human readable form
+# Always print in human readable form
 alias df='df -h'
 alias du='du -ch'
 
-# make mount command output pretty and human readable format
+# Make mount command output pretty and human readable format
 alias mount='mount |column -t'
 
-# handy short cuts
+# Handy short cuts
 alias h='history'
 alias j='jobs -l'
 
-# create a new set of commands
+# Create a new set of commands
 alias path='echo -e ${PATH//:/\\n}'
 alias now=date
 alias nowtime='date +"%T"'
 alias nowdate='date +"%d-%m-%Y"'
 
-# stop after sending count ECHO_REQUEST packets
+# Stop after sending count ECHO_REQUEST packets
 alias ping='ping -c 10'
 
-# get web server headers
+# Get web server headers
 alias header='curl -I'
 
-# do not delete / or prompt if deleting more than 3 files at a time
+# Do not delete / or prompt if deleting more than 3 files at a time
 alias rm='rm -I --preserve-root'
  
-# confirmation
+# Confirmation
 alias mv='mv -i'
 alias cp='cp -i'
 alias ln='ln -i'
@@ -70,10 +70,10 @@ alias chown='chown --preserve-root'
 alias chmod='chmod --preserve-root'
 alias chgrp='chgrp --preserve-root'
 
-# become root
+# Become root
 alias root='sudo -i'
 alias su='sudo -i'
 
-# enable zsh-completions
+# Enable zsh-completions
 fpath=(/usr/local/share/zsh-completions $fpath)
 rm -f ~/.zcompdump; compinit
