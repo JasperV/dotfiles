@@ -1,11 +1,8 @@
 # Put your environment variables here
 
-# Personal information
-export NAME='JasperV'
-
 # Preferred programs
 #export PAGER=less
-export EDITOR=subl
+#export EDITOR=subl
 #export VISUAL=$EDITOR
 
 # Language
