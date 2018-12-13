@@ -35,7 +35,7 @@ function dotfiles {
 }
 
 # Remove default .zshrc install
-rm ~/.zshrc
+# rm ~/.zshrc
 
 # Checkout the actual content from repo to $HOME
 dotfiles checkout
