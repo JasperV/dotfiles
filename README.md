@@ -6,7 +6,7 @@ They target macOS systems.
 
 ## Install
 ```bash
-curl -Lks https://raw.githubusercontent.com/JasperV/dotfiles/master/upstall.sh | /bin/bash
+curl -Lks https://raw.githubusercontent.com/JasperV/dotfiles/master/upstall.sh | sh
 ```
 
 ## TODO
