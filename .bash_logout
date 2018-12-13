@@ -1,1 +1,1 @@
-source .bash/logout
+source .zlogout
