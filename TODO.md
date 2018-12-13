@@ -37,6 +37,9 @@ https://github.com/kcrawford/dockutil
 https://github.com/mas-cli/mas
 zsh
 zsh pure sindre sorhus
+sindre sorhus trash
+sindre sorhus other cli's
+spotify alfred
 java?
 android file transfer
 google backup sync
