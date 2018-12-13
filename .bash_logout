@@ -1,1 +1,1 @@
-.bash/logout
+source .bash/logout

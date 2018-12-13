@@ -1,3 +1,1 @@
-echo "~/.zshrc"
-
-.zsh/interactive
+source .zsh/interactive

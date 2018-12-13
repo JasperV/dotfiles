@@ -1,7 +1,7 @@
 # We need to do two things here:
 
 # 1. Ensure ~/.bash/env gets run first
-. ~/.bash/env
+source ~/.bash/env
 
 # 2. Prevent it from being run later, since we need to use $BASH_ENV for
 # non-login non-interactive shells.
@@ -13,9 +13,9 @@ BASH_ENV=
 # so much for only two things...
 
 # 4. Run ~/.bash/login
-. ~/.bash/login
+source ~/.bash/login
 
 # 5. Run ~/.bash/interactive if this is an interactive shell.
 if [ "$PS1" ]; then
-    . ~/.bash/interactive
+    source ~/.bash/interactive
 fi
