@@ -1,1 +1,3 @@
+echo "~/.zsh/interactive"
+
 . ~/.shell/interactive

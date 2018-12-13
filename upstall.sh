@@ -48,3 +48,5 @@ source $HOME/.zshrc
 
 # Homebrew mac fix
 # sudo launchctl config user path "/usr/local/bin:$PATH"
+
+ll

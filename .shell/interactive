@@ -1,3 +1,5 @@
+echo "~/.shell/interactive"
+
 # Put your aliases here
 
 # If in a terminal
@@ -79,3 +81,7 @@ fpath=(/usr/local/share/zsh-completions $fpath)
 
 # alias zshconfig="sublime ~/.zshrc"
 # alias ohmyzsh="sublime ~/.oh-my-zsh"
+
+echo "done"
+
+ll
