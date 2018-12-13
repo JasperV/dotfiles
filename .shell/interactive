@@ -11,7 +11,7 @@ if [ -t 0 ]; then
 fi
 
 # create dotfiles alias
-alias dotfiles='/usr/bin/git --git-dir=/Users/prive/.files/ --work-tree=/Users/prive'
+alias dotfiles='/usr/bin/git --git-dir=$HOME/.files/ --work-tree=$HOME'
 
 # setting preferred options on ls
 alias ls='ls -lah' 
@@ -73,3 +73,7 @@ alias chgrp='chgrp --preserve-root'
 # become root
 alias root='sudo -i'
 alias su='sudo -i'
+
+# enable zsh-completions
+fpath=(/usr/local/share/zsh-completions $fpath)
+rm -f ~/.zcompdump; compinit
