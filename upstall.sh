@@ -17,6 +17,14 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 # Install zsh and zsh-completions
 brew install zsh zsh-completions
 
+rm -f ~/.zcompdump; compinit
+
+sudo chmod go-w '/usr/local/share'
+
+
+
+# Install dotfiles
+
 # Clone bare into .files folder
 git clone --bare https://github.com/JasperV/dotfiles.git $HOME/.files
 
