@@ -76,4 +76,3 @@ alias su='sudo -i'
 
 # Enable zsh-completions
 fpath=(/usr/local/share/zsh-completions $fpath)
-rm -f ~/.zcompdump; compinit
