@@ -60,6 +60,7 @@ toast
 sublime
 vlc
 transmission
+solarized themes and nice fonts for everything
 
 make terminal behave async
 https://www.anishathalye.com/2015/02/07/an-asynchronous-shell-prompt/
@@ -69,6 +70,9 @@ verify commands and/or app invokations before they are used, to prevent errors
 behave proper on multiple reruns - e.g. don't error, show info and update - upstall!
 
 find dev alternative for divvy -> hammerspoon?
+
+https://docs.brew.sh/Shell-Completion
+https://github.com/alichtman/stronghold
 
 install all apps configs as well and licenses as well
 https://github.com/lra/mackup#supported-storages
