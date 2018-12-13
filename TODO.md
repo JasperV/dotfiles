@@ -62,6 +62,8 @@ vlc
 transmission
 solarized themes and nice fonts for everything
 
+gitignore global -> mths
+
 make terminal behave async
 https://www.anishathalye.com/2015/02/07/an-asynchronous-shell-prompt/
 https://github.com/mafredri/zsh-async
