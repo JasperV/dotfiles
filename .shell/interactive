@@ -76,3 +76,6 @@ alias su='sudo -i'
 
 # Enable zsh-completions
 fpath=(/usr/local/share/zsh-completions $fpath)
+
+# alias zshconfig="sublime ~/.zshrc"
+# alias ohmyzsh="sublime ~/.oh-my-zsh"
