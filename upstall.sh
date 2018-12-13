@@ -19,6 +19,7 @@ brew install zsh #zsh-completions
 
 sudo chmod go-w '/usr/local/share'
 
+# Install oh my zsh
 #sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 
@@ -43,7 +44,7 @@ dotfiles checkout
 dotfiles config --local status.showUntrackedFiles no
 
 # Source all that is required
-source $HOME/.bashrc
+source $HOME/.zshrc
 
 # Homebrew mac fix
 # sudo launchctl config user path "/usr/local/bin:$PATH"
