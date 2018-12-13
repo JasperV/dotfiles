@@ -19,9 +19,6 @@ brew install zsh #zsh-completions
 
 sudo chmod go-w '/usr/local/share'
 
-# Install oh my zsh
-#sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-
 
 
 # Install dotfiles
@@ -34,9 +31,6 @@ function dotfiles {
   /usr/bin/git --git-dir=$HOME/.files/ --work-tree=$HOME $@
 }
 
-# Remove default .zshrc install
-# rm ~/.zshrc
-
 # Checkout the actual content from repo to $HOME
 dotfiles checkout
 
@@ -48,5 +42,3 @@ source $HOME/.zshrc
 
 # Homebrew mac fix
 # sudo launchctl config user path "/usr/local/bin:$PATH"
-
-ll
