@@ -51,8 +51,10 @@ alias egrep='egrep --color=auto'
 # Enable aliases to be sudo’ed
 alias sudo='sudo '
 
-# Get date and time
+# Show PATH in human readable format
 alias path='echo -e ${PATH//:/\\n}'
+
+# Get date and time
 alias now=date
 alias ntime='date +"%T"'
 alias ndate='date +"%d-%m-%Y"'
