@@ -164,6 +164,3 @@
 [url "git://gist.github.com/"]
 
 	insteadOf = "gist:"
-[user]
-	name = JasperV
-	email = jaspervermeulen1@gmail.com
