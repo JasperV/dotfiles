@@ -1,7 +1,6 @@
 apps
 
-nvm
-	node via nvm
+
 git via xcode developer tools
 chrome
 ms office via existing license

@@ -14,11 +14,16 @@ sudo -v
 # Install Homebrew
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" < /dev/null
 
-# Install zsh and zsh-completions
+# Install ZSH and zsh-completions
 brew install zsh #zsh-completions
 
-sudo chmod go-w '/usr/local/share'
+# Switch to using brew-installed zsh as default shell
+if ! fgrep -q "${BREW_PREFIX}/bin/zsh" /etc/shells; then
+  echo "${BREW_PREFIX}/bin/zsh" | sudo tee -a /etc/shells;
+  chsh -s "${BREW_PREFIX}/bin/zsh";
+fi;
 
+sudo chmod go-w '/usr/local/share'
 
 
 # Install dotfiles
@@ -37,8 +42,26 @@ dotfiles checkout
 # Set flag to ignore untracked files
 dotfiles config --local status.showUntrackedFiles no
 
-# Source all that is required
-source $HOME/.zshrc
+
 
 # Homebrew mac fix
 # sudo launchctl config user path "/usr/local/bin:$PATH"
+
+# Run brew installation
+sh ~/brew.sh
+
+# Run macOS installation
+# sh ~/.macos
+
+# Install nvm and node.js via nvm
+export NVM_DIR="$HOME/.nvm" && (
+  git clone https://github.com/creationix/nvm.git "$NVM_DIR"
+  cd "$NVM_DIR"
+  git checkout `git describe --abbrev=0 --tags --match "v[0-9]*" $(git rev-list --tags --max-count=1)`
+) && \. "$NVM_DIR/nvm.sh"
+
+$HOME/.nvm/nvm.sh install node
+
+
+# Finally source all that is required
+source $HOME/.zshrc
