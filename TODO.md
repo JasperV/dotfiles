@@ -1,7 +1,6 @@
 apps
 
 
-git via xcode developer tools
 chrome
 ms office via existing license
 alfred (3)
@@ -10,7 +9,6 @@ google backup and sync
 chrome remote desktop
 etcher
 fruitjuice
-brew
 brew cask
 mas-cli
 handbrake
@@ -34,8 +32,7 @@ wireshark
 virtualbox
 https://github.com/kcrawford/dockutil
 https://github.com/mas-cli/mas
-zsh
-zsh pure sindre sorhus
+zsh completions
 sindre sorhus trash
 sindre sorhus other cli's
 spotify alfred
@@ -94,3 +91,7 @@ https://github.com/denysdovhan/spaceship-prompt
 
 zsh plugins
 https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins/node
+
+full keyboard support for delete and home keys etc...
+proper keyboard keymapping for ctrl alt etc...
+full keyboard support on terminal

@@ -12,10 +12,10 @@ sudo -v
 # xcode-select --install
 
 # Install Homebrew
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" < /dev/null
+# ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" < /dev/null
 
 # Install ZSH and zsh-completions
-brew install zsh #zsh-completions
+brew install zsh zsh-completions zsh-syntax-highlighting
 
 # Switch to using brew-installed zsh as default shell
 if ! fgrep -q "${BREW_PREFIX}/bin/zsh" /etc/shells; then
@@ -47,11 +47,11 @@ dotfiles config --local status.showUntrackedFiles no
 # Homebrew mac fix
 # sudo launchctl config user path "/usr/local/bin:$PATH"
 
-# Run brew installation
-sh ~/brew.sh
-
 # Run macOS installation
 # sh ~/.macos
+
+# Run brew installation
+sh ~/brew.sh
 
 # Install nvm and node.js via nvm
 export NVM_DIR="$HOME/.nvm" && (
@@ -60,8 +60,11 @@ export NVM_DIR="$HOME/.nvm" && (
   git checkout `git describe --abbrev=0 --tags --match "v[0-9]*" $(git rev-list --tags --max-count=1)`
 ) && \. "$NVM_DIR/nvm.sh"
 
-$HOME/.nvm/nvm.sh install node
-
-
 # Finally source all that is required
 source $HOME/.zshrc
+
+# Install node.js
+nvm install node
+
+# Install Pure prompt
+npm i -g pure-prompt
