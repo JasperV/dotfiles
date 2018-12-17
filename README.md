@@ -10,6 +10,7 @@ curl -Lks https://raw.githubusercontent.com/JasperV/dotfiles/master/upstall.sh |
 ```
 
 ## TODO
+- [ ] git config; https://github.com/mathiasbynens/dotfiles#add-custom-commands-without-creating-a-new-fork - also use private email address
 - [ ] Use lastpass helper vs osx helper; https://github.com/lastpass/lastpass-cli/blob/master/contrib/examples/git-credential-lastpass
 - [ ] Make sourcing in current shell scope as well
 - [ ] Make short url -> rename install to upstall, put in folder, proper curl command like so: `curl get.darryl.sh | sh`

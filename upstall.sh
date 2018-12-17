@@ -6,7 +6,7 @@
 sudo -v
 
 # Check for macOS updates
-# sudo softwareupdate -i -a # --restart
+# sudo softwareupdate -i -a --restart
 
 # Install git by means of xcode command line tools
 # xcode-select --install
@@ -25,7 +25,6 @@ fi;
 
 sudo chmod go-w '/usr/local/share'
 
-
 # Install dotfiles
 
 # Clone bare into .files folder
@@ -41,11 +40,6 @@ dotfiles checkout
 
 # Set flag to ignore untracked files
 dotfiles config --local status.showUntrackedFiles no
-
-
-
-# Homebrew mac fix
-# sudo launchctl config user path "/usr/local/bin:$PATH"
 
 # Run macOS installation
 # sh ~/.macos
@@ -68,3 +62,6 @@ nvm install node
 
 # Install Pure prompt
 npm i -g pure-prompt
+
+# Do it again
+source $HOME/.zshrc

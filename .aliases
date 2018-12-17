@@ -2,6 +2,7 @@
 
 # Create dotfiles alias
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.files/ --work-tree=$HOME'
+alias dtf=dotfiles
 
 # Get rid of command not found
 alias cd..='cd ..'

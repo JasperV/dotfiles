@@ -74,6 +74,7 @@ brew cask install postman
 brew cask install private-internet-access
 brew cask install skype
 brew cask install skype-for-business
+brew cask install spotify
 brew cask install sublime-text
 brew cask install sublime-merge
 brew cask install subtitles

@@ -8,11 +8,12 @@ https://github.com/mas-cli/mas
 
 java?
 logitech harmony
-sindre sorhus alfred plugins
-sindre sorhus other cli's
-sindre sorhus trash
+sindre sorhus alfred plugins - https://github.com/sindresorhus?utf8=%E2%9C%93&tab=repositories&q=alfred&type=&language=
+other alfred plugins - spotify
+sindre sorhus trash - https://github.com/sindresorhus?utf8=%E2%9C%93&tab=repositories&q=trash&type=&language=
+sindre sorhus other cli's - https://github.com/sindresorhus?utf8=%E2%9C%93&tab=repositories&q=trash&type=&language=
 solarized themes and nice fonts for everything
-speedtest + cli + alfred
+speedtest + cli + alfred - https://github.com/sindresorhus/speed-test
 spotify alfred
 sublime plugins - repo
 tiptoi
