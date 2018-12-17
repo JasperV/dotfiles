@@ -6,13 +6,13 @@
 sudo -v
 
 # Check for macOS updates
-# sudo softwareupdate -i -a --restart
+sudo softwareupdate -i -a --restart
 
 # Install git by means of xcode command line tools
-# xcode-select --install
+xcode-select --install
 
 # Install Homebrew
-# ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" < /dev/null
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" < /dev/null
 
 # Install ZSH and zsh-completions
 brew install zsh zsh-completions zsh-syntax-highlighting

@@ -1,12 +1,3 @@
-apps
-
-authy - gsuite
-google music manager - gsuite
-
-aerial screensaver
-
-https://github.com/kcrawford/dockutil
-https://github.com/mas-cli/mas
 
 java?
 logitech harmony

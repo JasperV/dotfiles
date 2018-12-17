@@ -45,6 +45,7 @@ brew install woff2
 # Install other useful binaries.
 brew install ack
 #brew install exiv2
+brew install dockutil
 brew install imagemagick --with-webp
 brew install lastpass-cli --with-pinentry
 brew install lua
