@@ -61,6 +61,7 @@ brew install vbindiff
 brew install zopfli
 
 # Install applications
+brew cask install aerial
 brew cask install alfred
 brew cask install android-file-transfer
 brew cask install google-chrome
