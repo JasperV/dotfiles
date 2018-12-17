@@ -1,70 +1,28 @@
 apps
 
+authy - gsuite
+google music manager - gsuite
 
-chrome
-ms office via existing license
-alfred (3)
-lastpass
-google backup and sync
-chrome remote desktop
-etcher
-fruitjuice
-brew cask
-mas-cli
-handbrake
-insomnia x
-vscode
-sublime
-solarized dark themes for everything
-iterm
-postman
-private internet access
-skype
-space gremlin pro
-speedtest + cli + alfred
-sindre sorhus alfred plugins
-subtitles
-teamviewer host
-transmission
-vlc
-wifi explorer
-wireshark
-virtualbox
 https://github.com/kcrawford/dockutil
 https://github.com/mas-cli/mas
-zsh completions
-sindre sorhus trash
-sindre sorhus other cli's
-spotify alfred
-java?
-android file transfer
-google backup sync
-chrome remote
-lastpass
-authy
-logitech harmony
-macpaw gemini - specific version license
-office
-google music manager
-onedrive
-private internet access
-space gremlin
-subtitles
-speedtest
-tiptoi
-toast
-sublime
-vlc
-transmission
-solarized themes and nice fonts for everything
 
-gitignore global -> mths
+java?
+logitech harmony
+sindre sorhus alfred plugins
+sindre sorhus other cli's
+sindre sorhus trash
+solarized themes and nice fonts for everything
+speedtest + cli + alfred
+spotify alfred
+sublime plugins - repo
+tiptoi
+vscode plugins - repo?
+
 
 make terminal behave async
 https://www.anishathalye.com/2015/02/07/an-asynchronous-shell-prompt/
 https://github.com/mafredri/zsh-async
 
-verify commands and/or app invokations before they are used, to prevent errors
 behave proper on multiple reruns - e.g. don't error, show info and update - upstall!
 
 find dev alternative for divvy -> hammerspoon?
@@ -76,8 +34,6 @@ install all apps configs as well and licenses as well
 https://github.com/lra/mackup#supported-storages
 
 checkout a list of specific git repositories
-
-
 https://github.com/holman/dotfiles
 https://chr4.org/blog/2014/09/10/conf-dot-d-like-directories-for-zsh-slash-bash-dotfiles/
 https://github.com/driesvints/dotfiles

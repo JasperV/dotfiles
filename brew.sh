@@ -46,8 +46,10 @@ brew install woff2
 brew install ack
 #brew install exiv2
 brew install imagemagick --with-webp
+brew install lastpass-cli --with-pinentry
 brew install lua
 brew install lynx
+brew install mas
 brew install p7zip
 brew install pigz
 brew install pv
@@ -57,6 +59,37 @@ brew install ssh-copy-id
 brew install tree
 brew install vbindiff
 brew install zopfli
+
+# Install applications
+brew cask install alfred
+brew cask install android-file-transfer
+brew cask install google-chrome
+brew cask install balenaetcher
+brew cask install google-backup-and-sync
+brew cask install handbrake
+brew cask install iterm2
+brew cask install macpaw gemini # TODO: specific version -> license
+brew cask install microsoft-office
+brew cask install postman
+brew cask install private-internet-access
+brew cask install skype
+brew cask install skype-for-business
+brew cask install sublime-text
+brew cask install sublime-merge
+brew cask install subtitles
+brew cask install teamviewer-host
+brew cask install transmission
+brew cask install virtualbox
+brew cask install virtualbox-extension-pack
+brew cask install vlc
+brew cask install visual-studio-code
+brew cask install wifi-explorer
+brew cask install wireshark
+
+# Install mas applications
+mas install 671736912 # FruitJuice
+mas install 414515628 # Space Gremlin # TODO: pro version http://www.spacegremlinapp.com/mac/modes.html
+mas install 1153157709 # Speedtest by Ookla
 
 # Remove outdated versions from the cellar.
 brew cleanup
