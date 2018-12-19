@@ -1,4 +1,3 @@
-
 java?
 logitech harmony
 sindre sorhus alfred plugins - https://github.com/sindresorhus?utf8=%E2%9C%93&tab=repositories&q=alfred&type=&language=
@@ -11,18 +10,15 @@ spotify alfred
 sublime plugins - repo
 tiptoi
 vscode plugins - repo?
-
-
-make terminal behave async
-https://www.anishathalye.com/2015/02/07/an-asynchronous-shell-prompt/
-https://github.com/mafredri/zsh-async
+little snitch
+brew cask install macpaw gemini # TODO: specific version -> license
 
 behave proper on multiple reruns - e.g. don't error, show info and update - upstall!
 
 find dev alternative for divvy -> hammerspoon?
 
-https://docs.brew.sh/Shell-Completion
-https://github.com/alichtman/stronghold
+add pip path to path
+/Library/Frameworks/Python.framework/Versions/2.7/bin
 
 install all apps configs as well and licenses as well
 https://github.com/lra/mackup#supported-storages

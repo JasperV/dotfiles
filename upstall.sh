@@ -57,6 +57,12 @@ export NVM_DIR="$HOME/.nvm" && (
 # Finally source all that is required
 source $HOME/.zshrc
 
+# Upgrade pip
+pip install --upgrade pip
+
+# Install pip apps
+pip install stronghold
+
 # Install node.js
 nvm install node
 
@@ -65,3 +71,6 @@ npm i -g pure-prompt
 
 # Do it again
 source $HOME/.zshrc
+
+# Enable filevault
+sudo fdesetup enable

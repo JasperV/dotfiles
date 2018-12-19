@@ -70,7 +70,6 @@ brew cask install balenaetcher
 brew cask install google-backup-and-sync
 brew cask install handbrake
 brew cask install iterm2
-brew cask install macpaw gemini # TODO: specific version -> license
 brew cask install microsoft-office
 brew cask install postman
 brew cask install private-internet-access
