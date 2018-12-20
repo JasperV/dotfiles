@@ -16,7 +16,7 @@ curl -Ls get.jasperv.nl | sh
 
 java?
 logitech harmony
-other alfred plugins - speedtest, spotify, maps, colors, convert, kill, play song, lastpass
+other alfred plugins - speedtest, spotify, maps, colors, convert, kill, play song, lastpass, encode decode, git?, packal, timezones, units
 solarized themes and nice fonts (menlo?) for everything
 sublime plugins - repo
 tiptoi
