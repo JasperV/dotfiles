@@ -69,6 +69,15 @@ nvm install node
 # Install Pure prompt
 npm i -g pure-prompt
 
+# Install other npm modules
+npm i -g diff-so-fancy
+
+# Install better nanorc config
+curl https://raw.githubusercontent.com/scopatz/nanorc/master/install.sh | sh
+
+# For the c alias (syntax highlighted cat)
+sudo easy_install Pygments
+
 # Do it again
 source $HOME/.zshrc
 

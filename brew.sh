@@ -50,15 +50,20 @@ brew install imagemagick --with-webp
 brew install lastpass-cli --with-pinentry
 brew install lua
 brew install lynx
+brew install mackup
 brew install mas
 brew install p7zip
 brew install pigz
 brew install pv
+brew install python
+brew install python3
 brew install rename
 brew install rlwrap
 brew install ssh-copy-id
 brew install tree
 brew install vbindiff
+brew install wifi-password
+brew install z
 brew install zopfli
 
 # Install applications
