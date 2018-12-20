@@ -96,10 +96,10 @@ brew cask install subtitles
 brew cask install suspicious-package
 brew cask install teamviewer-host
 brew cask install transmission
-brew cask install virtualbox
-brew cask install virtualbox-extension-pack
 brew cask install vlc
 brew cask install visual-studio-code
+brew cask install virtualbox
+brew cask install virtualbox-extension-pack
 brew cask install webpquicklook
 brew cask install wifi-explorer
 brew cask install wireshark
