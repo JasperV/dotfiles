@@ -44,8 +44,8 @@ brew install woff2
 
 # Install other useful binaries.
 brew install ack
-#brew install exiv2
 brew install dockutil
+#brew install exiv2
 brew install imagemagick --with-webp
 brew install lastpass-cli --with-pinentry
 brew install lua
@@ -72,31 +72,42 @@ brew cask install alfred
 brew cask install android-file-transfer
 brew cask install google-chrome
 brew cask install balenaetcher
+brew cask install betterzip
 brew cask install google-backup-and-sync
 brew cask install handbrake
 brew cask install iterm2
 brew cask install microsoft-office
 brew cask install postman
 brew cask install private-internet-access
+brew cask install provisionql
+brew cask install qlcolorcode
+brew cask install qlimagesize
+brew cask install qlmarkdown
+brew cask install qlstephen
+brew cask install qlvideo
+brew cask install quicklookapk
+brew cask install quicklook-json
 brew cask install skype
 brew cask install skype-for-business
 brew cask install spotify
 brew cask install sublime-text
 brew cask install sublime-merge
 brew cask install subtitles
+brew cask install suspicious-package
 brew cask install teamviewer-host
 brew cask install transmission
 brew cask install virtualbox
 brew cask install virtualbox-extension-pack
 brew cask install vlc
 brew cask install visual-studio-code
+brew cask install webpquicklook
 brew cask install wifi-explorer
 brew cask install wireshark
 
 # Install mas applications
-mas install 671736912 # FruitJuice
+# mas install 671736912 # FruitJuice
 mas install 414515628 # Space Gremlin # TODO: pro version http://www.spacegremlinapp.com/mac/modes.html
-mas install 1153157709 # Speedtest by Ookla
+# mas install 1153157709 # Speedtest by Ookla
 
 # Remove outdated versions from the cellar.
 brew cleanup

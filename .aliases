@@ -43,6 +43,9 @@ alias lsd="ls -lF ${colorflag} | grep --color=never '^d'"
 alias ll="ls"
 alias l=ls
 
+# Clipboard shortcut
+alias cb=clipboard
+
 # Always enable colored `grep` output
 # Note: `GREP_OPTIONS="--color=auto"` is deprecated, hence the alias usage.
 alias grep='grep --color=auto'
@@ -56,7 +59,7 @@ alias sudo='sudo '
 alias cp='cp -i'
 
 # Prompt user when deleting a file
-alias rm='rm -i'
+alias rm='rm -I'
 
 # Always print in human readable form
 alias df='df -h'
@@ -195,7 +198,9 @@ alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resource
 alias reload="exec ${SHELL} -l"
 
 # Enable zsh-completions
-# fpath=(/usr/local/share/zsh-completions $fpath)
+fpath=(/usr/local/share/zsh-completions $fpath)
 
 # alias zshconfig="sublime ~/.zshrc"
 # alias ohmyzsh="sublime ~/.oh-my-zsh"
+
+alias rm=trash

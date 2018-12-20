@@ -21,6 +21,7 @@ export LC_ALL=$LANG
 #pathprepend ~/lib LD_LIBRARY_PATH
 #pathprepend ~/include CPATH
 pathprepend /usr/local/bin PATH
+pathapppend ~/bin PATH
 
 # The current directory should never be in $PATH
 pathremove . PATH
@@ -49,3 +50,8 @@ export MANPAGER='less -X';
 
 # Define nvm dir
 export NVM_DIR="$HOME/.nvm"
+
+# Safeguard rm some more
+# https://github.com/sindresorhus/guides/blob/master/how-not-to-rm-yourself.md#safeguard-rm
+unsetopt RM_STAR_SILENT
+setopt RM_STAR_WAIT

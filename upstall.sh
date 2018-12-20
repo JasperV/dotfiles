@@ -66,11 +66,41 @@ pip install stronghold
 # Install node.js
 nvm install node
 
-# Install Pure prompt
+# Install ZSH Pure prompt
 npm i -g pure-prompt
+
+# TODO: add to own file for re-running on new node verions via nvm?
 
 # Install other npm modules
 npm i -g diff-so-fancy
+npm i -g emoj
+npm i -g lock-cli
+npm i -g fkill-cli
+npm i -g pageres-cli
+npm i -g fast-cli
+npm i -g clipboard-cli
+npm i -g speed-test
+npm i -g trash-cli
+npm i -g empty-trash-cli
+npm i -g cpy-cli
+npm i -g manage-wifi-cli
+npm i -g public-ip-cli
+npm i -g latest-version-cli
+npm i -g term-img-cli
+npm i -g is-online-cli
+npm i -g open-editor-cli
+npm i -g opn-cli
+npm i -g file-type-cli
+npm i -g is-progressive-cli
+npm i -g is-camera-on-cli
+npm i -g current-path-cli
+npm i -g npm-user-cli
+npm i -g pretty-ms-cli
+
+# Install Alfred workflows via npm
+npm i -g alfred-emoj
+npm i -g alfred-npms
+npm i -g alfred-fkill
 
 # Install better nanorc config
 curl https://raw.githubusercontent.com/scopatz/nanorc/master/install.sh | sh
