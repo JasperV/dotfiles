@@ -22,6 +22,7 @@ sublime plugins - repo
 tiptoi
 vscode plugins - repo?
 little snitch
+rocket?
 brew cask install macpaw gemini # TODO: specific version -> license
 add alfred to mackup
 
