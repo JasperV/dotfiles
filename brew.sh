@@ -76,7 +76,7 @@ brew cask install betterzip
 brew cask install google-backup-and-sync
 brew cask install handbrake
 brew cask install iterm2
-brew cask install microsoft-office
+# brew cask install microsoft-office
 brew cask install postman
 brew cask install private-internet-access
 brew cask install provisionql
@@ -103,6 +103,8 @@ brew cask install virtualbox-extension-pack
 brew cask install webpquicklook
 brew cask install wifi-explorer
 brew cask install wireshark
+
+# TODO: add keyboard and mouse drivers
 
 # Install mas applications
 # mas install 671736912 # FruitJuice
