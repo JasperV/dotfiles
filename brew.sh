@@ -110,6 +110,7 @@ brew cask install wireshark
 # mas install 671736912 # FruitJuice
 mas install 414515628 # Space Gremlin # TODO: pro version http://www.spacegremlinapp.com/mac/modes.html
 # mas install 1153157709 # Speedtest by Ookla
+mas install 926036361 # LastPass
 
 # Remove outdated versions from the cellar.
 brew cleanup
