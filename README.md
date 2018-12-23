@@ -25,6 +25,7 @@ little snitch
 rocket?
 brew cask install macpaw gemini # TODO: specific version -> license
 add alfred to mackup
+switch to hyper terminal - with visor plugin
 
 find dev alternative for divvy -> hammerspoon?
 
