@@ -96,6 +96,7 @@ brew cask install subtitles
 brew cask install suspicious-package
 brew cask install teamviewer-host
 brew cask install transmission
+brew cask install vanilla
 brew cask install vlc
 brew cask install visual-studio-code
 brew cask install virtualbox
