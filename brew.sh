@@ -76,7 +76,7 @@ brew cask install betterzip
 brew cask install google-backup-and-sync
 brew cask install handbrake
 brew cask install iterm2
-# brew cask install microsoft-office
+brew cask install microsoft-office
 brew cask install postman
 brew cask install private-internet-access
 brew cask install provisionql
