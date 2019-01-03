@@ -112,7 +112,7 @@ sudo easy_install Pygments
 source $HOME/.zshrc
 
 # Run stronghold
-stronghold
+stronghold -lockdown
 
 # Enable filevault
 sudo fdesetup enable
