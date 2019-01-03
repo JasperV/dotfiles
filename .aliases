@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env zsh
 
 # Create dotfiles alias
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.files/ --work-tree=$HOME'
@@ -87,9 +87,9 @@ alias cp='cp -i'
 alias ln='ln -i'
  
 # Parenting changing perms on /
-alias chown='chown --preserve-root'
-alias chmod='chmod --preserve-root'
-alias chgrp='chgrp --preserve-root'
+# alias chown='chown --preserve-root'
+# alias chmod='chmod --preserve-root'
+# alias chgrp='chgrp --preserve-root'
 
 # Become root
 alias root='sudo -i'

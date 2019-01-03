@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env zsh
 
 # Install command-line tools using Homebrew.
 
@@ -55,7 +55,7 @@ brew install mas
 brew install p7zip
 brew install pigz
 brew install pv
-brew install python
+brew install python2
 brew install python3
 brew install rename
 brew install rlwrap
@@ -99,8 +99,8 @@ brew cask install transmission
 brew cask install vanilla
 brew cask install vlc
 brew cask install visual-studio-code
-brew cask install virtualbox
-brew cask install virtualbox-extension-pack
+# brew cask install virtualbox
+# brew cask install virtualbox-extension-pack
 brew cask install webpquicklook
 brew cask install wifi-explorer
 brew cask install wireshark
@@ -114,5 +114,6 @@ mas install 414515628 # Space Gremlin # TODO: pro version http://www.spacegremli
 mas install 926036361 # LastPass
 mas install 1147396723 # WhatsApp Desktop
 mas install 803453959 # Slack for Mac
+
 # Remove outdated versions from the cellar.
 brew cleanup

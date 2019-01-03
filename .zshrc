@@ -1,10 +1,10 @@
-#!/usr/bin/env bash
+#!/usr/bin/env zsh
 
 # Enable zsh-completions
 fpath=(/usr/local/share/zsh-completions $fpath)
 
 # Enable zsh-syntax-highlighting
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Load nvm
 source ~/.nvm/nvm.sh
@@ -30,7 +30,6 @@ load-nvmrc() {
 }
 add-zsh-hook chpwd load-nvmrc
 load-nvmrc
-
 
 # Load Pure prompt
 autoload -U promptinit; promptinit

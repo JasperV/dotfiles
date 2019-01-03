@@ -26,6 +26,7 @@ rocket?
 brew cask install macpaw gemini # TODO: specific version -> license
 add alfred to mackup
 switch to hyper terminal - with visor plugin
+disable siri - https://apple.stackexchange.com/questions/258816/how-to-completely-disable-siri-on-sierra/258981#258981
 
 find dev alternative for divvy -> hammerspoon?
 
@@ -41,6 +42,8 @@ full keyboard support for delete and home keys etc...
 proper keyboard keymapping for ctrl alt etc...
 full keyboard support on terminal
 keyboard support on media players
+
+make uninstall option
 
 ### Inspired by
 https://developer.atlassian.com/blog/2016/02/best-way-to-store-dotfiles-git-bare-repo/

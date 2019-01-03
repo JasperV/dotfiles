@@ -18,10 +18,12 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 brew install zsh zsh-completions zsh-syntax-highlighting
 
 # Switch to using brew-installed zsh as default shell
-if ! fgrep -q "${BREW_PREFIX}/bin/zsh" /etc/shells; then
-  echo "${BREW_PREFIX}/bin/zsh" | sudo tee -a /etc/shells;
-  chsh -s "${BREW_PREFIX}/bin/zsh";
-fi;
+# if ! fgrep -q "${BREW_PREFIX}/bin/zsh" /etc/shells; then
+#   echo "${BREW_PREFIX}/bin/zsh" | sudo tee -a /etc/shells;
+#   chsh -s "${BREW_PREFIX}/bin/zsh";
+# fi;
+
+sudo dscl . -create /Users/$USER UserShell /usr/local/bin/zsh
 
 sudo chmod go-w '/usr/local/share'
 
@@ -42,7 +44,7 @@ dotfiles checkout
 dotfiles config --local status.showUntrackedFiles no
 
 # Run macOS installation
-# sh ~/.macos
+sh ~/.macos
 
 # Run brew installation
 sh ~/brew.sh
@@ -54,17 +56,15 @@ export NVM_DIR="$HOME/.nvm" && (
   git checkout `git describe --abbrev=0 --tags --match "v[0-9]*" $(git rev-list --tags --max-count=1)`
 ) && \. "$NVM_DIR/nvm.sh"
 
-# Finally source all that is required
-source $HOME/.zshrc
+# Install node.js
+nvm install lts/*
 
 # Upgrade pip
 pip install --upgrade pip
+pip3 install --upgrade pip
 
 # Install pip apps
-pip install stronghold
-
-# Install node.js
-nvm install node
+pip3 install stronghold
 
 # Install ZSH Pure prompt
 npm i -g pure-prompt
@@ -108,8 +108,11 @@ curl https://raw.githubusercontent.com/scopatz/nanorc/master/install.sh | sh
 # For the c alias (syntax highlighted cat)
 sudo easy_install Pygments
 
-# Do it again
+# Finally source all that is required
 source $HOME/.zshrc
+
+# Run stronghold
+stronghold
 
 # Enable filevault
 sudo fdesetup enable
