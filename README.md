@@ -17,12 +17,13 @@ curl -Ls get.jasperv.nl | sh
 java?
 logitech harmony
 other alfred plugins - speedtest, spotify, maps, colors, convert, kill, play song, lastpass, encode decode, git?, packal, timezones, units
-solarized themes and nice fonts (menlo?) for everything
+solarized themes and nice fonts (menlo? or wesbos) for everything
 sublime plugins - repo
 tiptoi
 vscode plugins - repo?
 little snitch
 rocket?
+hyper
 brew cask install macpaw gemini # TODO: specific version -> license
 add alfred to mackup
 switch to hyper terminal - with visor plugin
@@ -31,6 +32,9 @@ disable siri - https://apple.stackexchange.com/questions/258816/how-to-completel
 find dev alternative for divvy -> hammerspoon?
 
 checkout a list of specific git repositories?
+
+https://wesbos.com/uses/
+https://github.com/wesbos/dotfiles
 
 https://github.com/jaredculp/iterm2-borderless-padding
 
@@ -44,6 +48,8 @@ full keyboard support on terminal
 keyboard support on media players
 
 make uninstall option
+
+update solarized theme like wesbos cobalt theme
 
 ### Inspired by
 https://developer.atlassian.com/blog/2016/02/best-way-to-store-dotfiles-git-bare-repo/
