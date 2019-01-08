@@ -1,10 +1,10 @@
 [user]
-	
+
 	name = JasperV
 	email = 1297464+JasperV@users.noreply.github.com
 
 [core]
-	
+
 	# Use custom `.gitignore`
 	excludesfile = ~/.gitignore-global
 
@@ -173,3 +173,11 @@
 [url "git://gist.github.com/"]
 
 	insteadOf = "gist:"
+
+[url "https://github.com/"]
+
+	insteadOf = git@github.com:
+
+[url "https://"]
+
+	insteadOf = git://
