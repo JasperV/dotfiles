@@ -72,7 +72,7 @@ brew cask install alfred
 brew cask install android-file-transfer
 brew cask install google-chrome
 brew cask install balenaetcher
-brew cask install betterzip
+# brew cask install betterzip
 brew cask install google-backup-and-sync
 brew cask install handbrake
 brew cask install iterm2
