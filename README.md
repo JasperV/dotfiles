@@ -42,6 +42,7 @@ https://github.com/jaredculp/iterm2-borderless-padding
 https://github.com/webpro/dotfiles
 https://medium.com/@webprolific/getting-started-with-dotfiles-43c3602fd789
 https://github.com/paulirish/dotfiles
+https://www.taniarascia.com/setting-up-a-brand-new-mac-for-development/
 
 full keyboard support for delete and home keys etc...
 proper keyboard keymapping for ctrl alt etc...
