@@ -29,7 +29,11 @@ brew install wget --with-iri
 # Install GnuPG to enable PGP-signing commits.
 # brew install gnupg
 
+# Install Java
+brew cask install java
+
 # Install more recent versions of some macOS tools.
+# TODO: brew install git
 brew install grep
 brew install openssh
 brew install screen
@@ -44,6 +48,9 @@ brew install woff2
 
 # Install other useful binaries.
 brew install ack
+brew tap bazelbuild/tap
+brew tap-pin bazelbuild/tap
+brew install bazelbuild/tap/bazel
 brew install dockutil
 #brew install exiv2
 brew install imagemagick --with-webp

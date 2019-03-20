@@ -15,7 +15,7 @@ xcode-select --install
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" < /dev/null
 
 # Install ZSH and zsh-completions
-brew install zsh zsh-completions zsh-syntax-highlighting
+brew install zsh zsh-completions zsh-syntax-highlighting zsh-autosuggestions
 
 # Switch to using brew-installed zsh as default shell
 # if ! fgrep -q "${BREW_PREFIX}/bin/zsh" /etc/shells; then
@@ -96,6 +96,7 @@ npm i -g is-camera-on-cli
 npm i -g current-path-cli
 npm i -g npm-user-cli
 npm i -g pretty-ms-cli
+npm i -g @bazel/ibazel
 
 # Install Alfred workflows via npm
 npm i -g alfred-emoj
