@@ -80,6 +80,7 @@ brew cask install android-file-transfer
 brew cask install google-chrome
 brew cask install balenaetcher
 # brew cask install betterzip
+brew cask install eqmac
 brew cask install franz
 brew cask install google-backup-and-sync
 brew cask install handbrake
@@ -95,8 +96,6 @@ brew cask install qlstephen
 brew cask install qlvideo
 brew cask install quicklookapk
 brew cask install quicklook-json
-brew cask install skype
-brew cask install skype-for-business
 brew cask install spotify
 brew cask install sublime-text
 brew cask install sublime-merge
