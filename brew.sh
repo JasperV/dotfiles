@@ -54,6 +54,7 @@ brew install bazelbuild/tap/bazel
 brew install dockutil
 #brew install exiv2
 brew install imagemagick --with-webp
+brew install jq
 brew install lastpass-cli --with-pinentry
 brew install lua
 brew install lynx
