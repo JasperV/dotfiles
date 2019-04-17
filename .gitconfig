@@ -28,7 +28,7 @@
 
 [credential]
 
-	helper = lastpass
+	helper = /Users/jasper/bin/git-credential-lastpass
 
 [push]
 
