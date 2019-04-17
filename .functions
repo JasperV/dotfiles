@@ -1,4 +1,3 @@
-
 #!/usr/bin/env bash
 
 # Usage: indirect_expand PATH -> $PATH

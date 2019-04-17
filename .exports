@@ -21,7 +21,7 @@ export LC_ALL=$LANG
 #pathprepend ~/lib LD_LIBRARY_PATH
 #pathprepend ~/include CPATH
 pathprepend /usr/local/bin PATH
-pathappend ~/bin PATH
+pathappend ~/bin/git-credential-lastpass PATH
 pathappend "/Applications/Visual Studio Code.app/Contents/Resources/app/bin" PATH
 
 # The current directory should never be in $PATH
