@@ -55,6 +55,7 @@ brew install dockutil
 #brew install exiv2
 brew install imagemagick --with-webp
 brew install jq
+# TODO: should be? lastpass-cli --with-pinentry --with-doc
 brew install lastpass-cli --with-pinentry
 brew install lua
 brew install lynx
