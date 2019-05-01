@@ -102,6 +102,11 @@ npm i -g @bazel/ibazel
 npm i -g alfred-emoj
 npm i -g alfred-npms
 npm i -g alfred-fkill
+npm i -g alfred-coolors
+npm i -g alfred-vpn
+npm i -g alfred-show-network-info
+npm i -g alfred-currency-conversion
+npm i -g alfred-polyglot
 
 # Install better nanorc config
 curl https://raw.githubusercontent.com/scopatz/nanorc/master/install.sh | sh
