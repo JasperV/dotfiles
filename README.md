@@ -29,6 +29,7 @@ add alfred to mackup
 switch to hyper terminal - with visor plugin
 disable siri - https://apple.stackexchange.com/questions/258816/how-to-completely-disable-siri-on-sierra/258981#258981
 zsh completions - git, files and folders etc...
+https://github.com/jessfraz/dotfiles
 https://github.com/MikeMcQuaid/strap
 https://github.com/ruimarinho/authy-client
 
