@@ -1,7 +1,7 @@
 #!/usr/bin/env zsh
 
 # Create dotfiles alias
-alias dotfiles='/usr/bin/git --git-dir=$HOME/.files/ --work-tree=$HOME'
+alias dotfiles='git --git-dir=$HOME/.files/ --work-tree=$HOME'
 alias dtf=dotfiles
 
 # Get rid of command not found
@@ -80,12 +80,12 @@ alias header='curl -I'
 
 # Do not delete / or prompt if deleting more than 3 files at a time
 alias rm='rm -I --preserve-root'
- 
+
 # Confirmation
 alias mv='mv -i'
 alias cp='cp -i'
 alias ln='ln -i'
- 
+
 # Parenting changing perms on /
 # alias chown='chown --preserve-root'
 # alias chmod='chmod --preserve-root'

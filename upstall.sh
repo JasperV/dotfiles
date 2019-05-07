@@ -9,7 +9,7 @@ sudo -v
 sudo softwareupdate -i -a --restart
 
 # Install git by means of xcode command line tools
-xcode-select --install
+# xcode-select --install
 
 # Install Homebrew
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" < /dev/null
@@ -26,6 +26,10 @@ brew install zsh zsh-completions zsh-syntax-highlighting zsh-autosuggestions
 sudo dscl . -create /Users/$USER UserShell /usr/local/bin/zsh
 
 sudo chmod go-w '/usr/local/share'
+
+# Install git
+brew install git
+git config --system --unset credential.helper
 
 # Install dotfiles
 
