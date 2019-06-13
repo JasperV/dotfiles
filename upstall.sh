@@ -76,6 +76,7 @@ npm i -g pure-prompt
 # TODO: add to own file for re-running on new node verions via nvm?
 
 # Install other npm modules
+# TODO: re-install on nvm update to other version...
 npm i -g diff-so-fancy
 npm i -g emoj
 npm i -g lock-cli
