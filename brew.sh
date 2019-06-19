@@ -80,14 +80,16 @@ brew install zopfli
 brew cask install aerial
 brew cask install alfred
 brew cask install android-file-transfer
-brew cask install google-chrome
 brew cask install balenaetcher
 # brew cask install betterzip
 brew cask install docker
 brew cask install franz
+brew cask install garmin-fresh
 brew cask install google-backup-and-sync
+brew cask install google-chrome
 brew cask install handbrake
 brew cask install iterm2
+brew cask install little-snitch
 brew cask install microsoft-office
 brew cask install postman
 brew cask install private-internet-access
@@ -100,11 +102,10 @@ brew cask install qlvideo
 brew cask install quicklookapk
 brew cask install quicklook-json
 brew cask install spotify
-brew cask install sublime-text
-brew cask install sublime-merge
 brew cask install subtitles
 brew cask install suspicious-package
 brew cask install teamviewer-host
+brew cask install tiptoi-manager
 brew cask install transmission
 brew cask install vanilla
 brew cask install vlc
