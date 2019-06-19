@@ -34,6 +34,7 @@ https://github.com/MikeMcQuaid/dotfiles
 https://github.com/MikeMcQuaid/strap
 https://github.com/ruimarinho/authy-client
 git log: git log --graph --pretty=\"format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset'\" --abbrev-commit --date=relative
+https://github.com/lastpass/lastpass-cli/tree/master/contrib
 
 find dev alternative for divvy -> hammerspoon?
 
