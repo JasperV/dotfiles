@@ -24,6 +24,7 @@ vscode plugins - repo?
 little snitch
 rocket?
 hyper
+consider pnpm
 brew cask install macpaw gemini # TODO: specific version -> license
 add alfred to mackup
 switch to hyper terminal - with visor plugin
