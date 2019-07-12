@@ -61,4 +61,4 @@ setopt RM_STAR_WAIT
 export LPASS_AGENT_TIMEOUT=28800
 
 # set Node.js heap size
-NODE_OPTIONS=--max-old-space-size=8192
+export NODE_OPTIONS=--max-old-space-size=8192
