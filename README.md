@@ -34,6 +34,7 @@ defaults for editorconfig and other settings so that these not need to be put in
 ### programs/drivers/libs to install
 anka\
 java?\
+whatsapp\
 logitech harmony\
 https://github.com/antonmedv/fx\
 https://github.com/antonmedv/eat\
@@ -99,10 +100,26 @@ git log: git log --graph --pretty=\"format:'%Cred%h%Creset -%C(yellow)%d%Creset 
 find dev alternative for divvy -> hammerspoon?\
 checkout a list of specific git repositories? - e.g. all from github/bitbucket to src folder?\
 https://kalis.me/increasing-development-productivity-repository-management/
+https://laracasts.com/series/setup-a-mac-dev-machine-from-scratch?utm_source=codropscollective
+https://blog.sindresorhus.com/macos-tips-tricks-13046cf377f8#.ywacpzm3v
+https://www.blockloop.io/mastering-bash-and-terminal
 https://wesbos.com/uses/
+https://github.com/wesbos/dotfiles
+https://github.com/jlevy/the-art-of-command-line
+https://sourabhbajaj.com/mac-setup/iTerm/zsh.html
 https://github.com/IngmarStein/Monolingual
+https://denysdovhan.com/spaceship-prompt/
+https://github.com/antonmedv/fx
+http://http-prompt.com/
+https://httpie.org/
+https://matthewpalmer.net/blog/2018/04/14/ultimate-pro-guide-best-secret-mac-features/index.html
+https://medium.com/@caulfieldOwen/turn-your-keyboard-into-a-text-editing-rocket-1514d8474d2d
 https://github.com/jaredculp/iterm2-borderless-padding
+https://github.com/nikitavoloboev/my-mac-os
+https://gist.github.com/kevin-smets/8568070
+https://askubuntu.com/questions/90013/how-do-i-enable-syntax-highlighting-in-nano
 https://www.taniarascia.com/setting-up-a-brand-new-mac-for-development/
+https://mattstauffer.co/blog/setting-up-a-new-os-x-development-machine-part-1-core-files-and-custom-shell/
 https://github.com/mischah/ibrew + other from this repo\
 https://github.com/fniephaus/alfred-homebrew
 https://github.com/drduh/macOS-Security-and-Privacy-Guide
@@ -114,21 +131,27 @@ https://github.com/alichtman/shallow-backup
 https://www.iamdeveloper.com/blog/2018-01-12-my-mac-setup/
 https://github.com/sb2nov/mac-setup
 https://github.com/vitorgalvao/tiny-scripts
+https://osquery.io/
 https://github.com/guarinogabriel/Mac-CLI
 https://github.com/rgcr/m-cli
 https://github.com/ptb/mac-setup
 https://github.com/therealklanni/purity
 https://github.com/intelfx/pure
 https://github.com/kaunteya/MacCacheCleaner
+https://github.com/bhilburn/powerlevel9k
 https://github.com/joeyhoer/starter
 https://github.com/sebhildebrandt/mmon
+https://github.com/NARKOZ/hacker-scripts
 https://dev.to/nickytonline/my-visual-studio-code-setup-2ima
 https://github.com/monfresh/laptop
 https://github.com/anishathalye/lumen
 https://github.com/rkalis/dotfiles/tree/master/hammerspoon
 https://github.com/Hammerspoon/hammerspoon/wiki/Sample-Configurations
+https://blog.theodo.fr/2018/03/making-runtime-funtime-hammerspoon/
 https://gist.github.com/max-mykhailenko/6548a102c0e955e3df8b
 https://gist.github.com/saetia/1623487
+https://github.com/so-fancy/diff-so-fancy
+http://ohshitgit.com/
 https://github.com/bkuhlmann/mac_os
 https://github.com/bkuhlmann/dotfiles
 https://github.com/andrewconnell/osx-install
