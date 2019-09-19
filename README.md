@@ -128,6 +128,7 @@ http://newosxbook.com/files/moxii3/AppendixA.pdf
 https://github.com/Kevin-De-Koninck/Clean-Me
 https://github.com/kristovatlas/osx-config-check
 https://github.com/SummitRoute/osxlockdown
+https://github.com/brotandgames/bagcli
 https://github.com/alichtman/shallow-backup
 https://www.iamdeveloper.com/blog/2018-01-12-my-mac-setup/
 https://github.com/sb2nov/mac-setup
