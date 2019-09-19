@@ -100,6 +100,7 @@ git log: git log --graph --pretty=\"format:'%Cred%h%Creset -%C(yellow)%d%Creset 
 find dev alternative for divvy -> hammerspoon?\
 checkout a list of specific git repositories? - e.g. all from github/bitbucket to src folder?\
 https://kalis.me/increasing-development-productivity-repository-management/
+https://dev.to/awwsmm/101-bash-commands-and-tips-for-beginners-to-experts-30je
 https://laracasts.com/series/setup-a-mac-dev-machine-from-scratch?utm_source=codropscollective
 https://blog.sindresorhus.com/macos-tips-tricks-13046cf377f8#.ywacpzm3v
 https://www.blockloop.io/mastering-bash-and-terminal
@@ -131,12 +132,31 @@ https://github.com/alichtman/shallow-backup
 https://www.iamdeveloper.com/blog/2018-01-12-my-mac-setup/
 https://github.com/sb2nov/mac-setup
 https://github.com/vitorgalvao/tiny-scripts
+https://github.com/yudai/gotty
 https://osquery.io/
+https://github.com/denysdovhan/spaceship-prompt
+https://github.com/sharkdp/fd
+https://github.com/wtfutil/wtf
+https://github.com/jesseduffield/lazygit
+https://github.com/k4m4/terminals-are-sexy
 https://github.com/guarinogabriel/Mac-CLI
+https://github.com/nicolargo/glances
+https://github.com/paulirish/git-recent
 https://github.com/rgcr/m-cli
 https://github.com/ptb/mac-setup
+https://remysharp.com/2018/08/23/cli-improved/
+https://github.com/sharkdp/bat
 https://github.com/therealklanni/purity
 https://github.com/intelfx/pure
+https://github.com/jakubroztocil/httpie
+https://layautoapp.com/?ref=producthunt
+https://github.com/rajivkanaujia/alphaworks/wiki/Handy-Mac-Commands
+https://bitbucket.org/rajivkanaujia/alphaworkspub/src/master/scripts/
+https://stackoverflow.com/questions/44549733/how-to-use-visual-studio-code-as-default-editor-for-git-mergetool
+https://github.com/codebytere/dotify
+https://www.imore.com/manage-your-windows-pro-macos
+https://github.com/alebcay/awesome-shell
+https://github.com/herrbischoff/awesome-macos-command-line
 https://github.com/kaunteya/MacCacheCleaner
 https://github.com/bhilburn/powerlevel9k
 https://github.com/joeyhoer/starter
@@ -152,10 +172,17 @@ https://gist.github.com/max-mykhailenko/6548a102c0e955e3df8b
 https://gist.github.com/saetia/1623487
 https://github.com/so-fancy/diff-so-fancy
 http://ohshitgit.com/
+https://bitsofco.de/git-aliases-for-lazy-developers/
+https://github.com/rictic/bash_profile
+https://objective-see.com/products/lulu.html
+https://github.com/cjbassi/gotop
 https://github.com/bkuhlmann/mac_os
 https://github.com/bkuhlmann/dotfiles
 https://github.com/andrewconnell/osx-install
+https://hacker-tools.github.io/
+https://pirate.github.io/security-growler/
 https://github.com/bkuhlmann/mac_os-config
+https://www.bhnywl.com/blog/setting-up-a-macbook-for-front-end-development/
 full keyboard support for delete and home keys etc...\
 proper keyboard keymapping for ctrl alt etc...\
 full keyboard support on terminal\
