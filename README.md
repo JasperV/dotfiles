@@ -66,6 +66,7 @@ https://www.maketecheasier.com/extend-mac-quick-look-with-plugins/\
 https://github.com/sindresorhus/quick-look-plugins
 
 #### dotfiles examples/inspiration
+https://www.taniarascia.com/setting-up-a-brand-new-mac-for-development/
 https://kalis.me/dotfiles-automating-macos-system-configuration/
 https://github.com/rkalis/dotfiles
 https://github.com/jessfraz/dotfiles
