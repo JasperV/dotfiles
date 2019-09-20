@@ -192,6 +192,8 @@ keyboard support on media players\
 properly configure keyboard for mac with colemak and functions keys support instead of touchbar\
 https://opensource.com/article/18/9/tips-productivity-zsh\
 https://github.com/sindresorhus/terminal-snazzy
+https://github.com/Neilpang/acme.sh/wiki/Synology-RT1900ac-and-RT2600ac-install-guide
+https://forum.synology.com/enu/viewtopic.php?f=265&t=123003
 
 ### Inspired by
 https://developer.atlassian.com/blog/2016/02/best-way-to-store-dotfiles-git-bare-repo/
