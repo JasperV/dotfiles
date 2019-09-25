@@ -109,6 +109,7 @@ https://wesbos.com/uses/
 https://github.com/wesbos/dotfiles
 https://github.com/jlevy/the-art-of-command-line
 https://sourabhbajaj.com/mac-setup/iTerm/zsh.html
+https://github.com/denisidoro/navi
 https://github.com/IngmarStein/Monolingual
 https://denysdovhan.com/spaceship-prompt/
 https://github.com/antonmedv/fx
