@@ -64,6 +64,7 @@ https://github.com/whomwah/qlstephen\
 https://www.quicklookplugins.com/\
 https://www.maketecheasier.com/extend-mac-quick-look-with-plugins/\
 https://github.com/sindresorhus/quick-look-plugins
+on opening of new session, unlock bw vault and set session var
 remove all references to email and usernames - templatize it in
 bitwarden git credential helper rewrite from ground up - make work in all cases
 
