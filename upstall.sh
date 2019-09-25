@@ -102,6 +102,7 @@ npm i -g current-path-cli
 npm i -g npm-user-cli
 npm i -g pretty-ms-cli
 npm i -g @bazel/ibazel
+npm i -g @bitwarden/cli
 
 # Install Alfred workflows via npm
 npm i -g alfred-emoj
@@ -112,6 +113,7 @@ npm i -g alfred-vpn
 npm i -g alfred-show-network-info
 npm i -g alfred-currency-conversion
 npm i -g alfred-polyglot
+# TODO: bitwarden
 
 # Install better nanorc config
 curl https://raw.githubusercontent.com/scopatz/nanorc/master/install.sh | sh

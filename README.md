@@ -64,6 +64,8 @@ https://github.com/whomwah/qlstephen\
 https://www.quicklookplugins.com/\
 https://www.maketecheasier.com/extend-mac-quick-look-with-plugins/\
 https://github.com/sindresorhus/quick-look-plugins
+remove all references to email and usernames - templatize it in
+bitwarden git credential helper rewrite from ground up - make work in all cases
 
 #### dotfiles examples/inspiration
 https://www.taniarascia.com/setting-up-a-brand-new-mac-for-development/
