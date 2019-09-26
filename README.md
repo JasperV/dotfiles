@@ -191,6 +191,7 @@ https://github.com/andrewconnell/osx-install
 https://hacker-tools.github.io/
 https://pirate.github.io/security-growler/
 https://github.com/bkuhlmann/mac_os-config
+https://github.com/jakehilborn/displayplacer
 https://www.bhnywl.com/blog/setting-up-a-macbook-for-front-end-development/
 full keyboard support for delete and home keys etc...\
 proper keyboard keymapping for ctrl alt etc...\
