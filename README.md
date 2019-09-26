@@ -110,6 +110,7 @@ https://blog.sindresorhus.com/macos-tips-tricks-13046cf377f8#.ywacpzm3v
 https://www.blockloop.io/mastering-bash-and-terminal
 https://wesbos.com/uses/
 https://github.com/wesbos/dotfiles
+https://github.com/nicolashery/mac-dev-setup
 https://github.com/jlevy/the-art-of-command-line
 https://sourabhbajaj.com/mac-setup/iTerm/zsh.html
 https://github.com/denisidoro/navi
