@@ -1,6 +1,3 @@
-# Compiled Python files
-*.pyc
-
 # Folder view configuration files
 .DS_Store
 Desktop.ini
@@ -8,10 +5,27 @@ Desktop.ini
 # Thumbnail cache files
 ._*
 Thumbs.db
+ehthumbs.db
 
 # Files that might appear on external disks
+.DocumentRevisions-V100
+.fseventsd
 .Spotlight-V100
+.TemporaryItems
 .Trashes
+.VolumeIcon.icns
+$RECYCLE.BIN/
 
-# Application files
-*.sublime-workspace
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# Other
+.AppleDouble
+.LSOverride
+
+# Compiled Python files
+*.pyc
