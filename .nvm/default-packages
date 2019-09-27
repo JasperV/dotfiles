@@ -25,3 +25,4 @@ pretty-ms-cli
 @bazel/ibazel
 @bitwarden/cli
 npm-check
+fixpack
