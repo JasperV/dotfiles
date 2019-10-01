@@ -89,6 +89,7 @@ npm i -g alfred-show-network-info
 npm i -g alfred-currency-conversion
 npm i -g alfred-polyglot
 # TODO: bitwarden
+# TODO: make note of other alfred plugins
 
 # Install better nanorc config
 curl https://raw.githubusercontent.com/scopatz/nanorc/master/install.sh | sh
