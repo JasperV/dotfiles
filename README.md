@@ -126,6 +126,7 @@ https://github.com/jaredculp/iterm2-borderless-padding
 https://github.com/nikitavoloboev/my-mac-os
 https://gist.github.com/kevin-smets/8568070
 https://github.com/junegunn/fzf
+https://github.com/dylanaraps/pure-bash-bible
 https://github.com/blacs30/wd
 https://askubuntu.com/questions/90013/how-do-i-enable-syntax-highlighting-in-nano
 https://www.taniarascia.com/setting-up-a-brand-new-mac-for-development/
