@@ -88,7 +88,6 @@ npm i -g alfred-vpn
 npm i -g alfred-show-network-info
 npm i -g alfred-currency-conversion
 npm i -g alfred-polyglot
-npm i -g alfred-updater
 # TODO: bitwarden
 
 # Install better nanorc config
