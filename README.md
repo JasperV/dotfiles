@@ -116,6 +116,7 @@ https://sourabhbajaj.com/mac-setup/iTerm/zsh.html
 https://github.com/denisidoro/navi
 https://github.com/IngmarStein/Monolingual
 https://denysdovhan.com/spaceship-prompt/
+https://httptoolkit.tech/mock/
 https://github.com/antonmedv/fx
 http://http-prompt.com/
 https://httpie.org/
