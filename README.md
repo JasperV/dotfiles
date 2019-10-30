@@ -108,6 +108,7 @@ https://dev.to/awwsmm/101-bash-commands-and-tips-for-beginners-to-experts-30je
 https://laracasts.com/series/setup-a-mac-dev-machine-from-scratch?utm_source=codropscollective
 https://blog.sindresorhus.com/macos-tips-tricks-13046cf377f8#.ywacpzm3v
 https://www.blockloop.io/mastering-bash-and-terminal
+https://www.wezm.net/technical/2019/10/useful-command-line-tools/
 https://wesbos.com/uses/
 https://github.com/wesbos/dotfiles
 https://github.com/nicolashery/mac-dev-setup
