@@ -57,8 +57,5 @@ export NVM_DIR="$HOME/.nvm"
 unsetopt RM_STAR_SILENT
 setopt RM_STAR_WAIT
 
-# LastPass CLI settings
-export LPASS_AGENT_TIMEOUT=28800
-
 # set Node.js heap size
 export NODE_OPTIONS=--max-old-space-size=8192

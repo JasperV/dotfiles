@@ -40,7 +40,7 @@ https://github.com/antonmedv/fx\
 https://github.com/antonmedv/eat\
 https://github.com/antonmedv/fx-completion\
 https://github.com/sindresorhus/pure\
-alfred plugins - speedtest, spotify, maps, colors, convert, kill, play song, lastpass, encode decode, git?, packal, timezones, units - separate file\
+alfred plugins - speedtest, spotify, maps, colors, convert, kill, play song, encode decode, git?, packal, timezones, units - separate file\
 solarized theme for everything\
 tiptoi\
 https://github.com/nvbn/thefuck\

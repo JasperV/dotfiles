@@ -56,8 +56,6 @@ brew install dockutil
 #brew install exiv2
 brew install imagemagick --with-webp
 brew install jq
-# TODO: should be? lastpass-cli --with-pinentry --with-doc
-brew install lastpass-cli --with-pinentry
 brew install lua
 brew install lynx
 brew install mackup
@@ -122,7 +120,6 @@ brew cask install wireshark
 # mas install 671736912 # FruitJuice
 mas install 414515628 # Space Gremlin # TODO: pro version http://www.spacegremlinapp.com/mac/modes.html
 # mas install 1153157709 # Speedtest by Ookla
-mas install 926036361 # LastPass
 mas install 1147396723 # WhatsApp Desktop
 mas install 803453959 # Slack for Mac
 mas install 883878097 # macOS server
