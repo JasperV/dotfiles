@@ -23,6 +23,7 @@ uninstall\
 update\
 settings\
 configs\
+should work on rpi too, for example\
 mac security settings separate repo\
 mac config separate repo to allow for fork from mths\
 vscode setting config + plugins - seperate repo to use in other variants (online) as well\
