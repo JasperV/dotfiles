@@ -69,6 +69,9 @@ pip3 install --upgrade pip
 
 # Install pip apps
 pip3 install stronghold
+pip install beets
+pip install pyacoustid
+pip install discogs-client
 
 # TODO: add to own file for re-running on new node verions via nvm?
 # Install other npm modules

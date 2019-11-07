@@ -1,0 +1,10 @@
+directory: ~/Downloads/Music
+library: ~/.config/beets/library.db
+import:
+    move: yes
+id3v23: yes
+plugins: scrub chroma discogs fromfilename fetchart embedart duplicates
+asciify_paths: yes
+paths:
+    default: $albumartist - $album%aunique{}/$track $title
+    comp: $album%aunique{}/$track $artist - $title

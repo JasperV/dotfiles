@@ -52,6 +52,7 @@ brew install ack
 brew tap bazelbuild/tap
 brew tap-pin bazelbuild/tap
 brew install bazelbuild/tap/bazel
+brew install chromaprint
 brew install dockutil
 #brew install exiv2
 brew install imagemagick --with-webp
