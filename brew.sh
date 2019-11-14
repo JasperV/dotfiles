@@ -87,6 +87,7 @@ brew cask install garmin-fresh
 brew cask install google-backup-and-sync
 brew cask install google-chrome
 brew cask install handbrake
+brew cask install hammerspoon
 brew cask install iterm2
 brew cask install little-snitch
 brew cask install microsoft-office
