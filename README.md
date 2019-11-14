@@ -112,6 +112,8 @@ https://www.blockloop.io/mastering-bash-and-terminal
 https://www.wezm.net/technical/2019/10/useful-command-line-tools/
 https://github.com/junegunn/fzf
 https://wesbos.com/uses/
+https://github.com/Kevin-De-Koninck/Clean-Me
+https://askubuntu.com/questions/59846/bash-history-search-partial-up-arrow
 https://github.com/wesbos/dotfiles
 https://github.com/nicolashery/mac-dev-setup
 https://github.com/jlevy/the-art-of-command-line
