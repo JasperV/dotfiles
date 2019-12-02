@@ -33,6 +33,7 @@ behave proper on multiple reruns (install) - e.g. don't error, show info and upd
 defaults for editorconfig and other settings so that these not need to be put in all repo's (only when other people start working on it)
 
 ### programs/drivers/libs to install
+https://asdf-vm.com/#/\
 anka\
 java?\
 whatsapp\
