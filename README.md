@@ -97,6 +97,8 @@ https://github.com/rambleraptor/dotfiles
 https://github.com/atomantic/dotfiles
 
 #### other
+https://homebrew-file.readthedocs.io/en/latest/
+https://github.com/joelparkerhenderson/brewfile
 https://github.com/lukechilds/zsh-nvm
 https://github.com/lukechilds/zsh-better-npm-completion
 https://github.com/mafredri/zsh-async
