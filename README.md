@@ -113,6 +113,7 @@ https://laracasts.com/series/setup-a-mac-dev-machine-from-scratch?utm_source=cod
 https://blog.sindresorhus.com/macos-tips-tricks-13046cf377f8#.ywacpzm3v
 https://www.blockloop.io/mastering-bash-and-terminal
 https://www.wezm.net/technical/2019/10/useful-command-line-tools/
+https://github.com/kcrawford/dockutil
 https://github.com/junegunn/fzf
 https://wesbos.com/uses/
 https://github.com/Kevin-De-Koninck/Clean-Me
