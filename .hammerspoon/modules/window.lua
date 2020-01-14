@@ -1,0 +1,11 @@
+-- spoon.WindowScreenLeftAndRight:bindHotkeys({
+--   screen_left = { hyperShift, "Left" },
+--   screen_right= { hyperShift, "Right" },
+-- })
+
+-- spoon.WindowHalfsAndThirds:bindHotkeys({
+--   left_half   = { hyper, "Left" },
+--   right_half  = { hyper, "Right" },
+--   top_half    = { hyper, "Up" },
+--   bottom_half = { hyper, "Down" },
+-- })
