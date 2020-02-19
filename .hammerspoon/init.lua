@@ -4,7 +4,7 @@
 -- require "modules/window"
 
 -- macbook_monitor = "Color LCD"
-
+-- luminis_monitor = "BenQ GW2765"
 
 
 -- This is a configuration for Hammerspoon:

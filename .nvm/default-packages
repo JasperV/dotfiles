@@ -26,3 +26,4 @@ pretty-ms-cli
 @bitwarden/cli
 npm-check
 fixpack
+node-gyp
