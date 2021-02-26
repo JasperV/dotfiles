@@ -78,12 +78,14 @@ which is completely different.
     "@~i"      = ("moveUp:","moveUp:","moveUp:","moveUp:","moveUp:","moveUp:","moveUp:","moveUp:",);                            /* Cmd + Option + j */
     "@~k"      = ("moveDown:","moveDown:","moveDown:","moveDown:","moveDown:","moveDown:","moveDown:","moveDown:",);                            /* Cmd + Option + j */
 
-    "~\UF702"  = "moveWordBackward:";                            /* Opt  + LeftArrow */
-    "~\U007F"  = "deleteWordBackward:";                          /* Opt  + Backspace */
+    "@\UF702"  = "moveWordBackward:";                            /* Cmd  + LeftArrow */
+    "@~j"      = "moveWordBackward:";                            /* Cmd + Option + j */
+    "@\U007F"  = "deleteWordBackward:";                          /* Cmd  + Backspace */
 
-    "~\UF703"  = "moveWordForward:";                             /* Opt  + RightArrow */
-    "~\UF728"  = "deleteWordForward:";                           /* Opt  + Delete */
+    "@\UF703"  = "moveWordForward:";                             /* Cmd  + RightArrow */
+    "@~l"      = "moveWordForward:";                             /* Cmd + Option + l */
+    "@\UF728"  = "deleteWordForward:";                           /* Cmd  + Delete */
 
-    "~$\UF702" = "moveWordBackwardAndModifySelection:";          /* Shift + Opt  + Leftarrow */
-    "~$\UF703" = "moveWordForwardAndModifySelection:";           /* Shift + Opt  + Rightarrow */
+    "@$\UF702" = "moveWordBackwardAndModifySelection:";          /* Shift + Cmd  + Leftarrow */
+    "@$\UF703" = "moveWordForwardAndModifySelection:";           /* Shift + Cmd  + Rightarrow */
 }
