@@ -39,6 +39,8 @@ autoload -U promptinit; promptinit
 
 PURE_GIT_UNTRACKED_DIRTY=0
 
+autoload -Uz promptinit
+promptinit
 prompt pure
 export PATH="/usr/local/sbin:$PATH"
 
