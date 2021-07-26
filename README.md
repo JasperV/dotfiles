@@ -7,14 +7,17 @@ They target macOS systems.
 Still a bit messy, but I will cleanup up as I go along.
 
 ## Install
+
 ```bash
 curl -Ls get.jasperv.nl | sh
 ```
 
 ## Features
+
 - Named features will go here
 
 ## TODO
+
 use anka to test it all on clean mac image\
 mac cli dev tools work well with own installed git\
 rename to dotfiles.jasperv.nl\
@@ -31,8 +34,12 @@ apps config backup via mackup as far as possible\
 verify commands and/or app invokations before they are used, to prevent errors\
 behave proper on multiple reruns (install) - e.g. don't error, show info and update - upstall! use paulirish code!\
 defaults for editorconfig and other settings so that these not need to be put in all repo's (only when other people start working on it)
+sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.metadata.mds.plist - disable spotlight
+https://github.com/munki
+create bootvolume on usb from downloaded macos installer script - https://github.com/veertuinc/getting-started#create-vm-templatebash
 
 ### programs/drivers/libs to install
+
 https://asdf-vm.com/#/\
 anka\
 java?\
@@ -46,7 +53,7 @@ alfred plugins - speedtest, spotify, maps, colors, convert, kill, play song, enc
 solarized theme for everything\
 tiptoi\
 https://github.com/nvbn/thefuck\
-vscode plugins - by means of default project?\
+vscode plugins - by means of default project?\ helemaal goed en clean opzetten - handleiding lezen
 little snitch\
 https://github.com/jessfraz/gmailfilters\
 rocket?\
@@ -69,8 +76,10 @@ https://github.com/sindresorhus/quick-look-plugins
 on opening of new session, unlock bw vault and set session var
 remove all references to email and usernames - templatize it in
 bitwarden git credential helper rewrite from ground up - make work in all cases
+mackup for apps, set cronjob daily?
 
 #### dotfiles examples/inspiration
+
 https://www.taniarascia.com/setting-up-a-brand-new-mac-for-development/
 https://kalis.me/dotfiles-automating-macos-system-configuration/
 https://github.com/rkalis/dotfiles
@@ -97,8 +106,11 @@ https://github.com/rambleraptor/dotfiles
 https://github.com/atomantic/dotfiles
 
 #### other
+
 https://homebrew-file.readthedocs.io/en/latest/
 https://github.com/joelparkerhenderson/brewfile
+please
+fuck
 https://github.com/lukechilds/zsh-nvm
 https://github.com/lukechilds/zsh-better-npm-completion
 https://github.com/mafredri/zsh-async
@@ -215,5 +227,6 @@ https://github.com/Neilpang/acme.sh/wiki/Synology-RT1900ac-and-RT2600ac-install-
 https://forum.synology.com/enu/viewtopic.php?f=265&t=123003
 
 ### Inspired by
+
 https://developer.atlassian.com/blog/2016/02/best-way-to-store-dotfiles-git-bare-repo/
 https://medium.com/@webprolific/getting-started-with-dotfiles-43c3602fd789
