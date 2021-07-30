@@ -8,12 +8,13 @@ Still a bit messy, but I will cleanup up as I go along.
 
 Some things are automated, some things are not.
 
+[![Project Status: WIP – Development is in progress, but there has not yet been a stable, usable release suitable for the public.](https://www.repostatus.org/badges/latest/wip.svg)](https://www.repostatus.org/#wip)
+
 ## Install
 
 ```bash
-// TODO: curl -Ls dot.jasperv.nl | sh
-// or even shorter...git.io
-// curl -fsSL https://example.com/setup.sh | bash
+curl -fsSL https://raw.githubusercontent.com/JasperV/dotfiles/HEAD/install | bash
+# TODO: or even shorter...git.io link
 ```
 
 ## Features
@@ -23,14 +24,15 @@ I use [Anka](https://veertu.com/anka-develop/) to test all of this out on virtua
 ## TODO
 
 use anka to test it all on clean mac image\
+add rights to all script files
 mac cli dev tools work well with own installed git\
 rename to dotfiles.jasperv.nl\
 install\
 uninstall\
 update\
 settings\
-configs\
-should work on rpi/linux too, for example\
+.config add all files???
+should work on rpi/linux too, for example\ - e.g. new branch ;)
 mac security settings separate repo\
 mac config separate repo to allow for fork from mths\
 notify when mths is updated
@@ -47,8 +49,8 @@ set pure prompt to solarized dark colors
 https://www.sitepoint.com/zsh-tips-tricks/
 https://sourabhbajaj.com/mac-setup/iTerm/zsh.html
 find a nice font for everything, menlo?
-
 rename branches to macos and linux
+auto start when rebooted after update - https://stackoverflow.com/questions/6442364/running-script-upon-login-mac
 
 ### programs/drivers/libs to install
 
@@ -87,6 +89,7 @@ on opening of new session, unlock bw vault and set session var
 remove all references to email and usernames - templatize it in
 bitwarden git credential helper rewrite from ground up - make work in all cases
 mackup for apps, set cronjob daily?
+https://github.com/MikeMcQuaid/strap
 
 #### dotfiles examples/inspiration
 

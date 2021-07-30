@@ -1,0 +1,22 @@
+#!/bin/zsh
+
+# Update script
+
+# Ask for the administrator password upfront
+sudo -v
+
+# Keep sudo session persistent
+while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
+
+
+
+# Check for macOS updates
+sudo softwareupdate -i -a --restart
+
+
+
+# TODO: present interactive lists of updateable software via all software managers
+
+# Update Homebrew itself
+brew update
+
