@@ -12,7 +12,7 @@ Some things are automated, some things are not.
 
 ```bash
 // TODO: curl -Ls dot.jasperv.nl | sh
-// or even shorter...
+// or even shorter...git.io
 // curl -fsSL https://example.com/setup.sh | bash
 ```
 
