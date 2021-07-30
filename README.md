@@ -13,6 +13,7 @@ Some things are automated, some things are not.
 ```bash
 // TODO: curl -Ls dot.jasperv.nl | sh
 // or even shorter...
+// curl -fsSL https://example.com/setup.sh | bash
 ```
 
 ## Features
@@ -46,6 +47,8 @@ set pure prompt to solarized dark colors
 https://www.sitepoint.com/zsh-tips-tricks/
 https://sourabhbajaj.com/mac-setup/iTerm/zsh.html
 find a nice font for everything, menlo?
+
+rename branches to macos and linux
 
 ### programs/drivers/libs to install
 
@@ -91,6 +94,7 @@ https://www.taniarascia.com/setting-up-a-brand-new-mac-for-development/
 https://kalis.me/dotfiles-automating-macos-system-configuration/
 https://github.com/rkalis/dotfiles
 https://github.com/jessfraz/dotfiles
+https://github.com/kalkayan/dotfiles
 https://github.com/MikeMcQuaid/dotfiles
 https://github.com/MikeMcQuaid/strap
 https://github.com/ruimarinho/authy-client
