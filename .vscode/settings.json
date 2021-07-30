@@ -11,7 +11,7 @@
     "**/.cache": true,
     "**/.cups": true,
     "**/.docker": true,
-    "**/.files": true,
+    // "**/.files": true,
     "**/.gem": true,
     "**/.IdentityService": true,
     "**/.kube": true,

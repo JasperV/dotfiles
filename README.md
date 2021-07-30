@@ -2,19 +2,22 @@
 
 These are my dotfiles.
 
-They target macOS systems.
+They target macOS systems. Should support Linux as well.
 
 Still a bit messy, but I will cleanup up as I go along.
+
+Some things are automated, some things are not.
 
 ## Install
 
 ```bash
-curl -Ls get.jasperv.nl | sh
+// TODO: curl -Ls dot.jasperv.nl | sh
+// or even shorter...
 ```
 
 ## Features
 
-- Named features will go here
+I use [Anka](https://veertu.com/anka-develop/) to test all of this out on virtual machines. To make it work exactly to my likings.
 
 ## TODO
 
@@ -26,25 +29,28 @@ uninstall\
 update\
 settings\
 configs\
-should work on rpi too, for example\
+should work on rpi/linux too, for example\
 mac security settings separate repo\
 mac config separate repo to allow for fork from mths\
-vscode setting config + plugins - seperate repo to use in other variants (online) as well\
+notify when mths is updated
+// done by vscode self these days - vscode setting config + plugins - seperate repo to use in other variants (online) as well\
 apps config backup via mackup as far as possible\
 verify commands and/or app invokations before they are used, to prevent errors\
 behave proper on multiple reruns (install) - e.g. don't error, show info and update - upstall! use paulirish code!\
 defaults for editorconfig and other settings so that these not need to be put in all repo's (only when other people start working on it)
+curl -Ls get.jasperv.nl | sh
 sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.metadata.mds.plist - disable spotlight
 https://github.com/munki
 create bootvolume on usb from downloaded macos installer script - https://github.com/veertuinc/getting-started#create-vm-templatebash
+set pure prompt to solarized dark colors
+https://www.sitepoint.com/zsh-tips-tricks/
+https://sourabhbajaj.com/mac-setup/iTerm/zsh.html
+find a nice font for everything, menlo?
 
 ### programs/drivers/libs to install
 
 https://asdf-vm.com/#/\
-anka\
-java?\
 whatsapp\
-logitech harmony\
 https://github.com/antonmedv/fx\
 https://github.com/antonmedv/eat\
 https://github.com/antonmedv/fx-completion\
@@ -61,7 +67,6 @@ consider pnpm\
 https://github.com/jingweno/ccat\
 https://github.com/nicolargo/glances\
 https://httpie.org/\
-https://getharmony.xyz/\
 brew cask install macpaw gemini # TODO: specific version -> license\
 add alfred to mackup\
 https://github.com/Mortennn/Dozer\
@@ -73,6 +78,8 @@ https://github.com/whomwah/qlstephen\
 https://www.quicklookplugins.com/\
 https://www.maketecheasier.com/extend-mac-quick-look-with-plugins/\
 https://github.com/sindresorhus/quick-look-plugins
+remove all apple software that is not used
+disable siri completely
 on opening of new session, unlock bw vault and set session var
 remove all references to email and usernames - templatize it in
 bitwarden git credential helper rewrite from ground up - make work in all cases
@@ -225,6 +232,7 @@ https://opensource.com/article/18/9/tips-productivity-zsh\
 https://github.com/sindresorhus/terminal-snazzy
 https://github.com/Neilpang/acme.sh/wiki/Synology-RT1900ac-and-RT2600ac-install-guide
 https://forum.synology.com/enu/viewtopic.php?f=265&t=123003
+use all with solarized dark color theme(s)!
 
 ### Inspired by
 

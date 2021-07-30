@@ -1,6 +1,7 @@
-#!/usr/bin/env zsh
+#!/bin/zsh
 
-# Install command-line tools using Homebrew.
+# Install Homebrew
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 # Make sure we’re using the latest Homebrew.
 brew update
@@ -33,7 +34,7 @@ brew install wget --with-iri
 brew cask install java
 
 # Install more recent versions of some macOS tools.
-# TODO: brew install git
+brew install git
 brew install grep
 brew install openssh
 brew install screen
