@@ -14,11 +14,19 @@ This branch is for macOS systems. Other branches are used on other systems.
 
 ```zsh
 curl -fsSL https://raw.githubusercontent.com/JasperV/dotfiles/macos/install | zsh
+# or /bin/zsh -c "$(curl -fsSL https://raw.githubusercontent.com/JasperV/dotfiles/macos/install)"
 ```
 
 ## Features
 
-I use [Anka](https://veertu.com/anka-develop/) to test all of this out on virtual machines, so I can make it work exactly to my likings.
+- I use [Anka](https://veertu.com/anka-develop/) to test all of this out on virtual machines, so I can make it work exactly to my likings.
+- Install, update and uninstall scripts
+
+### Build based on
+
+https://github.com/kalkayan/dotfiles
+https://github.com/MikeMcQuaid/strap
+https://github.com/mathiasbynens/dotfiles
 
 ## TODO
 

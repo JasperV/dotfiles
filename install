@@ -1,9 +1,14 @@
 #!/bin/zsh
+set -e
 
 # Install script
 
 # Navigate to home directory
 cd ~
+
+# Validate your are yourself and an admin
+[ "$USER" = "root" ] && abort "Run this script as yourself, not root."
+groups | grep $Q -E "\b(admin)\b" || abort "Add $USER to the admin group."
 
 # Ask for the administrator password upfront
 sudo -v
@@ -20,15 +25,19 @@ rm /tmp/.com.apple.dt.CommandLineTools.installondemand.in-progress
 
 
 
+HOMEBREW_NO_ANALYTICS=1
 # Install Homebrew if not already installed
 if ! brew -v 2>/dev/null; then
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
 
+brew analytics off
 
+# Update brew to latest available version
+brew update
 
-# Install the latest git
-brew install git
+# Reload shell
+exec $SHELL
 
 
 
@@ -38,13 +47,16 @@ if [[ " $@ " =~ " --update-shell " ]]; then
 	brew install zsh
 
 	# Change default shell to Homebrew installed zsh
-	BREW_PREFIX=$(brew --prefix) # TODO: add to environment!
+	BREW_PREFIX=$(brew --prefix) # TODO: add to environment! in source file
 
   if ! fgrep -q "${BREW_PREFIX}/bin/zsh" /etc/shells; then
 	  echo "${BREW_PREFIX}/bin/zsh" | sudo tee -a /etc/shells;
 	  chsh -s "${BREW_PREFIX}/bin/zsh";
 	fi
 fi
+
+# Install the latest git
+brew install git
 
 # Reload shell
 exec $SHELL
@@ -54,7 +66,7 @@ exec $SHELL
 # Install dotfiles
 DF_BRANCH="macos"
 
-alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
+alias dot="/usr/bin/git --git-dir=$HOME/.files --work-tree=$HOME"
 
 if [ ! -d "$HOME/.files" ]; then
   git clone --bare https://github.com/JasperV/dotfiles.git $HOME/.files
@@ -62,15 +74,15 @@ fi
 
 # Reset the unstaged changes before updating
 if [[ " $@ " =~ " --dotfiles-reset " ]]; then
-  dotfiles reset --hard
+  dot reset --hard
 fi
 
 # Set flag to ignore untracked files
-dotfiles config --local status.showUntrackedFiles no
+dot config --local status.showUntrackedFiles no
 # TODO: prevent adding all untracked files
 
-dotfiles checkout $DF_BRANCH
-dotfiles pull origin $DF_BRANCH
+dot checkout $DF_BRANCH
+dot pull origin $DF_BRANCH
 
 # Reload shell
 exec $SHELL
