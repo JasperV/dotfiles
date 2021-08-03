@@ -33,6 +33,9 @@ https://github.com/mathiasbynens/dotfiles
 ## TODO
 
 todo's
+make not for self - commands etc...
+configure all installed apps - save configs in mackup or in dotfiles - make that work from install again
+
 mac cli dev tools work well with own installed git\
 install\
 uninstall\

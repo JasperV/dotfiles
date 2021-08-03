@@ -22,7 +22,7 @@ groups | grep $Q -E "\b(admin)\b" || abort "Add $USER to the admin group."
 
 # Check for macOS updates
 touch /tmp/.com.apple.dt.CommandLineTools.installondemand.in-progress;
-# sudo softwareupdate -i -a --restart
+# TODO: enable sudo softwareupdate -i -a --restart
 rm /tmp/.com.apple.dt.CommandLineTools.installondemand.in-progress
 
 
@@ -38,30 +38,21 @@ brew analytics off
 # Update brew to latest available version
 brew update
 
-# Reload shell
-# exec $SHELL
-
 
 
 # Update shell to latest zsh
-if [[ " $@ " =~ " --update-shell " ]]; then
-	# Install the latest zsh shell
-	brew install zsh
+brew install zsh
 
-	# Change default shell to Homebrew installed zsh
-	BREW_PREFIX=$(brew --prefix) # TODO: add to environment! in source file
+# Change default shell to Homebrew installed zsh
+BREW_PREFIX=$(brew --prefix) # TODO: add to environment! in source file
 
-  if ! fgrep -q "${BREW_PREFIX}/bin/zsh" /etc/shells; then
-	  echo "${BREW_PREFIX}/bin/zsh" | sudo tee -a /etc/shells;
-	  chsh -s "${BREW_PREFIX}/bin/zsh";
-	fi
+if ! fgrep -q "${BREW_PREFIX}/bin/zsh" /etc/shells; then
+  echo "${BREW_PREFIX}/bin/zsh" | sudo tee -a /etc/shells;
+  chsh -s "${BREW_PREFIX}/bin/zsh";
 fi
 
 # Install the latest git
 brew install git
-
-# Reload shell
-# exec $SHELL
 
 
 
@@ -82,14 +73,11 @@ git --git-dir=$HOME/.files --work-tree=$HOME config --local status.showUntracked
 git --git-dir=$HOME/.files --work-tree=$HOME checkout $DF_BRANCH
 git --git-dir=$HOME/.files --work-tree=$HOME pull origin $DF_BRANCH
 
-# Reload shell
-# exec $SHELL
-
 
 
 # Install Homebrew packages
-# https://github.com/MikeMcQuaid/strap
-brew bundle
+brew bundle --quiet
+
 
 
 
@@ -97,7 +85,7 @@ brew bundle
 # sh ~/.macos
 # https://github.com/alichtman/stronghold
 # https://github.com/MikeMcQuaid/strap
-
+# https://github.com/mathiasbynens/dotfiles verify from own old version
 # TODO: remove macos apps not needed
 # TODO: run monolingual app
 
@@ -155,3 +143,6 @@ brew bundle
 # # Enable filevault
 # # TODO: done by stronghold?
 # sudo fdesetup enable
+
+# Reload shell
+# exec $SHELL
