@@ -30,7 +30,7 @@ rm /tmp/.com.apple.dt.CommandLineTools.installondemand.in-progress
 HOMEBREW_NO_ANALYTICS=1
 # Install Homebrew if not already installed
 if ! brew -v 2>/dev/null; then
-  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  echo | /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
 
 brew analytics off
