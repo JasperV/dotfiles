@@ -20,3 +20,10 @@ sudo softwareupdate -i -a --restart
 # Update Homebrew itself
 brew update
 
+brew bundle cleanup
+
+# Install and upgrade Homebrew packages
+brew bundle
+
+brew cu
+# https://gist.github.com/ChristopherA/a579274536aab36ea9966f301ff14f3f

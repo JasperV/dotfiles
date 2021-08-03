@@ -2,28 +2,26 @@
 
 These are my dotfiles.
 
-They target macOS systems. Should support Linux as well.
+Some things are automated, some things are not.
 
 Still a bit messy, but I will cleanup up as I go along.
 
-Some things are automated, some things are not.
+This branch is for macOS systems. Other branches are used on other systems.
 
 [![Project Status: WIP – Development is in progress, but there has not yet been a stable, usable release suitable for the public.](https://www.repostatus.org/badges/latest/wip.svg)](https://www.repostatus.org/#wip)
 
 ## Install
 
-```bash
-curl -fsSL https://raw.githubusercontent.com/JasperV/dotfiles/HEAD/install | bash
-# TODO: or even shorter...git.io link
+```zsh
+curl -fsSL https://raw.githubusercontent.com/JasperV/dotfiles/macos/install | zsh
 ```
 
 ## Features
 
-I use [Anka](https://veertu.com/anka-develop/) to test all of this out on virtual machines. To make it work exactly to my likings.
+I use [Anka](https://veertu.com/anka-develop/) to test all of this out on virtual machines, so I can make it work exactly to my likings.
 
 ## TODO
 
-use anka to test it all on clean mac image\
 add rights to all script files
 mac cli dev tools work well with own installed git\
 rename to dotfiles.jasperv.nl\

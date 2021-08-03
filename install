@@ -2,6 +2,9 @@
 
 # Install script
 
+# Navigate to home directory
+cd ~
+
 # Ask for the administrator password upfront
 sudo -v
 
@@ -11,7 +14,9 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 
 # Check for macOS updates
-sudo softwareupdate -i -a --restart
+touch /tmp/.com.apple.dt.CommandLineTools.installondemand.in-progress;
+# sudo softwareupdate -i -a --restart
+rm /tmp/.com.apple.dt.CommandLineTools.installondemand.in-progress
 
 
 
@@ -67,17 +72,21 @@ dotfiles config --local status.showUntrackedFiles no
 dotfiles checkout $DF_BRANCH
 dotfiles pull origin $DF_BRANCH
 
+# Reload shell
+exec $SHELL
+
+
+
+# Install Homebrew packages
+brew bundle
+
+
 
 
 
 
 
 # use --quiet for brew install ;)
-
-
-
-
-
 
 # # Install Homebrew + packages & casks
 # ~/brew.sh
@@ -94,15 +103,6 @@ dotfiles pull origin $DF_BRANCH
 # # Install ZSH and zsh-completions
 # brew install zsh zsh-completions zsh-syntax-highlighting zsh-autosuggestions
 
-# # Switch to using brew-installed zsh as default shell
-# # if ! fgrep -q "${BREW_PREFIX}/bin/zsh" /etc/shells; then
-# #   echo "${BREW_PREFIX}/bin/zsh" | sudo tee -a /etc/shells;
-# #   chsh -s "${BREW_PREFIX}/bin/zsh";
-# # fi;
-
-# sudo dscl . -create /Users/$USER UserShell /usr/local/bin/zsh
-
-# sudo chmod go-w '/usr/local/share'
 
 
 # # Run macOS installation

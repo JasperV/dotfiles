@@ -98,6 +98,7 @@ brew cask install quicklook-json
 brew cask install spotify
 brew cask install subtitles
 brew cask install suspicious-package
+# + Apparency
 brew cask install teamviewer-host
 brew cask install tiptoi-manager
 brew cask install transmission
