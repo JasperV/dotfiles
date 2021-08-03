@@ -17,6 +17,11 @@ sudo softwareupdate -i -a --restart
 
 # TODO: present interactive lists of updateable software via all software managers
 
+
+# # Upgrade any already-installed formulae.
+# brew upgrade
+
+
 # Update Homebrew itself
 brew update
 

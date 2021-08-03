@@ -92,35 +92,19 @@ dot pull origin $DF_BRANCH
 
 
 # Install Homebrew packages
+# https://github.com/MikeMcQuaid/strap
 brew bundle
-
-
-
-
-
-
-
-# use --quiet for brew install ;)
-
-# # Install Homebrew + packages & casks
-# ~/brew.sh
-# exec $SHELL
-
-# TODO: using brew leaves -r create an option to verify between installed and wanted... auto-remove etc...
-# also allow for interactive pick list of uninstall
-# same for other software managers... keep lists!
-
-# # Upgrade any already-installed formulae.
-# brew upgrade
-
-
-# # Install ZSH and zsh-completions
-# brew install zsh zsh-completions zsh-syntax-highlighting zsh-autosuggestions
 
 
 
 # # Run macOS installation
 # sh ~/.macos
+# https://github.com/alichtman/stronghold
+# https://github.com/MikeMcQuaid/strap
+
+# TODO: remove macos apps not needed
+# TODO: run monolingual app
+
 
 
 # # https://blog.jamesauble.com/install-nvm-on-mac-with-brew-adb921fb92cc
@@ -135,15 +119,12 @@ brew bundle
 # # Install node.js
 # nvm install lts/*
 
+
+
 # # Upgrade pip
 # pip install --upgrade pip
 # pip3 install --upgrade pip
 
-# # Install pip apps
-# pip3 install stronghold
-# pip install beets
-# pip install pyacoustid
-# pip install discogs-client
 
 # # TODO: add to own file for re-running on new node verions via nvm?
 # # Install other npm modules
@@ -174,9 +155,6 @@ brew bundle
 
 # # Finally source all that is required
 # source $HOME/.zshrc
-
-# # Run stronghold
-# stronghold -lockdown
 
 # # Enable filevault
 # # TODO: done by stronghold?

@@ -52,6 +52,9 @@ cask "typora"
 # mas "1Password", id: 443987910
 
 
+# # Install ZSH and zsh-completions
+# brew install zsh zsh-completions zsh-syntax-highlighting zsh-autosuggestions
+
 tap "adoptopenjdk/openjdk"
 tap "bazelbuild/tap"
 tap "bramstein/webfonttools"

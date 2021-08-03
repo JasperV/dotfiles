@@ -13,8 +13,7 @@ This branch is for macOS systems. Other branches are used on other systems.
 ## Install
 
 ```zsh
-# curl -fsSL https://raw.githubusercontent.com/JasperV/dotfiles/macos/install | zsh
-/bin/zsh -c "$(curl -fsSL https://raw.githubusercontent.com/JasperV/dotfiles/macos/install)"
+echo | /bin/zsh -c "$(curl -fsSL https://raw.githubusercontent.com/JasperV/dotfiles/macos/install)"
 ```
 
 ## Features
@@ -26,14 +25,15 @@ This branch is for macOS systems. Other branches are used on other systems.
 ### Build based on
 
 https://github.com/kalkayan/dotfiles
+
 https://github.com/MikeMcQuaid/strap
+
 https://github.com/mathiasbynens/dotfiles
 
 ## TODO
 
-add rights to all script files
+todo's
 mac cli dev tools work well with own installed git\
-rename to dotfiles.jasperv.nl\
 install\
 uninstall\
 update\
@@ -55,13 +55,12 @@ create bootvolume on usb from downloaded macos installer script - https://github
 set pure prompt to solarized dark colors
 https://www.sitepoint.com/zsh-tips-tricks/
 https://sourabhbajaj.com/mac-setup/iTerm/zsh.html
-find a nice font for everything, menlo?
+find a nice font for everything, menlo? - vscode font!
 rename branches to macos and linux
 auto start when rebooted after update - https://stackoverflow.com/questions/6442364/running-script-upon-login-mac
 
 ### programs/drivers/libs to install
 
-https://asdf-vm.com/#/\
 whatsapp\
 https://github.com/antonmedv/fx\
 https://github.com/antonmedv/eat\
