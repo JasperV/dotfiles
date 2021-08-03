@@ -68,23 +68,19 @@ brew install git
 # Install dotfiles
 DF_BRANCH="macos"
 
-alias dot="/usr/bin/git --git-dir=$HOME/.files --work-tree=$HOME"
-
 if [ ! -d "$HOME/.files" ]; then
   git clone --bare https://github.com/JasperV/dotfiles.git $HOME/.files
 fi
 
 # Reset the unstaged changes before updating
-if [[ " $@ " =~ " --dotfiles-reset " ]]; then
-  dot reset --hard
-fi
+git --git-dir=$HOME/.files --work-tree=$HOME reset --hard
 
 # Set flag to ignore untracked files
-dot config --local status.showUntrackedFiles no
+git --git-dir=$HOME/.files --work-tree=$HOME config --local status.showUntrackedFiles no
 # TODO: prevent adding all untracked files
 
-dot checkout $DF_BRANCH
-dot pull origin $DF_BRANCH
+git --git-dir=$HOME/.files --work-tree=$HOME checkout $DF_BRANCH
+git --git-dir=$HOME/.files --work-tree=$HOME pull origin $DF_BRANCH
 
 # Reload shell
 # exec $SHELL
