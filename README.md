@@ -13,14 +13,15 @@ This branch is for macOS systems. Other branches are used on other systems.
 ## Install
 
 ```zsh
-curl -fsSL https://raw.githubusercontent.com/JasperV/dotfiles/macos/install | zsh
-# or /bin/zsh -c "$(curl -fsSL https://raw.githubusercontent.com/JasperV/dotfiles/macos/install)"
+# curl -fsSL https://raw.githubusercontent.com/JasperV/dotfiles/macos/install | zsh
+/bin/zsh -c "$(curl -fsSL https://raw.githubusercontent.com/JasperV/dotfiles/macos/install)"
 ```
 
 ## Features
 
-- I use [Anka](https://veertu.com/anka-develop/) to test all of this out on virtual machines, so I can make it work exactly to my likings.
+- [Anka](https://veertu.com/anka-develop/) to test all of this out on virtual machines
 - Install, update and uninstall scripts
+- TODO: idempotent when running all scripts
 
 ### Build based on
 

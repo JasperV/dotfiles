@@ -3,18 +3,20 @@ set -e
 
 # Install script
 
+echo -n -e "\033]0;dotfiles for macOS\007"
+
 # Navigate to home directory
 cd ~
-
-# Validate your are yourself and an admin
-[ "$USER" = "root" ] && abort "Run this script as yourself, not root."
-groups | grep $Q -E "\b(admin)\b" || abort "Add $USER to the admin group."
 
 # Ask for the administrator password upfront
 sudo -v
 
 # Keep sudo session persistent
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
+
+# Validate your are yourself and an admin
+[ "$USER" = "root" ] && abort "Run this script as yourself, not root."
+groups | grep $Q -E "\b(admin)\b" || abort "Add $USER to the admin group."
 
 
 
@@ -37,7 +39,7 @@ brew analytics off
 brew update
 
 # Reload shell
-exec $SHELL
+# exec $SHELL
 
 
 
@@ -59,7 +61,7 @@ fi
 brew install git
 
 # Reload shell
-exec $SHELL
+# exec $SHELL
 
 
 
@@ -85,7 +87,7 @@ dot checkout $DF_BRANCH
 dot pull origin $DF_BRANCH
 
 # Reload shell
-exec $SHELL
+# exec $SHELL
 
 
 
