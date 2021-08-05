@@ -3,7 +3,7 @@ set -e
 
 # Install script
 
-echo -n -e "\033]0;dotfiles for macOS\007"
+echo -n -e "\033]0;Install dotfiles for macOS\007"
 
 # Navigate to home directory
 cd ~
@@ -77,20 +77,38 @@ git --git-dir=$HOME/.files --work-tree=$HOME pull origin $DF_BRANCH
 
 # Install Homebrew packages
 brew bundle --quiet
+brew cleanup
 
 
 
-
-# # Run macOS installation
-# sh ~/.macos
-# https://github.com/alichtman/stronghold
-# https://github.com/MikeMcQuaid/strap
+# Run macOS configuration
+./.macos
 # https://github.com/mathiasbynens/dotfiles verify from own old version
+# https://github.com/MikeMcQuaid/strap
+# https://github.com/alichtman/stronghold
 # TODO: remove macos apps not needed
 # TODO: run monolingual app
 
 
 
+
+
+
+
+
+
+
+# antigen + oh-my-zsh
+# https://phuctm97.com/blog/zsh-antigen-ohmyzsh
+# https://github.com/zsh-users/antigen
+# https://github.com/sindresorhus/pure#getting-started
+# https://www.thorsten-hans.com/frictionless-zsh-and-oh-my-zsh-management-with-antigen
+# https://github.com/belak/zsh-utils
+
+
+
+# https://github.com/nvm-sh/nvm
+# https://github.com/lukechilds/zsh-nvm
 # # https://blog.jamesauble.com/install-nvm-on-mac-with-brew-adb921fb92cc
 
 # # Install nvm and node.js via nvm
@@ -102,6 +120,8 @@ brew bundle --quiet
 
 # # Install node.js
 # nvm install lts/*
+
+# TODO: make note of list of nvm->npm globals
 
 
 

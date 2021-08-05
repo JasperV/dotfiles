@@ -4,7 +4,30 @@ tap "homebrew/cask"
 tap "homebrew/cask-fonts"
 tap "homebrew/core"
 tap "homebrew/services"
-tap "buo/cask-upgrade"
+tap "buo/cask-upgrade" # TODO: learn how to use
+
+# TODO: sort alphabetically
+
+# photoshop
+# karabiner
+# alfred
+# anka
+# AppCleaner
+# authy Desktop
+# bitwarden
+# eqmac
+# iterm2
+# keka
+# monolingual
+# obsidian
+# onedrive
+# parallels
+# snap camera
+# sonic wall connect
+# space Gremlin
+# Speedtest
+# WhatsApp
+# zoom
 
 
 # Brews
@@ -14,36 +37,38 @@ brew "wget"
 brew "mkcert"
 brew "wifi-password"
 # brew "mackup"
+brew pure
 
 
 # Casks
 # set arguments for all 'brew install --cask' commands
 cask_args appdir: "~/Applications", require_sha: true
 
-cask "aerial"
-cask "alfred"
-cask "android-file-transfer"
-cask "balenaetcher"
-# cask "anka-flow"
-cask "eqmac"
-cask "fresh"
-cask "cakebrew"
-# cask "google-backup-and-sync"
-# cask "google-chrome"
-cask "hammerspoon"
-cask "handbrake"
-cask "iterm2"
-cask "little-snitch"
-cask "microsoft-office"
-cask "microsoft-teams"
-cask "ngrok"
-# cask "insomnia"
-cask "private-internet-access"
-cask "skype"
-cask "spotify"
-cask "teamviewer-host"
-cask "tiptoi-manager"
-cask "vanilla"
+# TODO: check what comes via app store
+# cask "aerial"
+# cask "alfred"
+# cask "android-file-transfer"
+# cask "balenaetcher"
+# # cask "anka-flow"
+# cask "eqmac"
+# cask "fresh"
+# cask "cakebrew"
+# # cask "google-backup-and-sync"
+# # cask "google-chrome"
+# cask "hammerspoon"
+# cask "handbrake"
+# cask "iterm2"
+# cask "little-snitch"
+# # cask "microsoft-office" - app store?
+# # cask "microsoft-teams" - app store?
+# cask "ngrok"
+# # cask "insomnia"
+# cask "private-internet-access"
+# cask "skype"
+# cask "spotify"
+# cask "teamviewer-host"
+# cask "tiptoi-manager"
+# cask "vanilla"
 cask "visual-studio-code"
 
 
@@ -74,10 +99,8 @@ cask "visual-studio-code"
 # # Install mas applications
 # # mas install 671736912 # FruitJuice
 # mas install 414515628 # Space Gremlin # TODO: pro version http://www.spacegremlinapp.com/mac/modes.html
-# # mas install 1153157709 # Speedtest by Ookla
+mas "Speedtest", id: 1153157709
 # mas install 1147396723 # WhatsApp Desktop
-# mas install 803453959 # Slack for Mac
-# mas install 883878097 # macOS server
 
 # # Remove outdated versions from the cellar.
 # brew cleanup

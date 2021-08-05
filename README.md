@@ -20,7 +20,13 @@ echo | /bin/zsh -c "$(curl -fsSL https://raw.githubusercontent.com/JasperV/dotfi
 
 - [Anka](https://veertu.com/anka-develop/) to test all of this out on virtual machines
 - Install, update and uninstall scripts
-- TODO: idempotent when running all scripts
+- TODO: idempotent when running all scripts (paul irish, kalkayan, mikemcquaid, mths)
+
+### Inspired by
+
+https://developer.atlassian.com/blog/2016/02/best-way-to-store-dotfiles-git-bare-repo/
+
+https://medium.com/@webprolific/getting-started-with-dotfiles-43c3602fd789
 
 ### Build based on
 
@@ -33,25 +39,15 @@ https://github.com/mathiasbynens/dotfiles
 ## TODO
 
 todo's
-make not for self - commands etc...
-configure all installed apps - save configs in mackup or in dotfiles - make that work from install again
+make notes for self - commands etc...
 
+configure all installed apps - save configs in mackup or in dotfiles - make that work from install again
+finder config as well?
 mac cli dev tools work well with own installed git\
-install\
-uninstall\
-update\
-settings\
-.config add all files???
+verify all files in homedir
 should work on rpi/linux too, for example\ - e.g. new branch ;)
 mac security settings separate repo\
-mac config separate repo to allow for fork from mths\
-notify when mths is updated
-// done by vscode self these days - vscode setting config + plugins - seperate repo to use in other variants (online) as well\
-apps config backup via mackup as far as possible\
-verify commands and/or app invokations before they are used, to prevent errors\
-behave proper on multiple reruns (install) - e.g. don't error, show info and update - upstall! use paulirish code!\
-defaults for editorconfig and other settings so that these not need to be put in all repo's (only when other people start working on it)
-curl -Ls get.jasperv.nl | sh
+apps config backup via mackup as far as possible\ - also vscode just in case
 sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.metadata.mds.plist - disable spotlight
 https://github.com/munki
 create bootvolume on usb from downloaded macos installer script - https://github.com/veertuinc/getting-started#create-vm-templatebash
@@ -60,21 +56,19 @@ https://www.sitepoint.com/zsh-tips-tricks/
 https://sourabhbajaj.com/mac-setup/iTerm/zsh.html
 find a nice font for everything, menlo? - vscode font!
 rename branches to macos and linux
+make git always clone in ~/src
 auto start when rebooted after update - https://stackoverflow.com/questions/6442364/running-script-upon-login-mac
 
 ### programs/drivers/libs to install
 
-whatsapp\
 https://github.com/antonmedv/fx\
 https://github.com/antonmedv/eat\
 https://github.com/antonmedv/fx-completion\
 https://github.com/sindresorhus/pure\
 alfred plugins - speedtest, spotify, maps, colors, convert, kill, play song, encode decode, git?, packal, timezones, units - separate file\
 solarized theme for everything\
-tiptoi\
 https://github.com/nvbn/thefuck\
 vscode plugins - by means of default project?\ helemaal goed en clean opzetten - handleiding lezen
-little snitch\
 https://github.com/jessfraz/gmailfilters\
 rocket?\
 consider pnpm\
@@ -84,12 +78,14 @@ https://httpie.org/\
 brew cask install macpaw gemini # TODO: specific version -> license\
 add alfred to mackup\
 https://github.com/Mortennn/Dozer\
+https://phuctm97.com/blog/zsh-antigen-ohmyzsh
 disable siri - https://apple.stackexchange.com/questions/258816/how-to-completely-disable-siri-on-sierra/258981#258981\
 zsh completions - git, files and folders etc...\
 https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md\
 https://github.com/dominictarr/low-battery-warning\
 https://github.com/whomwah/qlstephen\
 https://www.quicklookplugins.com/\
+https://github.com/rupa/z
 https://www.maketecheasier.com/extend-mac-quick-look-with-plugins/\
 https://github.com/sindresorhus/quick-look-plugins
 remove all apple software that is not used
@@ -115,6 +111,7 @@ https://github.com/webpro/dotfiles
 https://medium.com/@webprolific/getting-started-with-dotfiles-43c3602fd789
 https://github.com/paulirish/dotfiles
 https://github.com/rkalis/dotfiles
+https://github.com/mathiasbynens/dotfiles
 https://github.com/sapegin/dotfiles
 https://github.com/hql287/dotfiles
 https://github.com/sapegin/dotfiles/blob/dd063f9c30de7d2234e8accdb5272a5cc0a3388b/includes/bash_prompt.bash
@@ -132,6 +129,7 @@ https://github.com/atomantic/dotfiles
 
 https://homebrew-file.readthedocs.io/en/latest/
 https://github.com/joelparkerhenderson/brewfile
+https://dev.to/mattstratton/my-brewfile-1pob
 please
 fuck
 https://github.com/lukechilds/zsh-nvm
@@ -249,8 +247,3 @@ https://github.com/sindresorhus/terminal-snazzy
 https://github.com/Neilpang/acme.sh/wiki/Synology-RT1900ac-and-RT2600ac-install-guide
 https://forum.synology.com/enu/viewtopic.php?f=265&t=123003
 use all with solarized dark color theme(s)!
-
-### Inspired by
-
-https://developer.atlassian.com/blog/2016/02/best-way-to-store-dotfiles-git-bare-repo/
-https://medium.com/@webprolific/getting-started-with-dotfiles-43c3602fd789
