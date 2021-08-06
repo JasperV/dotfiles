@@ -18,6 +18,9 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 [ "$USER" = "root" ] && abort "Run this script as yourself, not root."
 groups | grep $Q -E "\b(admin)\b" || abort "Add $USER to the admin group."
 
+# Prevent sleeping during script execution, as long as the machine is on AC power
+caffeinate -s -w $$ &
+
 
 
 # Check for macOS updates
@@ -81,49 +84,18 @@ brew cleanup
 
 
 
-# Run macOS configuration
+# configure macOS
 ./.macos
-# https://github.com/MikeMcQuaid/strap
-# https://github.com/alichtman/stronghold
-
-
-# # Enable filevault
-# # TODO: done by stronghold?
-# sudo fdesetup enable
-
-# TODO: run monolingual app
 
 
 
-
-
-
-
-
-
-
-# antigen + oh-my-zsh
-# https://phuctm97.com/blog/zsh-antigen-ohmyzsh
-# https://github.com/zsh-users/antigen
-# https://github.com/sindresorhus/pure#getting-started
-# https://www.thorsten-hans.com/frictionless-zsh-and-oh-my-zsh-management-with-antigen
+# Install Antigen
+# TODO:
+curl -L git.io/antigen > antigen.zsh
 # https://github.com/belak/zsh-utils
+# https://github.com/intelfx/pure
 
 
-
-# https://github.com/nvm-sh/nvm
-# https://github.com/lukechilds/zsh-nvm
-# # https://blog.jamesauble.com/install-nvm-on-mac-with-brew-adb921fb92cc
-
-# # Install nvm and node.js via nvm
-# export NVM_DIR="$HOME/.nvm" && (
-#   git clone https://github.com/creationix/nvm.git "$NVM_DIR"
-#   cd "$NVM_DIR"
-#   git checkout `git describe --abbrev=0 --tags --match "v[0-9]*" $(git rev-list --tags --max-count=1)`
-# ) && \. "$NVM_DIR/nvm.sh"
-
-# # Install node.js
-# nvm install lts/*
 
 # TODO: make note of list of nvm->npm globals
 
@@ -152,7 +124,7 @@ brew cleanup
 # npm i -g alfred-show-network-info
 # npm i -g alfred-currency-conversion
 # npm i -g alfred-polyglot
-# # TODO: bitwarden
+# # TODO: bitwarden cli
 # # TODO: make note of other alfred plugins
 
 # # Install better nanorc config
@@ -167,4 +139,4 @@ brew cleanup
 # Reload shell
 # exec $SHELL
 
-# TODO: reboot
+# TODO: reboot!!!

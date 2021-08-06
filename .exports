@@ -1,61 +1,61 @@
 
-#!/usr/bin/env bash
+# #!/usr/bin/env bash
 
-# Preferred programs
-#export PAGER=less
-export EDITOR=subl
-export VISUAL=$EDITOR
+# # Preferred programs
+# #export PAGER=less
+# export EDITOR=subl
+# export VISUAL=$EDITOR
 
-# Language
-export LANG='en_US.UTF-8'
-export LC_ALL=$LANG
-#export LC_COLLATE=$LANG
-#export LC_CTYPE=$LANG
-#export LC_MESSAGES=$LANG
-#export LC_MONETARY=$LANG
-#export LC_NUMERIC=$LANG
-#export LC_TIME=$LANG
+# # Language
+# export LANG='en_US.UTF-8'
+# export LC_ALL=$LANG
+# #export LC_COLLATE=$LANG
+# #export LC_CTYPE=$LANG
+# #export LC_MESSAGES=$LANG
+# #export LC_MONETARY=$LANG
+# #export LC_NUMERIC=$LANG
+# #export LC_TIME=$LANG
 
-# Path settings
-#pathprepend ~/bin PATH
-#pathprepend ~/lib LD_LIBRARY_PATH
-#pathprepend ~/include CPATH
-pathprepend /usr/local/bin PATH
-pathappend ~/bin PATH
-pathappend "/Applications/Visual Studio Code.app/Contents/Resources/app/bin" PATH
+# # Path settings
+# #pathprepend ~/bin PATH
+# #pathprepend ~/lib LD_LIBRARY_PATH
+# #pathprepend ~/include CPATH
+# pathprepend /usr/local/bin PATH
+# pathappend ~/bin PATH
+# pathappend "/Applications/Visual Studio Code.app/Contents/Resources/app/bin" PATH
 
-# The current directory should never be in $PATH
-pathremove . PATH
-pathremove "" PATH
+# # The current directory should never be in $PATH
+# pathremove . PATH
+# pathremove "" PATH
 
-# For compatibility reasons, remove if this causes issues for you
-TERM=xterm-256color
+# # For compatibility reasons, remove if this causes issues for you
+# TERM=xterm-256color
 
-# Enable persistent REPL history for `node`.
-export NODE_REPL_HISTORY=~/.node_history
+# # Enable persistent REPL history for `node`.
+# export NODE_REPL_HISTORY=~/.node_history
 
-# Allow 32³ entries; the default is 1000.
-export NODE_REPL_HISTORY_SIZE='32768'
+# # Allow 32³ entries; the default is 1000.
+# export NODE_REPL_HISTORY_SIZE='32768'
 
-# Use sloppy mode by default, matching web browsers.
-export NODE_REPL_MODE='sloppy'
+# # Use sloppy mode by default, matching web browsers.
+# export NODE_REPL_MODE='sloppy'
 
-# Make Python use UTF-8 encoding for output to stdin, stdout, and stderr.
-export PYTHONIOENCODING='UTF-8'
+# # Make Python use UTF-8 encoding for output to stdin, stdout, and stderr.
+# export PYTHONIOENCODING='UTF-8'
 
-# Highlight section titles in manual pages.
-export LESS_TERMCAP_md="${yellow}";
+# # Highlight section titles in manual pages.
+# export LESS_TERMCAP_md="${yellow}";
 
-# Don’t clear the screen after quitting a manual page
-export MANPAGER='less -X';
+# # Don’t clear the screen after quitting a manual page
+# export MANPAGER='less -X';
 
-# Define nvm dir
-export NVM_DIR="$HOME/.nvm"
+# # Define nvm dir
+# export NVM_DIR="$HOME/.nvm"
 
-# Safeguard rm some more
-# https://github.com/sindresorhus/guides/blob/master/how-not-to-rm-yourself.md#safeguard-rm
-unsetopt RM_STAR_SILENT
-setopt RM_STAR_WAIT
+# # Safeguard rm some more
+# # https://github.com/sindresorhus/guides/blob/master/how-not-to-rm-yourself.md#safeguard-rm
+# unsetopt RM_STAR_SILENT
+# setopt RM_STAR_WAIT
 
-# set Node.js heap size
-export NODE_OPTIONS=--max-old-space-size=8192
+# # set Node.js heap size
+# export NODE_OPTIONS=--max-old-space-size=8192

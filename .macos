@@ -11,6 +11,57 @@ sudo -v
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 ###############################################################################
+# Security & Privacy                                                          #
+###############################################################################
+
+# Enable the Application Layer Firewall and start it
+sudo defaults write /Library/Preferences/com.apple.alf globalstate -int 1
+sudo launchctl load /System/Library/LaunchDaemons/com.apple.alf.agent.plist 2>/dev/null
+sudo launchctl load /System/Library/LaunchAgents/com.apple.alf.useragent.plist 2>/dev/null
+
+# Enable logging
+sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setloggingmode on
+
+# Enable Stealth Mode
+# Your Mac will not respond to ICMP ping requests or connection attempts from closed TCP and UDP networks.
+sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setstealthmode on
+
+# Disable SSH Daemon
+sudo systemsetup -f -setremotelogin off
+
+# Disable Apache HTTPD auto-start
+sudo launchctl unload -w /System/Library/LaunchDaemons/org.apache.httpd.plist 2>/dev/null
+
+# Reset the firewall to finalize the changes
+sudo pkill -HUP socketfilterfw
+
+# Enable Gatekeeper
+sudo spctl --master-enable
+sudo spctl --enable --label "Developer ID"
+
+# Disable automatic software whitelisting
+sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setallowsigned off
+sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setallowsignedapp off
+
+# Disable Captive Portal Assistant and force login through browser on untrusted networks
+sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.captive.control Active -bool false
+
+# Disable printer sharing
+cupsctl --no-share-printers
+
+# Set a lost & found message on the login window
+sudo defaults write /Library/Preferences/com.apple.loginwindow LoginwindowText "Gevonden? Bel <TODO: name + phone here>"
+
+# Enable full-disk encryption and write the recovery key to the Desktop
+sudo fdesetup enable -user "$USER" | tee ~/Desktop/"FileVault Recovery Key (Backup NOW).txt"
+
+###############################################################################
+# User metadata                                                               #
+###############################################################################
+
+# TODO: https://github.com/alichtman/stronghold/blob/master/stronghold.py#L171
+
+###############################################################################
 # General UI/UX                                                               #
 ###############################################################################
 

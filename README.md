@@ -35,15 +35,20 @@ Reboot into recovery again (Command+R) and re-enable System Integrity Protection
 echo | /bin/zsh -c "$(curl -fsSL https://raw.githubusercontent.com/JasperV/dotfiles/macos/install)"
 ```
 
+When done, run the following (Apps) to finalize the setup:
+
+- [Monolingual](https://ingmarstein.github.io/Monolingual/)
+
 ## Features
 
 - [Anka](https://veertu.com/anka-develop/) to test all of this out on virtual machines
 - Install, update and uninstall scripts
 - TODO: idempotent when running all scripts (paul irish, kalkayan, mikemcquaid, mths)
+- branch based for different OS'es
 
 ### Inspired by
 
-https://developer.atlassian.com/blog/2016/02/best-way-to-store-dotfiles-git-bare-repo/
+https://www.atlassian.com/git/tutorials/dotfiles
 
 https://medium.com/@webprolific/getting-started-with-dotfiles-43c3602fd789
 
@@ -58,9 +63,13 @@ https://github.com/mathiasbynens/dotfiles
 ## TODO
 
 todo's
+
+private vars - phone, email, name etc...
+
 make notes for self - commands etc...
 
-configure all installed apps - save configs in mackup or in dotfiles - make that work from install again
+disable siri https://apple.stackexchange.com/a/258981
+configure all installed apps - save configs in mackup or in dotfiles - make that work from install again, also use that for sensitive files - .npmrc etc. which contain keys and such
 finder config as well?
 mac cli dev tools work well with own installed git\
 verify all files in homedir
