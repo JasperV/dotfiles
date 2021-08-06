@@ -83,10 +83,14 @@ brew cleanup
 
 # Run macOS configuration
 ./.macos
-# https://github.com/mathiasbynens/dotfiles verify from own old version
 # https://github.com/MikeMcQuaid/strap
 # https://github.com/alichtman/stronghold
-# TODO: remove macos apps not needed
+
+
+# # Enable filevault
+# # TODO: done by stronghold?
+# sudo fdesetup enable
+
 # TODO: run monolingual app
 
 
@@ -160,9 +164,7 @@ brew cleanup
 # # Finally source all that is required
 # source $HOME/.zshrc
 
-# # Enable filevault
-# # TODO: done by stronghold?
-# sudo fdesetup enable
-
 # Reload shell
 # exec $SHELL
+
+# TODO: reboot

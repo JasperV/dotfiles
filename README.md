@@ -10,6 +10,25 @@ This branch is for macOS systems. Other branches are used on other systems.
 
 [![Project Status: WIP – Development is in progress, but there has not yet been a stable, usable release suitable for the public.](https://www.repostatus.org/badges/latest/wip.svg)](https://www.repostatus.org/#wip)
 
+## Prepare
+
+Before the install script is run, remove all macOS default apps that you do not want. In my case these are:
+books, calculator, Calendar, chess, Contacts, dictionary, facetime, home, mail, maps, messages, music, news, photos, podcasts, reminders, stickies, stocks, textedit, time machine & voice memos
+
+Boot into recovery mode (Command + R), then in the terminal, disable System Integrity Protection: `csrutil disable`. Reboot as admin, or login when not admin, then:
+
+```zsh
+login <username> # When not as admin
+sudo mount -uw / System / Applications
+cd /Applications/
+sudo rm -rf Mail.app/
+sudo rm -rf Stickies.app/
+sudo rm -rf Chess.app/
+# etc...
+```
+
+Reboot into recovery again (Command+R) and re-enable System Integrity Protection: `csrutil enable`. Reboot and start install as outlined below.
+
 ## Install
 
 ```zsh
@@ -46,7 +65,6 @@ finder config as well?
 mac cli dev tools work well with own installed git\
 verify all files in homedir
 should work on rpi/linux too, for example\ - e.g. new branch ;)
-mac security settings separate repo\
 apps config backup via mackup as far as possible\ - also vscode just in case
 sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.metadata.mds.plist - disable spotlight
 https://github.com/munki
