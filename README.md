@@ -60,11 +60,11 @@ https://github.com/MikeMcQuaid/strap
 
 https://github.com/mathiasbynens/dotfiles
 
-## TODO
+### Notes
+
+#### TODO
 
 todo's
-
-private vars - phone, email, name etc...
 
 make notes for self - commands etc...
 
@@ -82,16 +82,81 @@ set pure prompt to solarized dark colors
 https://www.sitepoint.com/zsh-tips-tricks/
 https://sourabhbajaj.com/mac-setup/iTerm/zsh.html
 find a nice font for everything, menlo? - vscode font!
-rename branches to macos and linux
+rename branches to macos, linux, rpi, synology etc...
 make git always clone in ~/src
+make dot files add . command not work
 auto start when rebooted after update - https://stackoverflow.com/questions/6442364/running-script-upon-login-mac
+private vars - phone, email, name etc... mackup or some other way?
+
+aflred workflows
+
+# TODO: affred workslof
+
+# npm i -g alfred-emoj
+
+# npm i -g alfred-npms
+
+# npm i -g alfred-fkill
+
+# npm i -g alfred-coolors
+
+# npm i -g alfred-vpn
+
+# npm i -g alfred-show-network-info
+
+# npm i -g alfred-currency-conversion
+
+# npm i -g alfred-polyglot
+
+# # TODO: bitwarden cli
+
+# # TODO: make note of other alfred plugins
+
+npm packages
+diff-so-fancy
+emoj
+lock-cli
+fkill-cli
+pageres-cli
+fast-cli
+clipboard-cli
+speed-test
+trash-cli
+empty-trash-cli
+cpy-cli
+manage-wifi-cli
+public-ip-cli
+latest-version-cli
+term-img-cli
+is-online-cli
+open-editor-cli
+opn-cli
+file-type-cli
+is-progressive-cli
+is-camera-on-cli
+current-path-cli
+npm-user-cli
+pretty-ms-cli
+@bazel/ibazel
+@bitwarden/cli
+npm-check
+fixpack
+node-gyp
+
+# # Install better nanorc config
+
+# curl https://raw.githubusercontent.com/scopatz/nanorc/master/install.sh | sh
+
+# # For the c alias (syntax highlighted cat)
+
+# sudo easy_install Pygments
 
 ### programs/drivers/libs to install
 
+https://github.com/pock/pock
 https://github.com/antonmedv/fx\
 https://github.com/antonmedv/eat\
 https://github.com/antonmedv/fx-completion\
-https://github.com/sindresorhus/pure\
 alfred plugins - speedtest, spotify, maps, colors, convert, kill, play song, encode decode, git?, packal, timezones, units - separate file\
 solarized theme for everything\
 https://github.com/nvbn/thefuck\
@@ -119,9 +184,8 @@ remove all apple software that is not used
 disable siri completely
 on opening of new session, unlock bw vault and set session var
 remove all references to email and usernames - templatize it in
-bitwarden git credential helper rewrite from ground up - make work in all cases
+bitwarden git credential helper rewrite from ground up - make work in all cases - e.g. sod + calcas both on dev.azure.com
 mackup for apps, set cronjob daily?
-https://github.com/MikeMcQuaid/strap
 
 #### dotfiles examples/inspiration
 
