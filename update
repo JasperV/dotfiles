@@ -25,7 +25,12 @@ sudo softwareupdate -i -a --restart
 # Update Homebrew itself
 brew update
 
-brew bundle cleanup
+# brew bundle cleanup
+
+# Cleaning up to match brewfile
+# If you want your current system configuration to match your brewfile
+
+# brew bundle --force cleanup
 
 # Install and upgrade Homebrew packages
 brew bundle
