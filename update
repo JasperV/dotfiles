@@ -13,7 +13,7 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 # Check for macOS updates
 sudo softwareupdate -i -a --restart
 
-
+# https://scott-bollinger.com/macos-update-aio-alias
 
 # TODO: present interactive lists of updateable software via all software managers
 

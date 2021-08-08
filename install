@@ -45,6 +45,7 @@ brew update
 
 # Update shell to latest zsh
 brew install zsh
+# TODO: asks for password
 
 # Change default shell to Homebrew installed zsh
 BREW_PREFIX=$(brew --prefix) # TODO: add to environment! in source file
@@ -79,6 +80,11 @@ git --git-dir=$HOME/.files --work-tree=$HOME pull origin $DF_BRANCH
 
 
 # Install Homebrew packages
+# brew install mas
+
+# mas signin mas@example.com 'ZdkM4f$gzF;gX3ABXNLf8KcCt.x.np'
+# TOOD: get username and password from somewhere
+
 brew bundle --quiet
 brew cleanup
 

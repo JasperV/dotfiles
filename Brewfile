@@ -96,10 +96,12 @@ cask "monolingual"
 
 # TODO: add keyboard and mouse drivers
 
+
+# TODO: await getting username + password from env for mas signin
 # # Install mas applications
 # # mas install 671736912 # FruitJuice
 # mas install 414515628 # Space Gremlin # TODO: pro version http://www.spacegremlinapp.com/mac/modes.html
-mas "Speedtest", id: 1153157709
+# mas "Speedtest", id: 1153157709
 # mas install 1147396723 # WhatsApp Desktop
 
 # # Remove outdated versions from the cellar.

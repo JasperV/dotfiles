@@ -31,9 +31,13 @@ Reboot into recovery again (Command+R) and re-enable System Integrity Protection
 
 ## Install
 
+For now; manually sign in to the App Store...
+
 ```zsh
 echo | /bin/zsh -c "$(curl -fsSL https://raw.githubusercontent.com/JasperV/dotfiles/macos/install)"
 ```
+
+If there are macOS updates, it will reboot. Run the script again to continue.
 
 When done, run the following (Apps) to finalize the setup:
 
