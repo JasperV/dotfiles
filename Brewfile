@@ -38,6 +38,7 @@ brew "mkcert"
 brew "wifi-password"
 # brew "mackup"
 brew "pure"
+brew "anka-virtualization"
 
 
 # Casks

@@ -20,18 +20,24 @@ Also, I completely disable Siri and Spotlight.
 Boot into recovery mode (Command + R), then in the terminal, disable System Integrity Protection: `csrutil disable`. Reboot as admin, or login when not admin, then:
 
 ```zsh
-  # sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.coreduetd.osx.plist
-  # sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.metadata.mds.plist
-login <username> # When not as admin
+# Disable spotlight indexing
+sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.metadata.mds.plist
+sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.coreduetd.osx.plist
+
+# When not as admin
+login <username>
+
 sudo mount -uw / System / Applications
+
 cd /Applications/
+
 sudo rm -rf Mail.app/
 sudo rm -rf Stickies.app/
 sudo rm -rf Chess.app/
 # etc...
 ```
 
-Reboot into recovery again (Command+R) and re-enable System Integrity Protection: `csrutil enable`. Reboot and start install as outlined below.
+Reboot into recovery again (Command+R) and re-enable System Integrity Protection: `csrutil enable`. Reboot, disable Siri completely and then start install as outlined below.
 
 ## Install
 
@@ -72,15 +78,10 @@ https://github.com/mathiasbynens/dotfiles
 
 #### TODO
 
-create script for using anka - disable spotlight indexing in vm!
-also disable in macos config! + disable spotlight completely
-add anka to brewfile as well - checkout install script from anka
-
 todo's
 
 make notes for self - commands etc...
 
-disable siri https://apple.stackexchange.com/a/258981
 configure all installed apps - save configs in mackup or in dotfiles - make that work from install again, also use that for sensitive files - .npmrc etc. which contain keys and such
 finder config as well?
 mac cli dev tools work well with own installed git\
