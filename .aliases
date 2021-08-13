@@ -1,8 +1,8 @@
-# #!/usr/bin/env zsh
+#!/usr/bin/env zsh
 
-# # Create dotfiles alias
-# alias dotfiles='git --git-dir=$HOME/.files/ --work-tree=$HOME'
-# alias dot=dotfiles
+# Create dotfiles alias
+alias dotfiles='git --git-dir=$HOME/.files/ --work-tree=$HOME'
+alias dot=dotfiles
 
 # # Get rid of command not found
 # alias cd..='cd ..'

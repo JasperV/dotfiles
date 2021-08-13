@@ -15,9 +15,13 @@ This branch is for macOS systems. Other branches are used on other systems.
 Before the install script is run, remove all macOS default apps that you do not want. In my case these are:
 books, calculator, Calendar, chess, Contacts, dictionary, facetime, home, mail, maps, messages, music, news, photos, podcasts, reminders, stickies, stocks, textedit, time machine & voice memos
 
+Also, I completely disable Siri and Spotlight.
+
 Boot into recovery mode (Command + R), then in the terminal, disable System Integrity Protection: `csrutil disable`. Reboot as admin, or login when not admin, then:
 
 ```zsh
+  # sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.coreduetd.osx.plist
+  # sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.metadata.mds.plist
 login <username> # When not as admin
 sudo mount -uw / System / Applications
 cd /Applications/
@@ -67,6 +71,10 @@ https://github.com/mathiasbynens/dotfiles
 ### Notes
 
 #### TODO
+
+create script for using anka - disable spotlight indexing in vm!
+also disable in macos config! + disable spotlight completely
+add anka to brewfile as well - checkout install script from anka
 
 todo's
 

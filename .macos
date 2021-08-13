@@ -28,7 +28,7 @@ sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setstealthmode on
 
 # Disable SSH Daemon
 # TODO: requires full disk access privileges
-sudo systemsetup -f -setremotelogin off
+# sudo systemsetup -f -setremotelogin off
 
 # Disable Apache HTTPD auto-start
 sudo launchctl unload -w /System/Library/LaunchDaemons/org.apache.httpd.plist 2>/dev/null
@@ -51,7 +51,8 @@ sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.captive.c
 cupsctl --no-share-printers
 
 # Set a lost & found message on the login window
-sudo defaults write /Library/Preferences/com.apple.loginwindow LoginwindowText "Gevonden? Bel <TODO: name + phone here>"
+# TODO: get private data from somewhere
+# sudo defaults write /Library/Preferences/com.apple.loginwindow LoginwindowText "Gevonden? Bel <TODO: name + phone here>"
 
 # Enable full-disk encryption and write the recovery key to the Desktop
 sudo fdesetup enable -user "$USER" | tee ~/Desktop/"FileVault Recovery Key (Backup NOW).txt"
