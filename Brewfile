@@ -38,7 +38,6 @@ brew "mkcert"
 brew "wifi-password"
 # brew "mackup"
 brew "pure"
-brew "anka-virtualization"
 
 
 # Casks
@@ -72,6 +71,7 @@ cask_args appdir: "~/Applications", require_sha: true
 # cask "vanilla"
 cask "visual-studio-code"
 cask "monolingual"
+cask "anka-virtualization"
 
 # App Store
 # mas "1Password", id: 443987910

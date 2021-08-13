@@ -22,6 +22,8 @@ sudo softwareupdate -i -a --restart
 # brew upgrade
 
 
+# https://github.com/Homebrew/homebrew-autoupdate
+
 # Update Homebrew itself
 brew update
 
