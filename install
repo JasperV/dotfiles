@@ -3,7 +3,7 @@ set -e
 
 # Install script
 
-echo -n -e "\033]0;Install dotfiles for macOS\007"
+echo -n -e "\033]0;Install & update dotfiles for macOS\007"
 
 # Navigate to home directory
 cd ~
@@ -98,7 +98,6 @@ curl -L git.io/antigen > antigen.zsh
 
 
 # configure macOS
-# TODO: repeat sudo session!
 ./.macos
 
 

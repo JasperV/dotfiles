@@ -75,32 +75,11 @@ https://github.com/mathiasbynens/dotfiles
 
 ### Notes
 
+read manuals and readme's of all installed apps/libs
+
 #### TODO
 
 todo's
-
-make notes for self - commands etc... -> read manuals and readme's
-
-idempotent scripts (paul irish, kalkayan, mikemcquaid, mths)
-
-configure all installed apps - save configs in mackup or in dotfiles - make that work from install again, also use that for sensitive files - .npmrc etc. which contain keys and such
-finder config as well?
-mac cli dev tools work well with own installed git\
-verify all files in homedir
-should work on rpi/linux too, for example\ - e.g. new branch ;)
-apps config backup via mackup as far as possible\ - also vscode just in case
-sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.metadata.mds.plist - disable spotlight
-https://github.com/munki
-create bootvolume on usb from downloaded macos installer script - https://github.com/veertuinc/getting-started#create-vm-templatebash
-set pure prompt to solarized dark colors
-https://www.sitepoint.com/zsh-tips-tricks/
-https://sourabhbajaj.com/mac-setup/iTerm/zsh.html
-find a nice font for everything, menlo? - vscode font!
-rename branches to macos, linux, rpi, synology etc...
-make git always clone in ~/src
-make dot files add . command not work
-auto start when rebooted after update - https://stackoverflow.com/questions/6442364/running-script-upon-login-mac
-private vars - phone, email, name etc... mackup or some other way?
 
 brew:
 
@@ -184,6 +163,19 @@ brew:
 
 # mas install 1147396723 # WhatsApp Desktop
 
+private vars - phone, email, name etc... mackup or some other way?
+configure all installed apps - save configs in mackup or in dotfiles - make that work from install again, also use that for sensitive files - .npmrc etc. which contain keys and such
+finder config as well?
+verify all files in homedir
+apps config backup via mackup as far as possible\ - also vscode just in case
+set pure prompt to solarized dark colors
+https://www.sitepoint.com/zsh-tips-tricks/
+https://sourabhbajaj.com/mac-setup/iTerm/zsh.html
+find a nice font for everything, menlo? - vscode font!
+make git always clone in ~/src
+make dot files add . command not work
+auto start when rebooted after update - https://stackoverflow.com/questions/6442364/running-script-upon-login-mac
+
 aflred workflows
 
 # TODO: affred workslof
@@ -239,14 +231,6 @@ npm-check
 fixpack
 node-gyp
 
-# # Install better nanorc config
-
-# curl https://raw.githubusercontent.com/scopatz/nanorc/master/install.sh | sh
-
-# # For the c alias (syntax highlighted cat)
-
-# sudo easy_install Pygments
-
 ### programs/drivers/libs to install
 
 https://github.com/pock/pock
@@ -289,6 +273,8 @@ mackup for apps, set cronjob daily?
 
 https://www.taniarascia.com/setting-up-a-brand-new-mac-for-development/
 https://kalis.me/dotfiles-automating-macos-system-configuration/
+https://github.com/munki
+create bootvolume on usb from downloaded macos installer script - https://github.com/veertuinc/getting-started#create-vm-templatebash
 https://github.com/rkalis/dotfiles
 https://github.com/jessfraz/dotfiles
 https://github.com/kalkayan/dotfiles
