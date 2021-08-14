@@ -70,7 +70,7 @@ cask_args appdir: "~/Applications", require_sha: true
 # cask "tiptoi-manager"
 # cask "vanilla"
 cask "visual-studio-code"
-cask "monolingual"
+# cask "monolingual"
 # cask "anka-virtualization"
 
 # App Store
