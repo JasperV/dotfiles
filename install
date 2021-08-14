@@ -85,13 +85,13 @@ git --git-dir=$HOME/.files --work-tree=$HOME pull origin $DF_BRANCH
 # mas signin mas@example.com 'ZdkM4f$gzF;gX3ABXNLf8KcCt.x.np'
 # TOOD: get username and password from somewhere
 
-brew bundle --quiet
-brew cleanup
+# brew bundle --quiet
+# brew cleanup
 
 
 
 # Install Antigen
-curl -L git.io/antigen > antigen.zsh
+# curl -L git.io/antigen > antigen.zsh
 # TODO: can there be more than one antigen use...?
 # https://github.com/belak/zsh-utils
 # https://github.com/intelfx/pure
@@ -105,7 +105,7 @@ curl -L git.io/antigen > antigen.zsh
 
 
 # configure macOS
-./.macos
+# ./.macos
 
 
 
