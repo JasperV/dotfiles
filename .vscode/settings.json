@@ -56,6 +56,7 @@
     ".zcompdump": true,
     ".zshrc.zwc": true,
     "antigen.zsh": true,
-    "Brewfile.lock.json": true
+    "Brewfile.lock.json": true,
+    ".node_repl_history": true
   }
 }

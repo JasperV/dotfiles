@@ -4,6 +4,9 @@
 alias dotfiles='git --git-dir=$HOME/.files/ --work-tree=$HOME'
 alias dot=dotfiles
 
+alias install='~/install'
+alias update='~/install'
+
 # # Get rid of command not found
 # alias cd..='cd ..'
 

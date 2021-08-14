@@ -55,7 +55,7 @@ cupsctl --no-share-printers
 # sudo defaults write /Library/Preferences/com.apple.loginwindow LoginwindowText "Gevonden? Bel <TODO: name + phone here>"
 
 # Enable full-disk encryption and write the recovery key to the Desktop
-if [[ ! -d "$(sudo fdesetup isactive)" ]]; then
+if [[ ! -d "$(sudo fdesetup isactive)" && "$(id -un)" != "anka" ]]; then
   sudo fdesetup enable -user "$USER" | tee ~/Desktop/"FileVault Recovery Key (Backup NOW).txt"
 fi
 

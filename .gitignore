@@ -7,3 +7,4 @@ Brewfile.lock.json
 .zcompdump
 .zshrc.zwc
 antigen.zsh
+.node_repl_history

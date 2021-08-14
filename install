@@ -36,12 +36,14 @@ HOMEBREW_CLEANUP_MAX_AGE_DAYS=0
 # Install Homebrew if not already installed
 if ! brew -v 2>/dev/null; then
   echo | /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+else
+  echo "Homebrew already installed. Updating..."
 fi
 
 brew analytics off
 
 # Update brew to latest available version
-brew update --quiet
+brew update --quiet && brew upgrade --quiet && brew cu && brew cleanup --quiet
 
 
 
@@ -66,14 +68,14 @@ DF_BRANCH="macos"
 
 if [ ! -d "$HOME/.files" ]; then
   git clone --bare https://github.com/JasperV/dotfiles.git $HOME/.files
+
+  # Reset the unstaged changes before updating
+  git --git-dir=$HOME/.files --work-tree=$HOME reset --hard
+
+  # Set flag to ignore untracked files
+  git --git-dir=$HOME/.files --work-tree=$HOME config --local status.showUntrackedFiles no
+  # TODO: prevent adding all untracked files
 fi
-
-# Reset the unstaged changes before updating
-git --git-dir=$HOME/.files --work-tree=$HOME reset --hard
-
-# Set flag to ignore untracked files
-git --git-dir=$HOME/.files --work-tree=$HOME config --local status.showUntrackedFiles no
-# TODO: prevent adding all untracked files
 
 git --git-dir=$HOME/.files --work-tree=$HOME checkout $DF_BRANCH
 git --git-dir=$HOME/.files --work-tree=$HOME pull origin $DF_BRANCH
@@ -81,13 +83,14 @@ git --git-dir=$HOME/.files --work-tree=$HOME pull origin $DF_BRANCH
 
 
 # Install Homebrew packages
-brew bundle --quiet --no-lock
+brew bundle cleanup --quiet --no-lock --force
+brew autoupdate start --upgrade --cleanup --enable-notification
 brew cleanup --prune=all
 rm -rf "$(brew --cache)"
 
 
 
-# Install Antigen
+# Install/update Antigen
 curl -L git.io/antigen > antigen.zsh
 
 
