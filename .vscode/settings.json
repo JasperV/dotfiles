@@ -55,6 +55,7 @@
     ".antigenrc.zwc": true,
     ".zcompdump": true,
     ".zshrc.zwc": true,
-    "antigen.zsh": true
+    "antigen.zsh": true,
+    "Brewfile.lock.json": true
   }
 }
