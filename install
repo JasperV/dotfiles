@@ -84,7 +84,7 @@ git --git-dir=$HOME/.files --work-tree=$HOME pull origin $DF_BRANCH
 
 # Install Homebrew packages
 brew bundle cleanup --quiet --no-lock --force
-brew autoupdate start --upgrade --cleanup --enable-notification
+# brew autoupdate start --upgrade --cleanup --enable-notification
 brew cleanup --prune=all
 rm -rf "$(brew --cache)"
 
