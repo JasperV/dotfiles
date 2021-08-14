@@ -98,6 +98,7 @@ curl -L git.io/antigen > antigen.zsh
 
 
 # configure macOS
+# TODO: fix errors in macos config
 ./.macos
 
 

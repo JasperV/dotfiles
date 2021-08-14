@@ -15,4 +15,5 @@ brew "zsh"
 
 cask_args appdir: "~/Applications", require_sha: true
 
+cask "iterm2"
 cask "visual-studio-code"

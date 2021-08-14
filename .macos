@@ -54,6 +54,7 @@ cupsctl --no-share-printers
 # TODO: get private data from somewhere
 # sudo defaults write /Library/Preferences/com.apple.loginwindow LoginwindowText "Gevonden? Bel <TODO: name + phone here>"
 
+# TODO: check if filevault already on
 # Enable full-disk encryption and write the recovery key to the Desktop
 sudo fdesetup enable -user "$USER" | tee ~/Desktop/"FileVault Recovery Key (Backup NOW).txt"
 
@@ -261,10 +262,13 @@ sudo pmset -b sleep 5
 sudo pmset -a hibernatemode 0
 
 # Remove the sleep image file to save disk space
+echo 1
 sudo rm /private/var/vm/sleepimage
 # Create a zero-byte file instead…
+echo 2
 sudo touch /private/var/vm/sleepimage
 # …and make sure it can’t be rewritten
+echo 3
 sudo chflags uchg /private/var/vm/sleepimage
 
 ###############################################################################
@@ -597,7 +601,8 @@ defaults write com.apple.Safari InstallExtensionUpdatesAutomatically -bool true
 ###############################################################################
 
 # Hide Spotlight tray-icon (and subsequent helper)
-sudo chmod 600 /System/Library/CoreServices/Search.bundle/Contents/MacOS/Search
+# TODO: not allowed
+# sudo chmod 600 /System/Library/CoreServices/Search.bundle/Contents/MacOS/Search
 # Disable Spotlight indexing for any volume that gets mounted and has not yet
 # been indexed before.
 # Use `sudo mdutil -i off "/Volumes/foo"` to stop indexing any volume.
