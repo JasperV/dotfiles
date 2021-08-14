@@ -104,4 +104,4 @@ if [[ " $@ " =~ " --no-reboot " ]]; then
     exit
 fi
 echo "Done. Rebooting now!"
-sudo shutdown -r now
+# sudo shutdown -r now # Do not do this in Anka, it will not reboot because of disk encryption
