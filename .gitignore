@@ -1,3 +1,4 @@
 .files
+# TODO: how to do .npmrc partial?
 .npmrc
-# TODO: Brewfile.lock.json???
+Brewfile.lock.json
