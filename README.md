@@ -82,6 +82,8 @@ todo's
 
 make notes for self - commands etc...
 
+idempotent when running all scripts (paul irish, kalkayan, mikemcquaid, mths)
+
 configure all installed apps - save configs in mackup or in dotfiles - make that work from install again, also use that for sensitive files - .npmrc etc. which contain keys and such
 finder config as well?
 mac cli dev tools work well with own installed git\
