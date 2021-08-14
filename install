@@ -39,12 +39,12 @@ fi
 brew analytics off
 
 # Update brew to latest available version
-brew update
+brew update # --quiet
 
 
 
 # Update shell to latest zsh
-brew install zsh
+brew install zsh # --quiet
 # TODO: asks for password
 
 # Change default shell to Homebrew installed zsh
@@ -56,7 +56,7 @@ if ! fgrep -q "${BREW_PREFIX}/bin/zsh" /etc/shells; then
 fi
 
 # Install the latest git
-brew install git
+brew install git # --quiet
 
 
 
@@ -91,21 +91,15 @@ git --git-dir=$HOME/.files --work-tree=$HOME pull origin $DF_BRANCH
 
 
 # Install Antigen
-# curl -L git.io/antigen > antigen.zsh
+curl -L git.io/antigen > antigen.zsh
 # TODO: can there be more than one antigen use...?
 # https://github.com/belak/zsh-utils
 # https://github.com/intelfx/pure
 
 
 
-# TODO: test first for presence, but most likely not needed # Upgrade pip
-# pip install --upgrade pip
-# pip3 install --upgrade pip
-
-
-
 # configure macOS
-# ./.macos
+./.macos
 
 
 
