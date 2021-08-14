@@ -98,5 +98,9 @@ curl -L git.io/antigen > antigen.zsh
 
 
 # Reboot
+if [[ " $@ " =~ " --no-reboot " ]]; then
+    echo "Done."
+    exit
+fi
 echo "Done. Rebooting now!"
 sudo shutdown -r now
