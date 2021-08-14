@@ -84,17 +84,6 @@ git --git-dir=$HOME/.files --work-tree=$HOME pull origin $DF_BRANCH
 
 # Install Homebrew packages
 brew bundle --quiet --no-lock
-
-# Warning: Please note if you use Casks that require `sudo` to upgrade there
-# are known issues with that use case and this command unless using
-# `SUDO_ASKPASS`.
-
-#   https://github.com/Homebrew/homebrew-autoupdate/issues/40
-
-# Error: /Users/anka/Library/LaunchAgents does not exist. Please create it first:
-#   mkdir -p /Users/anka/Library/LaunchAgents
-# You may need to use `sudo`.
-
 brew autoupdate start --upgrade --cleanup --enable-notification
 brew cu
 brew cleanup --prune=all
