@@ -59,3 +59,7 @@
 
 # # set Node.js heap size
 # export NODE_OPTIONS=--max-old-space-size=8192
+
+HOMEBREW_NO_ANALYTICS=1
+HOMEBREW_BUNDLE_NO_LOCK=1
+HOMEBREW_CLEANUP_MAX_AGE_DAYS=0

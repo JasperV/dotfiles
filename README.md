@@ -80,7 +80,7 @@ https://github.com/mathiasbynens/dotfiles
 
 todo's
 
-make notes for self - commands etc...
+make notes for self - commands etc... -> read manuals and readme's
 
 idempotent when running all scripts (paul irish, kalkayan, mikemcquaid, mths)
 
@@ -328,6 +328,8 @@ https://github.com/antonmedv/fx-completion\
 alfred plugins - speedtest, spotify, maps, colors, convert, kill, play song, encode decode, git?, packal, timezones, units - separate file\
 solarized theme for everything\
 https://github.com/nvbn/thefuck\
+https://github.com/belak/zsh-utils
+https://github.com/intelfx/pure
 vscode plugins - by means of default project?\ helemaal goed en clean opzetten - handleiding lezen
 https://github.com/jessfraz/gmailfilters\
 rocket?\

@@ -2,3 +2,8 @@
 # TODO: how to do .npmrc partial?
 .npmrc
 Brewfile.lock.json
+.antigen
+.antigenrc.zwc
+.zcompdump
+.zshrc.zwc
+antigen.zsh

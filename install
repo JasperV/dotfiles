@@ -30,7 +30,6 @@ rm /tmp/.com.apple.dt.CommandLineTools.installondemand.in-progress
 
 
 
-# TODO: move these to exports as well
 HOMEBREW_NO_ANALYTICS=1
 HOMEBREW_BUNDLE_NO_LOCK=1
 HOMEBREW_CLEANUP_MAX_AGE_DAYS=0
@@ -48,10 +47,9 @@ brew update --quiet
 
 # Update shell to latest zsh
 brew install zsh --quiet
-# TODO: asks for password
 
 # Change default shell to Homebrew installed zsh
-BREW_PREFIX=$(brew --prefix) # TODO: add to environment! in source file
+BREW_PREFIX=$(brew --prefix)
 
 if ! fgrep -q "${BREW_PREFIX}/bin/zsh" /etc/shells; then
   echo "${BREW_PREFIX}/bin/zsh" | sudo tee -a /etc/shells;
@@ -91,18 +89,14 @@ rm -rf "$(brew --cache)"
 
 # Install Antigen
 curl -L git.io/antigen > antigen.zsh
-# TODO: can there be more than one antigen use...?
-# https://github.com/belak/zsh-utils
-# https://github.com/intelfx/pure
 
 
 
 # configure macOS
-# TODO: fix errors in macos config
 ./.macos
 
 
 
 # Reboot
 echo "Done. Rebooting now!"
-# sudo shutdown -r now
+sudo shutdown -r now

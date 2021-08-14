@@ -4,6 +4,7 @@
     "**/.android": true,
     "**/.anka": true,
     "**/.aws": true,
+    "**/.antigen": true,
     "**/.azure": true,
     "**/.bash_sessions": true,
     "**/.BrowserLock": true,
@@ -11,7 +12,7 @@
     "**/.cache": true,
     "**/.cups": true,
     "**/.docker": true,
-    // "**/.files": true,
+    "**/.files": true,
     "**/.gem": true,
     "**/.IdentityService": true,
     "**/.kube": true,
@@ -50,6 +51,10 @@
     ".mysql_history": true,
     ".wget-hsts": true,
     ".z": true,
-    ".zsh_history": true
+    ".zsh_history": true,
+    ".antigenrc.zwc": true,
+    ".zcompdump": true,
+    ".zshrc.zwc": true,
+    "antigen.zsh": true
   }
 }

@@ -54,9 +54,10 @@ cupsctl --no-share-printers
 # TODO: get private data from somewhere
 # sudo defaults write /Library/Preferences/com.apple.loginwindow LoginwindowText "Gevonden? Bel <TODO: name + phone here>"
 
-# TODO: check if filevault already on
 # Enable full-disk encryption and write the recovery key to the Desktop
-sudo fdesetup enable -user "$USER" | tee ~/Desktop/"FileVault Recovery Key (Backup NOW).txt"
+if [[ ! -d "$(sudo fdesetup isactive)" ]]; then
+  sudo fdesetup enable -user "$USER" | tee ~/Desktop/"FileVault Recovery Key (Backup NOW).txt"
+fi
 
 ###############################################################################
 # User metadata                                                               #
