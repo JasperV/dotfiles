@@ -51,7 +51,7 @@ If there are macOS updates, it will reboot. Run the script again to continue.
 
 When done, run the following (Apps) to finalize the setup:
 
-- [Monolingual](https://ingmarstein.github.io/Monolingual/)
+- [Monolingual](https://ingmarstein.github.io/Monolingual/) to reclaim some disk space
 
 ## Features
 
@@ -81,93 +81,12 @@ read manuals and readme's of all installed apps/libs
 
 todo's
 
-brew:
-
-# TODO: sort alphabetically
-
-# photoshop
-
-# karabiner
-
-# alfred
-
-# anka
-
-# AppCleaner
-
-# authy Desktop
-
-# bitwarden
-
-# eqmac
-
-# iterm2
-
-# keka
-
-# monolingual
-
-# obsidian
-
-# onedrive
-
-# parallels
-
-# snap camera
-
-# sonic wall connect
-
-# space Gremlin
-
-# Speedtest
-
-# WhatsApp
-
-# zoom
-
-# Brews
-
-# brew "lua"
-
-# brew "mackup"
-
-# Casks
-
-# TODO: check what comes via app store
-
-# # cask "anka-flow"
-
-# # cask "google-backup-and-sync"
-
-# # cask "google-chrome"
-
-# cask "little-snitch"
-
-# # cask "microsoft-office" - app store?
-
-# # cask "microsoft-teams" - app store?
-
-# # cask "insomnia"
-
-# cask "anka-virtualization"
-
-# quicklook plugins, cask "suspicious-package"
-
 # TODO: await getting username + password from env for mas signin
 
-# # Install mas applications
-
-# mas install 414515628 # Space Gremlin # TODO: pro version http://www.spacegremlinapp.com/mac/modes.html
-
-# mas "Speedtest", id: 1153157709
-
-# mas install 1147396723 # WhatsApp Desktop
-
 private vars - phone, email, name etc... mackup or some other way?
-configure all installed apps - save configs in mackup or in dotfiles - make that work from install again, also use that for sensitive files - .npmrc etc. which contain keys and such
+configure all installed apps - save configs in mackup or in dotfiles - make that work from install again - vscode just in case also, also use that for sensitive files - .npmrc etc. which contain keys and such
 finder config as well?
-verify all files in homedir
-apps config backup via mackup as far as possible\ - also vscode just in case
+verify all files in homedir - gitignore + vscode settings
 set pure prompt to solarized dark colors
 https://www.sitepoint.com/zsh-tips-tricks/
 https://sourabhbajaj.com/mac-setup/iTerm/zsh.html
@@ -196,8 +115,6 @@ aflred workflows
 
 # npm i -g alfred-polyglot
 
-# # TODO: bitwarden cli
-
 # # TODO: make note of other alfred plugins
 
 npm packages
@@ -225,7 +142,6 @@ is-camera-on-cli
 current-path-cli
 npm-user-cli
 pretty-ms-cli
-@bazel/ibazel
 @bitwarden/cli
 npm-check
 fixpack
