@@ -47,6 +47,9 @@ cask "monolingual"
 # insomnia
 # quicklook plugins
 # fonts
+# radarr
+# sonarr
+# transmission
 cask "private-internet-access"
 cask "skype"
 # cask "spotify"

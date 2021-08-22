@@ -81,7 +81,7 @@ read manuals and readme's of all installed apps/libs
 
 todo's
 
-# TODO: await getting username + password from env for mas signin
+ask name + phonenumber for login screen + computername for network name etc...
 
 private vars - phone, email, name etc... mackup or some other way?
 configure all installed apps - save configs in mackup or in dotfiles - make that work from install again - vscode just in case also, also use that for sensitive files - .npmrc etc. which contain keys and such
@@ -158,6 +158,7 @@ solarized theme for everything\
 https://github.com/nvbn/thefuck\
 https://github.com/belak/zsh-utils
 https://github.com/intelfx/pure
+support github codespaces
 vscode plugins - by means of default project?\ helemaal goed en clean opzetten - handleiding lezen
 https://github.com/jessfraz/gmailfilters\
 rocket?\

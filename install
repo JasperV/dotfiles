@@ -23,6 +23,14 @@ caffeinate -s -w $$ &
 
 
 
+# Set some variables to use during install
+echo "Phonenumber for lock screen message:"
+read -r PHONENUMBER
+echo "Computer network name:"
+read -r PCNAME
+
+
+
 # Check for macOS updates
 touch /tmp/.com.apple.dt.CommandLineTools.installondemand.in-progress;
 # TODO: enable sudo softwareupdate -i -a --restart
@@ -108,4 +116,4 @@ if [[ " $@ " =~ " --no-reboot " ]]; then
     exit
 fi
 echo "Done. Rebooting now!"
-# sudo shutdown -r now # Do not do this in Anka, it will not reboot because of disk encryption
+sudo shutdown -r now

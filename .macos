@@ -51,12 +51,11 @@ sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.captive.c
 cupsctl --no-share-printers
 
 # Set a lost & found message on the login window
-# TODO: get private data from somewhere
-# sudo defaults write /Library/Preferences/com.apple.loginwindow LoginwindowText "Gevonden? Bel <TODO: name + phone here>"
+sudo defaults write /Library/Preferences/com.apple.loginwindow LoginwindowText "Deze computer gevonden? Bel $PHONENUMBER. Bijvoorbaat dank!"
 
 # Enable full-disk encryption and write the recovery key to the Desktop
 if [[ ! -d "$(sudo fdesetup isactive)" && "$(id -un)" != "anka" ]]; then
-  sudo fdesetup enable -user "$USER" | tee ~/Desktop/"FileVault Recovery Key (Backup NOW).txt"
+  sudo fdesetup enable -user "$USER" | tee ~/Desktop/"FileVault Recovery Key (Backup NOW!).txt"
 fi
 
 ###############################################################################
@@ -70,10 +69,10 @@ fi
 ###############################################################################
 
 # Set computer name (as done via System Preferences → Sharing)
-sudo scutil --set ComputerName "mbp15"
-sudo scutil --set HostName "mbp15"
-sudo scutil --set LocalHostName "mbp15"
-sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "mbp15"
+sudo scutil --set ComputerName "$PCNAME"
+sudo scutil --set HostName "$PCNAME"
+sudo scutil --set LocalHostName "$PCNAME"
+sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "$PCNAME"
 
 # Disable the sound effects on boot
 sudo nvram SystemAudioVolume=" "
