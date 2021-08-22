@@ -9,6 +9,7 @@ echo -n -e "\033]0;Install & update dotfiles for macOS\007"
 cd ~
 
 # Ask for the administrator password upfront
+echo "Password for unattended install:"
 sudo -v
 
 # Keep sudo session persistent
@@ -24,10 +25,8 @@ caffeinate -s -w $$ &
 
 
 # Set some variables to use during install
-echo "Phonenumber for lock screen message:"
-read -rsp PHONENUMBER
-echo "Computer network name:"
-read -rsp PCNAME
+vared -p 'Phonenumber for lock screen message: ' -c PHONENUMBER
+vared -p 'Computer network name: ' -c PCNAME
 
 
 
