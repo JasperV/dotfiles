@@ -25,9 +25,9 @@ caffeinate -s -w $$ &
 
 # Set some variables to use during install
 echo "Phonenumber for lock screen message:"
-read -r PHONENUMBER
+read -rsp PHONENUMBER
 echo "Computer network name:"
-read -r PCNAME
+read -rsp PCNAME
 
 
 
