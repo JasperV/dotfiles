@@ -192,6 +192,7 @@ https://www.taniarascia.com/setting-up-a-brand-new-mac-for-development/
 https://kalis.me/dotfiles-automating-macos-system-configuration/
 https://github.com/munki
 create bootvolume on usb from downloaded macos installer script - https://github.com/veertuinc/getting-started#create-vm-templatebash
+https://tisgoud.nl/2019/11/fresh-install-of-macos/
 https://github.com/rkalis/dotfiles
 https://github.com/jessfraz/dotfiles
 https://github.com/kalkayan/dotfiles

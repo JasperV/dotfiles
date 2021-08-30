@@ -16,7 +16,7 @@ sudo -v
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 # Validate yourself and as admin
-[ "$USER" = "root" ] && abort "Run this script as yourself, not root."
+[ "$USER" = "root" ] && abort "Run this script as yourself, not as root."
 groups | grep $Q -E "\b(admin)\b" || abort "Add $USER to the admin group."
 
 # Prevent sleeping during script execution, as long as the machine is on AC power
@@ -81,7 +81,6 @@ if [ ! -d "$HOME/.files" ]; then
 
   # Set flag to ignore untracked files
   git --git-dir=$HOME/.files --work-tree=$HOME config --local status.showUntrackedFiles no
-  # TODO: prevent adding all untracked files
 fi
 
 git --git-dir=$HOME/.files --work-tree=$HOME checkout $DF_BRANCH
@@ -91,6 +90,8 @@ git --git-dir=$HOME/.files --work-tree=$HOME pull origin $DF_BRANCH
 
 # Install Homebrew packages
 brew bundle --quiet --no-lock
+# TODO: verify if already started then skip
+# brew autoupdate status
 brew autoupdate start --upgrade --cleanup --enable-notification
 brew cu
 brew cleanup --prune=all
@@ -105,6 +106,7 @@ curl -L git.io/antigen > antigen.zsh
 
 
 # configure macOS
+# TODO: prolong sudo session and also inherit variables - phone + pcname
 ./.macos
 
 
