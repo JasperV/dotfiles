@@ -97,7 +97,7 @@ fi
 brew cu -a -y -q
 brew cleanup --prune=all
 brew bundle cleanup --quiet --no-lock --force
-rm -rf "$(brew --cache)"
+sudo rm -rf "$(brew --cache)"
 
 
 
@@ -108,7 +108,7 @@ curl -L git.io/antigen > antigen.zsh
 
 # configure macOS
 # TODO: prolong sudo session and also inherit variables - phone + pcname
-./.macos
+sudo ./.macos
 
 
 
