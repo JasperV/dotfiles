@@ -126,7 +126,7 @@ pageres-cli
 fast-cli
 clipboard-cli
 speed-test
-trash-cli
+trash-cli - https://github.com/sindresorhus/guides/blob/main/how-not-to-rm-yourself.md#safeguard-rm
 empty-trash-cli
 cpy-cli
 manage-wifi-cli

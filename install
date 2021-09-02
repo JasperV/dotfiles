@@ -90,10 +90,11 @@ git --git-dir=$HOME/.files --work-tree=$HOME pull origin $DF_BRANCH
 
 # Install Homebrew packages
 brew bundle --quiet --no-lock
-# TODO: verify if already started then skip
-# brew autoupdate status
-brew autoupdate start --upgrade --cleanup --enable-notification
-brew cu
+UPDATE_STARTED=$(brew autoupdate status)
+if [[ $UPDATE_STARTED != *"installed"* ]]; then
+  brew autoupdate start --upgrade --cleanup --enable-notification
+fi
+brew cu -a -y -q
 brew cleanup --prune=all
 brew bundle cleanup --quiet --no-lock --force
 rm -rf "$(brew --cache)"

@@ -7,6 +7,7 @@ export NVM_LAZY_LOAD=true
 export NVM_NO_USE=true
 export NVM_AUTO_USE=true
 export PURE_GIT_UNTRACKED_DIRT=0
+export HOMEBREW_BUNDLE_NO_LOCK=1
 
 # Load Antigen
 source ~/antigen.zsh
