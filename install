@@ -31,7 +31,7 @@ vared -p 'Computer network name: ' -c PCNAME
 
 # Check for macOS updates
 touch /tmp/.com.apple.dt.CommandLineTools.installondemand.in-progress;
-# TODO: enable sudo softwareupdate -i -a --restart
+sudo softwareupdate -i -a --restart
 rm /tmp/.com.apple.dt.CommandLineTools.installondemand.in-progress
 
 

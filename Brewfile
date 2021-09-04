@@ -19,6 +19,7 @@ tap 'homebrew/services'
 # tap 'caskroom/fonts'
 # tap 'caskroom/versions'
 
+# brew 'bitwarden-cli' TODO: instead of npm?
 brew 'git'
 brew 'jq'
 brew 'mackup'
@@ -42,8 +43,8 @@ cask 'appcleaner'
 cask 'balenaetcher'
 cask 'cakebrew'
 # cask 'eqmac' # TODO: requires attended install
-cask 'google-chrome'
-cask 'google-drive'
+cask 'google-chrome', require_sha: false
+cask 'google-drive', require_sha: false
 cask 'hammerspoon'
 cask 'handbrake'
 cask 'insomnia'
@@ -59,29 +60,28 @@ cask 'private-internet-access'
 cask 'radarr'
 cask 'skype'
 cask 'sonarr'
-cask 'spotify'
-cask 'teamviewer-host'
+cask 'spotify', require_sha: false
+cask 'teamviewer-host', require_sha: false
 cask 'transmission'
-cask 'tiptoi-manager'
+cask 'tiptoi-manager', require_sha: false
 cask 'vanilla'
 cask 'visual-studio-code'
 
 # # Quicklook
 cask 'qlmarkdown'
-cask 'quicklook-json'
+cask 'quicklook-json', require_sha: false
 
 # Fonts
-cask 'font-lato'
-cask 'font-open-sans'
-cask 'font-roboto'
-cask 'font-source-code-pro'
-cask 'font-source-sans-pro'
-cask 'font-source-serif-pro'
+cask 'font-lato', require_sha: false
+cask 'font-open-sans', require_sha: false
+cask 'font-roboto', require_sha: false
+cask 'font-source-code-pro', require_sha: false
+cask 'font-source-serif-pro', require_sha: false
 cask 'font-fira-code-nerd-font'
 cask 'font-fira-code'
 cask 'font-fira-mono'
-cask 'font-fira-sans-condensed'
-cask 'font-fira-sans-extra-condensed'
+cask 'font-fira-sans-condensed', require_sha: false
+cask 'font-fira-sans-extra-condensed', require_sha: false
 cask 'font-fira-sans'
 cask 'font-firago'
 

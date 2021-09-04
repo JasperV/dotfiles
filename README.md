@@ -79,13 +79,12 @@ read manuals and readme's of all installed apps/libs
 
 #### TODO
 
-todo's
-
 ask name + phonenumber for login screen + computername for network name etc...
 
 private vars - phone, email, name etc... mackup or some other way?
 configure all installed apps - save configs in mackup or in dotfiles - make that work from install again - vscode just in case also, also use that for sensitive files - .npmrc etc. which contain keys and such
 finder config as well?
+anka base image sync in mackup
 verify all files in homedir - gitignore + vscode settings
 set pure prompt to solarized dark colors
 https://www.sitepoint.com/zsh-tips-tricks/
