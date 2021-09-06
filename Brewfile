@@ -72,6 +72,7 @@ cask 'aerial'
 # cask 'quicklook-json'
 
 # Fonts
+# TODO: sort
 # cask 'font-lato'
 # cask 'font-open-sans'
 # cask 'font-roboto'

@@ -52,24 +52,12 @@ brew analytics off
 # Update brew to latest available version
 brew update --quiet && brew upgrade --quiet && brew cleanup --quiet
 
-# Install Homebrew packages
-brew bundle --quiet --no-lock
-
-UPDATE_STARTED=$(brew autoupdate status)
-
-if [[ $UPDATE_STARTED != *"installed"* ]]; then
-  brew autoupdate start --upgrade --cleanup --enable-notification
-fi
-
-brew cu -a -y -q
-brew cleanup --prune=all
-brew bundle cleanup --quiet --no-lock --force
-sudo rm -rf "$(brew --cache)"
-
 
 
 # Change default shell to Homebrew installed zsh
 BREW_PREFIX=$(brew --prefix)
+
+brew install zsh --quiet
 
 if ! fgrep -q "${BREW_PREFIX}/bin/zsh" /etc/shells; then
   echo "${BREW_PREFIX}/bin/zsh" | sudo tee -a /etc/shells;
@@ -80,6 +68,8 @@ fi
 
 # Install dotfiles
 DF_BRANCH="macos"
+
+brew install git --quiet
 
 if [ ! -d "$HOME/.files" ]; then
   git clone --bare https://github.com/JasperV/dotfiles.git $HOME/.files
@@ -93,6 +83,22 @@ fi
 
 git --git-dir=$HOME/.files --work-tree=$HOME checkout $DF_BRANCH
 git --git-dir=$HOME/.files --work-tree=$HOME pull origin $DF_BRANCH
+
+
+
+# Install Homebrew packages
+brew bundle --quiet --no-lock
+
+UPDATE_STARTED=$(brew autoupdate status)
+
+if [[ $UPDATE_STARTED != *"installed"* ]]; then
+  brew autoupdate start --upgrade --cleanup --enable-notification
+fi
+
+brew cu -a -y -q
+brew cleanup --prune=all
+brew bundle cleanup --quiet --no-lock --force
+sudo rm -rf "$(brew --cache)"
 
 
 
