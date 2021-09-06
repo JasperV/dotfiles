@@ -65,7 +65,7 @@ cask 'aerial'
 # cask 'transmission'
 # cask 'tiptoi-manager'
 # cask 'vanilla'
-# cask 'visual-studio-code'
+cask 'visual-studio-code'
 
 # # # Quicklook
 # cask 'qlmarkdown'
