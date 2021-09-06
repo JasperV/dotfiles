@@ -36,10 +36,11 @@ rm /tmp/.com.apple.dt.CommandLineTools.installondemand.in-progress
 
 
 
+# Install Homebrew if not already installed
 HOMEBREW_NO_ANALYTICS=1
 HOMEBREW_BUNDLE_NO_LOCK=1
 HOMEBREW_CLEANUP_MAX_AGE_DAYS=0
-# Install Homebrew if not already installed
+
 if ! brew -v 2>/dev/null; then
   echo | /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 else
@@ -51,10 +52,21 @@ brew analytics off
 # Update brew to latest available version
 brew update --quiet && brew upgrade --quiet && brew cleanup --quiet
 
+# Install Homebrew packages
+brew bundle --quiet --no-lock
+
+UPDATE_STARTED=$(brew autoupdate status)
+
+if [[ $UPDATE_STARTED != *"installed"* ]]; then
+  brew autoupdate start --upgrade --cleanup --enable-notification
+fi
+
+brew cu -a -y -q
+brew cleanup --prune=all
+brew bundle cleanup --quiet --no-lock --force
+sudo rm -rf "$(brew --cache)"
 
 
-# Update shell to latest zsh
-brew install zsh --quiet
 
 # Change default shell to Homebrew installed zsh
 BREW_PREFIX=$(brew --prefix)
@@ -63,9 +75,6 @@ if ! fgrep -q "${BREW_PREFIX}/bin/zsh" /etc/shells; then
   echo "${BREW_PREFIX}/bin/zsh" | sudo tee -a /etc/shells;
   sudo chsh -s "${BREW_PREFIX}/bin/zsh";
 fi
-
-# Install the latest git
-brew install git --quiet
 
 
 
@@ -84,19 +93,6 @@ fi
 
 git --git-dir=$HOME/.files --work-tree=$HOME checkout $DF_BRANCH
 git --git-dir=$HOME/.files --work-tree=$HOME pull origin $DF_BRANCH
-
-
-
-# Install Homebrew packages
-brew bundle --quiet --no-lock
-UPDATE_STARTED=$(brew autoupdate status)
-if [[ $UPDATE_STARTED != *"installed"* ]]; then
-  brew autoupdate start --upgrade --cleanup --enable-notification
-fi
-brew cu -a -y -q
-brew cleanup --prune=all
-brew bundle cleanup --quiet --no-lock --force
-sudo rm -rf "$(brew --cache)"
 
 
 

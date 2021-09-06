@@ -55,9 +55,9 @@ When done, run the following (Apps) to finalize the setup:
 
 ## Features
 
-- [Anka](https://veertu.com/anka-develop/) to test all of this out on virtual machines
 - Idempotent install and update script
 - Branch based for different OS'es
+- [Anka](https://veertu.com/anka-develop/) to test on macOs virtual machines
 
 ### Inspired by
 
