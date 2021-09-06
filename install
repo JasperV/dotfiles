@@ -16,7 +16,7 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 # Validate yourself and as admin
 [ "$USER" = "root" ] && abort "Run this script as yourself, not as root."
-groups | grep $Q -E "\b(admin)\b" || abort "Add $USER to the admin group."
+groups | grep -q $Q -E "\b(admin)\b" || abort "Add $USER to the admin group."
 
 # Prevent sleeping during script execution, as long as the machine is on AC power
 caffeinate -s -w $$ &
@@ -63,10 +63,10 @@ BREW_PREFIX=$(brew --prefix)
 brew install zsh --quiet
 
 # TODO: check if if + /etc/shells works
-if [ ! $(fgrep -q "${BREW_PREFIX}/bin/zsh" /etc/shells) ]; then
+if ! fgrep -q "${BREW_PREFIX}/bin/zsh" /etc/shells; then
   echo "${BREW_PREFIX}/bin/zsh" | sudo tee -a /etc/shells
+  chsh -s "${BREW_PREFIX}/bin/zsh"
 fi
-sudo chsh -s "${BREW_PREFIX}/bin/zsh"
 
 
 

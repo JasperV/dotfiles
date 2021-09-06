@@ -79,6 +79,7 @@ read manuals and readme's of all installed apps/libs
 
 #### TODO
 
+https://scriptingosx.com/2019/06/moving-to-zsh-part-2-configuration-files/
 https://superuser.com/questions/866683/iterm-zsh-not-reading-bashrc-or-bash-profile
 
 configure all installed apps - save configs in mackup or in dotfiles - make that work from install again - vscode just in case also, also use that for sensitive files - .npmrc etc. which contain keys and such
