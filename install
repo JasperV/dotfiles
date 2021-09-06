@@ -58,14 +58,13 @@ brew update --quiet && brew upgrade --quiet && brew cleanup --quiet
 
 
 # Change default shell to Homebrew installed zsh
-BREW_PREFIX=$(brew --prefix)
-
 brew install zsh --quiet
 
-# TODO: check if if + /etc/shells works
-if ! fgrep -q "${BREW_PREFIX}/bin/zsh" /etc/shells; then
-  echo "${BREW_PREFIX}/bin/zsh" | sudo tee -a /etc/shells
-  chsh -s "${BREW_PREFIX}/bin/zsh"
+BREW_ZSH_LOCATION="$(brew --prefix)/bin/zsh"
+
+if ! fgrep -q $BREW_ZSH_LOCATION /etc/shells; then
+  echo $BREW_ZSH_LOCATION | sudo tee -a /etc/shells
+  sudo chsh -s $BREW_ZSH_LOCATION $USER
 fi
 
 
