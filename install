@@ -30,12 +30,13 @@ export PHONENUMBER=$PHONENUMBER
 export PCNAME=$PCNAME
 
 
+
 # Check for macOS updates
 # TODO: check on commandline tools "xcode-select -p"
 # prevent unneeded re-download and installation of Xcode Commandline Tools
-touch /tmp/.com.apple.dt.CommandLineTools.installondemand.in-progress;
-# sudo softwareupdate -i -a -R --agree-to-license
-rm /tmp/.com.apple.dt.CommandLineTools.installondemand.in-progress
+# touch /tmp/.com.apple.dt.CommandLineTools.installondemand.in-progress
+sudo softwareupdate -i -a -R --agree-to-license
+# rm /tmp/.com.apple.dt.CommandLineTools.installondemand.in-progress
 
 
 
