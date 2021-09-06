@@ -11,7 +11,7 @@ cd ~
 # Ask for the administrator password upfront
 sudo -v -B -p "Password for unattended install:"
 
-# Keep sudo session persistent
+# Keep sudo session alive until we're done
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 # Validate yourself and as admin
@@ -36,7 +36,7 @@ rm /tmp/.com.apple.dt.CommandLineTools.installondemand.in-progress
 
 
 
-# Install Homebrew if not already installed
+# Install/update Homebrew
 HOMEBREW_NO_ANALYTICS=1
 HOMEBREW_BUNDLE_NO_LOCK=1
 HOMEBREW_CLEANUP_MAX_AGE_DAYS=0
