@@ -13,9 +13,9 @@ This branch is for macOS systems. Other branches are used on other systems.
 ## Prepare
 
 Before the install script is run, remove all macOS default apps that you do not want. In my case these are:
-books, calculator, Calendar, chess, Contacts, dictionary, facetime, home, mail, maps, messages, music, news, photos, podcasts, reminders, stickies, stocks, textedit, time machine & voice memos
+books, calculator, Calendar, chess, Contacts, dictionary, facetime, home, mail, maps, messages, music, news, photos, podcasts, reminders, stickies, stocks, textedit, time machine & voice memos. I also completely disable Siri and Spotlight.
 
-Also, I completely disable Siri and Spotlight.
+### Instructions
 
 Boot into recovery mode (Command + R), then in the terminal, disable System Integrity Protection: `csrutil disable`. Reboot as admin, or login when not admin, then:
 
@@ -79,9 +79,8 @@ read manuals and readme's of all installed apps/libs
 
 #### TODO
 
-ask name + phonenumber for login screen + computername for network name etc...
+https://superuser.com/questions/866683/iterm-zsh-not-reading-bashrc-or-bash-profile
 
-private vars - phone, email, name etc... mackup or some other way?
 configure all installed apps - save configs in mackup or in dotfiles - make that work from install again - vscode just in case also, also use that for sensitive files - .npmrc etc. which contain keys and such
 finder config as well?
 anka base image sync in mackup
@@ -178,6 +177,12 @@ https://www.quicklookplugins.com/\
 https://github.com/rupa/z
 https://www.maketecheasier.com/extend-mac-quick-look-with-plugins/\
 https://github.com/sindresorhus/quick-look-plugins
+https://github.com/muesli/gitty
+https://github.com/muesli/duf
+https://github.com/charmbracelet/glow
+https://scriptingosx.com/2017/04/on-bash-environment-variables/
+https://github.com/Mortennn/Dozer
+https://scriptingosx.com/2019/08/moving-to-zsh-part-8-scripting-zsh/
 remove all apple software that is not used
 disable siri completely
 on opening of new session, unlock bw vault and set session var

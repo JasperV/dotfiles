@@ -1,5 +1,5 @@
 .files
-# TODO: how to do .npmrc partial?
+# TODO: how to do .npmrc partial? - use mackup! because senstive data
 .npmrc
 Brewfile.lock.json
 .antigen

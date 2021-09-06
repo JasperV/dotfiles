@@ -26,7 +26,8 @@ caffeinate -s -w $$ &
 # Set some variables to use during install
 vared -p 'Phonenumber for lock screen message: ' -c PHONENUMBER
 vared -p 'Computer network name: ' -c PCNAME
-
+export PHONENUMBER=$PHONENUMBER
+export PCNAME=$PCNAME
 
 
 # Check for macOS updates
@@ -61,10 +62,11 @@ BREW_PREFIX=$(brew --prefix)
 
 brew install zsh --quiet
 
-if ! fgrep -q "${BREW_PREFIX}/bin/zsh" /etc/shells; then
-  echo "${BREW_PREFIX}/bin/zsh" | sudo tee -a /etc/shells;
-  sudo chsh -s "${BREW_PREFIX}/bin/zsh";
+# TODO: check if if + /etc/shells works
+if [ ! $(fgrep -q "${BREW_PREFIX}/bin/zsh" /etc/shells) ]; then
+  echo "${BREW_PREFIX}/bin/zsh" | sudo tee -a /etc/shells
 fi
+sudo chsh -s "${BREW_PREFIX}/bin/zsh"
 
 
 
@@ -94,7 +96,6 @@ brew bundle --quiet --no-lock
 UPDATE_STARTED=$(brew autoupdate status)
 
 if [[ $UPDATE_STARTED != *"installed"* ]]; then
-  # TODO: not every 24 hours, but every week
   brew autoupdate start --upgrade --cleanup --enable-notification
 fi
 
@@ -106,13 +107,12 @@ sudo rm -rf "$(brew --cache)"
 
 
 # Install/update Antigen
-curl -L git.io/antigen > antigen.zsh
+curl -L -s git.io/antigen > antigen.zsh
 
 
 
 # configure macOS
-# TODO: prolong sudo session and also inherit variables - phone + pcname
-sudo ./.macos
+./.macos
 
 
 
@@ -121,6 +121,6 @@ if [[ " $@ " =~ " --no-reboot " ]]; then
     echo "Done."
     exit
 fi
-echo "Done. Rebooting now!"
-# TODO: 10 sec. countdown? to show message before reboot
-sudo shutdown -r now
+
+echo "Done. Scheduling reboot!"
+sudo shutdown -r +1
