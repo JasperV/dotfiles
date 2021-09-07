@@ -21,8 +21,6 @@ groups | grep -q $Q -E "\b(admin)\b" || abort "Add $USER to the admin group."
 # Prevent sleeping during script execution, as long as the machine is on AC power
 caffeinate -s -w $$ &
 
-
-
 # Set some variables to use during install
 vared -p 'Phonenumber for lock screen message: ' -c PHONENUMBER
 vared -p 'Computer network name: ' -c PCNAME
@@ -58,18 +56,6 @@ brew update --quiet && brew upgrade --quiet && brew cleanup --quiet
 
 
 
-# Change default shell to Homebrew installed zsh
-brew install zsh --quiet
-
-BREW_ZSH_LOCATION="$(brew --prefix)/bin/zsh"
-
-if ! fgrep -q $BREW_ZSH_LOCATION /etc/shells; then
-  echo $BREW_ZSH_LOCATION | sudo tee -a /etc/shells
-  sudo chsh -s $BREW_ZSH_LOCATION $USER
-fi
-
-
-
 # Install dotfiles
 DF_BRANCH="macos"
 
@@ -90,7 +76,7 @@ git --git-dir=$HOME/.files --work-tree=$HOME pull origin $DF_BRANCH
 
 
 
-# Install Homebrew packages
+# Install other Homebrew packages
 brew bundle --quiet --no-lock
 
 UPDATE_STARTED=$(brew autoupdate status)
@@ -105,6 +91,14 @@ brew bundle cleanup --quiet --no-lock --force
 sudo rm -rf "$(brew --cache)"
 
 
+
+# Change default shell to Homebrew installed zsh
+BREW_ZSH_LOCATION="$(brew --prefix)/bin/zsh"
+
+if ! fgrep -q $BREW_ZSH_LOCATION /etc/shells; then
+  echo $BREW_ZSH_LOCATION | sudo tee -a /etc/shells
+  sudo chsh -s $BREW_ZSH_LOCATION $USER
+fi
 
 # Install/update Antigen
 curl -L -s git.io/antigen > antigen.zsh
