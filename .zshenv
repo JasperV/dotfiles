@@ -23,8 +23,8 @@ export PURE_GIT_UNTRACKED_DIRT=0
 
 export NVM_AUTO_USE=true
 export NVM_COMPLETION=true
-# export NVM_LAZY_LOAD=true
-
+export NVM_LAZY_LOAD=true
+export NVM_LAZY_LOAD_EXTRA_COMMANDS=('bw')
 
 # #!/usr/bin/env bash
 
