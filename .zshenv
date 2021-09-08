@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/usr/local/bin/zsh
 
 # Add ~/bin to the $PATH
 export PATH="$HOME/bin:$PATH"
@@ -24,9 +24,9 @@ export PURE_GIT_UNTRACKED_DIRT=0
 export NVM_AUTO_USE=true
 export NVM_COMPLETION=true
 export NVM_LAZY_LOAD=true
-export NVM_LAZY_LOAD_EXTRA_COMMANDS=('bw')
+export NVM_LAZY_LOAD_EXTRA_COMMANDS=(git)
 
-# #!/usr/bin/env bash
+
 
 # # Path settings
 # #pathprepend ~/bin PATH

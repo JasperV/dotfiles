@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/usr/local/bin/zsh
 
 # Create dotfiles alias
 alias dotfiles='git --git-dir=$HOME/.files/ --work-tree=$HOME'
