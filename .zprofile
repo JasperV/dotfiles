@@ -1,15 +1,57 @@
 #!/bin/zsh
 
-# Add `~/bin` to the `$PATH`
-export PATH="$HOME/bin:$PATH";
+# Create dotfiles alias
+alias dotfiles='git --git-dir=$HOME/.files/ --work-tree=$HOME'
+alias dot=dotfiles
 
-# Load the shell dotfiles, and then some:
-# * ~/.path can be used to extend `$PATH`.
-# * ~/.extra can be used for other settings you don’t want to commit.
-for file in ~/.{path,functions,exports,aliases,extra}; do
-	[ -r "$file" ] && [ -f "$file" ] && source "$file";
-done;
-unset file;
+alias install='~/install'
+alias update='~/install'
+
+# Get rid of command not found
+alias cd..='cd ..'
+
+# Easier navigation: .., ..., ...., ....., and ~
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+alias .4='cd ../../../../'
+alias .5='cd ../../../../..'
+alias ~="cd ~"
+
+# Shortcuts
+alias g="git"
+alias dl="cd ~/Downloads"
+alias src="cd ~/src"
+
+# Shortcuts
+alias ll="ls -lah"
+alias l=ls
+
+# List only directories
+alias lsd="ls -lF ${colorflag} | grep --color=never '^d'"
+
+# Clipboard shortcut
+alias cb=clipboard
+
+# Enable aliases to be sudo’ed
+alias sudo='sudo '
+
+# Prompt user if overwriting during copy
+alias cp='cp -i'
+
+# Safely remove files
+alias rm=trash
+# alias rm='rm -I'
+
+# Get date and time
+alias now=date
+alias ntime='date +"%T"'
+alias ndate='date +"%d-%m-%Y"'
+alias week='date +%V'
+
+# Show PATH in human readable format
+alias path='echo -e ${PATH//:/\\n}'
 
 # # Enable tab completion for `g` by marking it as an alias for `git`
 # if type _git &> /dev/null && [ -f /usr/local/etc/bash_completion.d/git-completion.bash ]; then

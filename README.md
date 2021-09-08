@@ -37,7 +37,7 @@ sudo rm -rf Chess.app/
 # etc...
 ```
 
-Reboot into recovery again (Command+R) and re-enable System Integrity Protection: `csrutil enable`. Reboot, disable Siri completely and then start install as outlined below.
+Reboot into recovery again (Command+R) and re-enable System Integrity Protection: `csrutil enable`. Reboot, disable Siri completely `sudo mdutil -a -i off` and then start install as outlined below.
 
 ## Install
 
@@ -58,6 +58,7 @@ When done, run the following (Apps) to finalize the setup:
 - Idempotent install and update script
 - Branch based for different OS'es
 - [Anka](https://veertu.com/anka-develop/) to test on macOs virtual machines
+- [Mackup](https://github.com/lra/mackup) to sync configuration (with sensitive data)
 
 ### Inspired by
 
@@ -122,8 +123,6 @@ pageres-cli
 fast-cli
 clipboard-cli
 speed-test
-trash-cli - https://github.com/sindresorhus/guides/blob/main/how-not-to-rm-yourself.md#safeguard-rm
-empty-trash-cli
 cpy-cli
 manage-wifi-cli
 public-ip-cli

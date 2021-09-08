@@ -1,21 +1,6 @@
 
 # #!/usr/bin/env bash
 
-# # Preferred programs
-# #export PAGER=less
-# export EDITOR=subl
-# export VISUAL=$EDITOR
-
-# # Language
-# export LANG='en_US.UTF-8'
-# export LC_ALL=$LANG
-# #export LC_COLLATE=$LANG
-# #export LC_CTYPE=$LANG
-# #export LC_MESSAGES=$LANG
-# #export LC_MONETARY=$LANG
-# #export LC_NUMERIC=$LANG
-# #export LC_TIME=$LANG
-
 # # Path settings
 # #pathprepend ~/bin PATH
 # #pathprepend ~/lib LD_LIBRARY_PATH
@@ -59,7 +44,3 @@
 
 # # set Node.js heap size
 # export NODE_OPTIONS=--max-old-space-size=8192
-
-HOMEBREW_NO_ANALYTICS=1
-HOMEBREW_BUNDLE_NO_LOCK=1
-HOMEBREW_CLEANUP_MAX_AGE_DAYS=0
