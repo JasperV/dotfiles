@@ -1,5 +1,5 @@
 # Taps
-tap 'buo/cask-upgrade' # Use `brew cu` to update all casks
+tap 'buo/cask-upgrade'
 tap 'homebrew/autoupdate'
 tap 'homebrew/bundle'
 tap 'homebrew/cask'
