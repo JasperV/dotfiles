@@ -84,12 +84,7 @@ configure all installed apps - save configs in mackup or in dotfiles - make that
 finder config as well?
 anka base image sync in mackup
 verify all files in homedir - gitignore + vscode settings
-set pure prompt to solarized dark colors
-https://www.sitepoint.com/zsh-tips-tricks/
-https://sourabhbajaj.com/mac-setup/iTerm/zsh.html
-find a nice font for everything, menlo? - vscode font!
-make git always clone in ~/src
-make dot files add . command not work
+set iterm to solarized dark
 auto start when rebooted after update - https://stackoverflow.com/questions/6442364/running-script-upon-login-mac
 
 aflred workflows
@@ -150,6 +145,7 @@ https://github.com/antonmedv/eat\
 https://github.com/antonmedv/fx-completion\
 alfred plugins - speedtest, spotify, maps, colors, convert, kill, play song, encode decode, git?, packal, timezones, units - separate file\
 solarized theme for everything\
+integrate vscode terminal with same font/theme/colors etc...
 https://github.com/nvbn/thefuck\
 https://github.com/belak/zsh-utils
 https://github.com/intelfx/pure

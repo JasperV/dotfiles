@@ -10,26 +10,8 @@ alias update='~/install'
 # Get rid of command not found
 alias cd..='cd ..'
 
-# Easier navigation: .., ..., ...., ....., and ~
-alias ..="cd .."
-alias ...="cd ../.."
-alias ....="cd ../../.."
-alias .....="cd ../../../.."
-alias .4='cd ../../../../'
-alias .5='cd ../../../../..'
-alias ~="cd ~"
-
-# Shortcuts
-alias g="git"
-alias dl="cd ~/Downloads"
-alias src="cd ~/src"
-
-# Shortcuts
-alias ll="ls -lah"
-alias l=ls
-
 # List only directories
-alias lsd="ls -lF ${colorflag} | grep --color=never '^d'"
+alias lsd="ls -lF -G | grep --color=never '^d'"
 
 # Clipboard shortcut
 alias cb=clipboard
@@ -52,6 +34,15 @@ alias week='date +%V'
 
 # Show PATH in human readable format
 alias path='echo -e ${PATH//:/\\n}'
+
+# Public ip adres
+alias myip="curl https://ipecho.net/plain"
+
+# Git clone always in ~/src
+gsrc() {
+  git clone "$@" "/Users/jasper/src/$(basename $@)"
+  cd "/Users/jasper/src/$(basename $@)"
+}
 
 # # Enable tab completion for `g` by marking it as an alias for `git`
 # if type _git &> /dev/null && [ -f /usr/local/etc/bash_completion.d/git-completion.bash ]; then

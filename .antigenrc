@@ -6,6 +6,13 @@ antigen use oh-my-zsh
 # Load bundles from the default repo (oh-my-zsh)
 antigen bundle git
 antigen bundle command-not-found
+antigen bundle sudo
+antigen bundle colored-man-pages
+antigen bundle common-aliases
+antigen bundle npm
+antigen bundle vscode
+antigen bundle z
+antigen bundle brew
 
 # Load bundles from external repos
 antigen bundle zsh-users/zsh-completions
@@ -17,4 +24,9 @@ antigen bundle lukechilds/zsh-better-npm-completion
 # Tell Antigen that you're done
 antigen apply
 
-plugins=(git command-not-found) # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/git
+# https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/git
+# https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/common-aliases
+# https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/npm
+# https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/vscode
+# https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/brew
+plugins=(git command-not-found sudo colored-man-pages common-aliases npm vscode z brew)
