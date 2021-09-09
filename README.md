@@ -17,7 +17,7 @@ books, calculator, Calendar, chess, Contacts, dictionary, facetime, home, mail, 
 
 ### Instructions
 
-Boot into recovery mode (Command + R), then in the terminal, disable System Integrity Protection: `csrutil disable`. Reboot as admin, or login when not admin, then:
+Boot into recovery mode (`⌘ Command + R`), then in the terminal, disable System Integrity Protection: `csrutil disable`. Reboot as admin, or login when not admin, then:
 
 ```zsh
 # Disable spotlight indexing
@@ -37,7 +37,7 @@ sudo rm -rf Chess.app/
 # etc...
 ```
 
-Reboot into recovery again (Command+R) and re-enable System Integrity Protection: `csrutil enable`. Reboot, disable Siri completely `sudo mdutil -a -i off` and then start install as outlined below.
+Reboot into recovery again (`⌘ Command+R`) and re-enable System Integrity Protection: `csrutil enable`. Reboot, disable Siri completely `sudo mdutil -a -i off` + via GUI and then start install as outlined below.
 
 ## Install
 
@@ -59,6 +59,8 @@ When done, run the following (Apps) to finalize the setup:
 - Branch based for different OS'es
 - [Anka](https://veertu.com/anka-develop/) to test on macOs virtual machines
 - [Mackup](https://github.com/lra/mackup) to sync configuration (with sensitive data)
+- [AppCleaner](https://freemacsoft.net/appcleaner/) for properly uninstalling apps
+- [Alfred](https://www.alfredapp.com/) as a replacement for Spotlight and many other things
 
 ### Inspired by
 
