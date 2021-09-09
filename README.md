@@ -20,9 +20,19 @@ books, calculator, Calendar, chess, Contacts, dictionary, facetime, home, mail, 
 Boot into recovery mode (`⌘ Command + R`), then in the terminal, disable System Integrity Protection: `csrutil disable`. Reboot as admin, or login when not admin, then:
 
 ```zsh
-# Disable spotlight indexing
+# Disable Spotlight indexing
 sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.metadata.mds.plist
 sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.coreduetd.osx.plist
+
+# Disable Siri
+sudo plutil -replace Disabled -bool true /System/Library/LaunchAgents/com.apple.Siri.plist
+sudo plutil -replace Disabled -bool true /System/Library/LaunchAgents/com.apple.assistantd.plist
+
+# Disable "Ask Siri"
+defaults write com.apple.assistant.support "Assistant Enabled" -bool false
+
+# Remove Siri icon from status menu
+defaults write com.apple.Siri StatusMenuVisible -bool false
 
 # When not as admin
 login <username>
@@ -78,18 +88,62 @@ https://github.com/mathiasbynens/dotfiles
 
 ### Notes
 
-read manuals and readme's of all installed apps/libs
+##### Read manuals and readme's of all installed apps/libs
+
+- https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/git
+- https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/common-aliases
+- https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/npm
+- https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/vscode
+- https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/brew
+- .zprofile
 
 #### TODO
 
+"""""
 configure all installed apps - save configs in mackup or in dotfiles - make that work from install again - vscode just in case also, also use that for sensitive files - .npmrc etc. which contain keys and such
 finder config as well?
 anka base image sync in mackup
 verify all files in homedir - gitignore + vscode settings
-set iterm to solarized dark
+set iterm to solarized dark - .macos idempotent!
 auto start when rebooted after update - https://stackoverflow.com/questions/6442364/running-script-upon-login-mac
 
+https://github.com/pock/pock - make cask
+solarized theme for everything
+vscode plugins - by means of default project?\ helemaal goed en clean opzetten - handleiding lezen
+integrate vscode terminal with same font/theme/colors etc...
+support github codespaces
+
+### programs/drivers/libs to install
+
+https://github.com/antonmedv/fx
+alfred plugins - speedtest, spotify, maps, colors, convert, kill, play song, encode decode, git?, packal, timezones, units
+https://github.com/antonmedv/eat
+https://github.com/nvbn/thefuck
+https://github.com/belak/zsh-utils
+pnpm
+https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md\
+https://github.com/dominictarr/low-battery-warning\
+https://github.com/whomwah/qlstephen\
+https://www.quicklookplugins.com/\
+https://github.com/rupa/z
+https://www.maketecheasier.com/extend-mac-quick-look-with-plugins/\
+https://github.com/sindresorhus/quick-look-plugins
+https://github.com/muesli/gitty
+https://github.com/muesli/duf
+https://github.com/charmbracelet/glow
+https://scriptingosx.com/2017/04/on-bash-environment-variables/
+https://github.com/Mortennn/Dozer
+https://scriptingosx.com/2019/08/moving-to-zsh-part-8-scripting-zsh/
+remove all apple software that is not used
+disable siri completely
+on opening of new session, unlock bw vault and set session var
+remove all references to email and usernames - templatize it in
+bitwarden git credential helper rewrite from ground up - make work in all cases - e.g. sod + calcas both on dev.azure.com
+mackup for apps, set cronjob daily?
+
 aflred workflows
+
+packal.org
 
 # TODO: affred workslof
 
@@ -138,52 +192,6 @@ pretty-ms-cli
 npm-check
 fixpack
 node-gyp
-
-### programs/drivers/libs to install
-
-https://github.com/pock/pock
-https://github.com/antonmedv/fx\
-https://github.com/antonmedv/eat\
-https://github.com/antonmedv/fx-completion\
-alfred plugins - speedtest, spotify, maps, colors, convert, kill, play song, encode decode, git?, packal, timezones, units - separate file\
-solarized theme for everything\
-integrate vscode terminal with same font/theme/colors etc...
-https://github.com/nvbn/thefuck\
-https://github.com/belak/zsh-utils
-https://github.com/intelfx/pure
-support github codespaces
-vscode plugins - by means of default project?\ helemaal goed en clean opzetten - handleiding lezen
-https://github.com/jessfraz/gmailfilters\
-rocket?\
-consider pnpm\
-https://github.com/jingweno/ccat\
-https://github.com/nicolargo/glances\
-https://httpie.org/\
-brew cask install macpaw gemini # TODO: specific version -> license\
-add alfred to mackup\
-https://github.com/Mortennn/Dozer\
-https://phuctm97.com/blog/zsh-antigen-ohmyzsh
-disable siri - https://apple.stackexchange.com/questions/258816/how-to-completely-disable-siri-on-sierra/258981#258981\
-zsh completions - git, files and folders etc...\
-https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md\
-https://github.com/dominictarr/low-battery-warning\
-https://github.com/whomwah/qlstephen\
-https://www.quicklookplugins.com/\
-https://github.com/rupa/z
-https://www.maketecheasier.com/extend-mac-quick-look-with-plugins/\
-https://github.com/sindresorhus/quick-look-plugins
-https://github.com/muesli/gitty
-https://github.com/muesli/duf
-https://github.com/charmbracelet/glow
-https://scriptingosx.com/2017/04/on-bash-environment-variables/
-https://github.com/Mortennn/Dozer
-https://scriptingosx.com/2019/08/moving-to-zsh-part-8-scripting-zsh/
-remove all apple software that is not used
-disable siri completely
-on opening of new session, unlock bw vault and set session var
-remove all references to email and usernames - templatize it in
-bitwarden git credential helper rewrite from ground up - make work in all cases - e.g. sod + calcas both on dev.azure.com
-mackup for apps, set cronjob daily?
 
 #### dotfiles examples/inspiration
 

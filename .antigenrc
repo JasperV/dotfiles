@@ -24,9 +24,4 @@ antigen bundle lukechilds/zsh-better-npm-completion
 # Tell Antigen that you're done
 antigen apply
 
-# https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/git
-# https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/common-aliases
-# https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/npm
-# https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/vscode
-# https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/brew
 plugins=(git command-not-found sudo colored-man-pages common-aliases npm vscode z brew)

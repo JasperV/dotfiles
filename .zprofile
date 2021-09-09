@@ -44,6 +44,8 @@ gsrc() {
   cd "/Users/jasper/src/$(basename $@)"
 }
 
+alias cat=ccat
+
 # # Enable tab completion for `g` by marking it as an alias for `git`
 # if type _git &> /dev/null && [ -f /usr/local/etc/bash_completion.d/git-completion.bash ]; then
 # 	complete -o default -o nospace -F _git g;
