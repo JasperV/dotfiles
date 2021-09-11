@@ -11,9 +11,11 @@ tap 'homebrew/services'
 brew 'bitwarden-cli'
 brew 'ccat'
 brew 'coreutils'
+brew 'duf'
 brew 'fx'
 brew 'git'
 brew 'glances'
+brew 'glow'
 brew 'httpie'
 # lua - hammmerspoon?
 brew 'jq'
@@ -64,8 +66,22 @@ cask 'vanilla'
 cask 'visual-studio-code'
 
 # Quicklook
+# TODO: sort
 cask 'qlmarkdown'
 cask 'quicklook-json'
+cask 'qlcolorcode'
+cask 'qlstephen'
+cask 'qlprettypatch'
+cask 'quicklook-csv'
+cask 'qladdict'
+cask 'qlmobi'
+cask 'betterzipql'
+cask 'qlimagesize'
+cask 'suspicious-package'
+cask 'apparency'
+cask 'quicklookase'
+cask 'qlvideo'
+
 
 # Fonts
 # TODO: sort

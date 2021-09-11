@@ -1,5 +1,7 @@
 #!/usr/local/bin/zsh
 
+# Second to load
+
 # Create dotfiles alias
 alias dotfiles='git --git-dir=$HOME/.files/ --work-tree=$HOME'
 alias dot=dotfiles

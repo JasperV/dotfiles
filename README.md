@@ -99,99 +99,25 @@ https://github.com/mathiasbynens/dotfiles
 
 #### TODO
 
-"""""
+set iterm to solarized dark - .macos idempotent!
+auto start when rebooted after update - https://stackoverflow.com/questions/6442364/running-script-upon-login-mac
+
 configure all installed apps - save configs in mackup or in dotfiles - make that work from install again - vscode just in case also, also use that for sensitive files - .npmrc etc. which contain keys and such
 finder config as well?
 anka base image sync in mackup
 verify all files in homedir - gitignore + vscode settings
-set iterm to solarized dark - .macos idempotent!
-auto start when rebooted after update - https://stackoverflow.com/questions/6442364/running-script-upon-login-mac
+bitwarden git credential helper rewrite - make work in all cases - e.g. sod + calcas both on dev.azure.com
 
+https://github.com/antonmedv/fx
+https://github.com/antonmedv/eat
+https://github.com/nvbn/thefuck
+pnpm
+gitty
 https://github.com/pock/pock - make cask
 solarized theme for everything
 vscode plugins - by means of default project?\ helemaal goed en clean opzetten - handleiding lezen
 integrate vscode terminal with same font/theme/colors etc...
 support github codespaces
-
-### programs/drivers/libs to install
-
-https://github.com/antonmedv/fx
-alfred plugins - speedtest, spotify, maps, colors, convert, kill, play song, encode decode, git?, packal, timezones, units
-https://github.com/antonmedv/eat
-https://github.com/nvbn/thefuck
-https://github.com/belak/zsh-utils
-pnpm
-https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md\
-https://github.com/dominictarr/low-battery-warning\
-https://github.com/whomwah/qlstephen\
-https://www.quicklookplugins.com/\
-https://github.com/rupa/z
-https://www.maketecheasier.com/extend-mac-quick-look-with-plugins/\
-https://github.com/sindresorhus/quick-look-plugins
-https://github.com/muesli/gitty
-https://github.com/muesli/duf
-https://github.com/charmbracelet/glow
-https://scriptingosx.com/2017/04/on-bash-environment-variables/
-https://github.com/Mortennn/Dozer
-https://scriptingosx.com/2019/08/moving-to-zsh-part-8-scripting-zsh/
-remove all apple software that is not used
-disable siri completely
-on opening of new session, unlock bw vault and set session var
-remove all references to email and usernames - templatize it in
-bitwarden git credential helper rewrite from ground up - make work in all cases - e.g. sod + calcas both on dev.azure.com
-mackup for apps, set cronjob daily?
-
-aflred workflows
-
-packal.org
-
-# TODO: affred workslof
-
-# npm i -g alfred-emoj
-
-# npm i -g alfred-npms
-
-# npm i -g alfred-fkill
-
-# npm i -g alfred-coolors
-
-# npm i -g alfred-vpn
-
-# npm i -g alfred-show-network-info
-
-# npm i -g alfred-currency-conversion
-
-# npm i -g alfred-polyglot
-
-# # TODO: make note of other alfred plugins
-
-npm packages
-diff-so-fancy
-emoj
-lock-cli
-fkill-cli
-pageres-cli
-fast-cli
-clipboard-cli
-speed-test
-cpy-cli
-manage-wifi-cli
-public-ip-cli
-latest-version-cli
-term-img-cli
-is-online-cli
-open-editor-cli
-opn-cli
-file-type-cli
-is-progressive-cli
-is-camera-on-cli
-current-path-cli
-npm-user-cli
-pretty-ms-cli
-@bitwarden/cli
-npm-check
-fixpack
-node-gyp
 
 #### dotfiles examples/inspiration
 
@@ -204,14 +130,12 @@ https://github.com/rkalis/dotfiles
 https://github.com/jessfraz/dotfiles
 https://github.com/kalkayan/dotfiles
 https://github.com/MikeMcQuaid/dotfiles
-https://github.com/MikeMcQuaid/strap
 https://github.com/ruimarinho/authy-client
 https://github.com/wesbos/dotfiles
 https://github.com/webpro/dotfiles
 https://medium.com/@webprolific/getting-started-with-dotfiles-43c3602fd789
 https://github.com/paulirish/dotfiles
 https://github.com/rkalis/dotfiles
-https://github.com/mathiasbynens/dotfiles
 https://github.com/sapegin/dotfiles
 https://github.com/hql287/dotfiles
 https://github.com/sapegin/dotfiles/blob/dd063f9c30de7d2234e8accdb5272a5cc0a3388b/includes/bash_prompt.bash
@@ -256,12 +180,8 @@ https://github.com/nicolashery/mac-dev-setup
 https://github.com/jlevy/the-art-of-command-line
 https://sourabhbajaj.com/mac-setup/iTerm/zsh.html
 https://github.com/denisidoro/navi
-https://github.com/IngmarStein/Monolingual
-https://denysdovhan.com/spaceship-prompt/
 https://httptoolkit.tech/mock/
-https://github.com/antonmedv/fx
 http://http-prompt.com/
-https://httpie.org/
 https://matthewpalmer.net/blog/2018/04/14/ultimate-pro-guide-best-secret-mac-features/index.html
 https://medium.com/@caulfieldOwen/turn-your-keyboard-into-a-text-editing-rocket-1514d8474d2d
 https://github.com/jaredculp/iterm2-borderless-padding
@@ -287,21 +207,17 @@ https://github.com/sb2nov/mac-setup
 https://github.com/vitorgalvao/tiny-scripts
 https://github.com/yudai/gotty
 https://osquery.io/
-https://github.com/denysdovhan/spaceship-prompt
 https://github.com/sharkdp/fd
 https://github.com/wtfutil/wtf
 https://github.com/jesseduffield/lazygit
 https://github.com/k4m4/terminals-are-sexy
 https://github.com/guarinogabriel/Mac-CLI
-https://github.com/nicolargo/glances
 https://github.com/paulirish/git-recent
 https://github.com/rgcr/m-cli
 https://github.com/ptb/mac-setup
 https://remysharp.com/2018/08/23/cli-improved/
 https://github.com/sharkdp/bat
 https://github.com/therealklanni/purity
-https://github.com/intelfx/pure
-https://github.com/jakubroztocil/httpie
 https://layautoapp.com/?ref=producthunt
 https://github.com/rajivkanaujia/alphaworks/wiki/Handy-Mac-Commands
 https://bitbucket.org/rajivkanaujia/alphaworkspub/src/master/scripts/
@@ -337,13 +253,55 @@ https://pirate.github.io/security-growler/
 https://github.com/bkuhlmann/mac_os-config
 https://github.com/jakehilborn/displayplacer
 https://www.bhnywl.com/blog/setting-up-a-macbook-for-front-end-development/
-full keyboard support for delete and home keys etc...\
-proper keyboard keymapping for ctrl alt etc...\
 full keyboard support on terminal\
 keyboard support on media players\
-properly configure keyboard for mac with colemak and functions keys support instead of touchbar\
 https://opensource.com/article/18/9/tips-productivity-zsh\
 https://github.com/sindresorhus/terminal-snazzy
 https://github.com/Neilpang/acme.sh/wiki/Synology-RT1900ac-and-RT2600ac-install-guide
 https://forum.synology.com/enu/viewtopic.php?f=265&t=123003
 use all with solarized dark color theme(s)!
+
+aflred workflows - packal.org:
+alfred plugins - speedtest, spotify, maps, colors, convert, kill, play song, encode decode, git?, packal, timezones, units
+npm i -g alfred-emoj
+npm i -g alfred-npms
+npm i -g alfred-fkill
+npm i -g alfred-coolors
+npm i -g alfred-vpn
+npm i -g alfred-show-network-info
+npm i -g alfred-currency-conversion
+npm i -g alfred-polyglot
+bitwarden v2
+convert
+encode/decode
+hotkeys
+spotify mini
+timezone
+
+npm packages:
+diff-so-fancy
+emoj
+lock-cli
+fkill-cli
+pageres-cli
+fast-cli
+clipboard-cli
+speed-test
+cpy-cli
+manage-wifi-cli
+public-ip-cli
+latest-version-cli
+term-img-cli
+is-online-cli
+open-editor-cli
+opn-cli
+file-type-cli
+is-progressive-cli
+is-camera-on-cli
+current-path-cli
+npm-user-cli
+pretty-ms-cli
+@bitwarden/cli
+npm-check
+fixpack
+node-gyp

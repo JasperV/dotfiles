@@ -1,5 +1,7 @@
 #!/usr/local/bin/zsh
 
+# First to load
+
 # Add ~/bin to the $PATH
 export PATH="$HOME/bin:$PATH"
 
