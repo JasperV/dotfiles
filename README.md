@@ -70,7 +70,7 @@ When done, run the following (Apps) to finalize the setup:
 - [Anka](https://veertu.com/anka-develop/) to test on macOs virtual machines
 - [Mackup](https://github.com/lra/mackup) to sync configuration (with sensitive data)
 - [AppCleaner](https://freemacsoft.net/appcleaner/) for properly uninstalling apps
-- [Alfred](https://www.alfredapp.com/) as a replacement for Spotlight and many other things
+- [Alfred](https://www.alfredapp.com/) as a replacement for Spotlight and general swiss army knife
 
 ### Inspired by
 
@@ -113,21 +113,20 @@ https://github.com/antonmedv/eat
 https://github.com/nvbn/thefuck
 pnpm
 gitty
+https://github.com/sharkdp/bat ipv ccat
+https://htop.dev/
+https://getcaption.co/ - brew
 https://github.com/pock/pock - make cask
+create bootvolume on usb from downloaded macos installer script - https://github.com/veertuinc/getting-started#create-vm-templatebash
+https://tisgoud.nl/2020/09/keyboard-redefined-part-2/
 solarized theme for everything
+https://gist.github.com/kevin-smets/8568070 - iterm colors
 vscode plugins - by means of default project?\ helemaal goed en clean opzetten - handleiding lezen
 integrate vscode terminal with same font/theme/colors etc...
 support github codespaces
 
 #### dotfiles examples/inspiration
 
-https://www.taniarascia.com/setting-up-a-brand-new-mac-for-development/
-https://kalis.me/dotfiles-automating-macos-system-configuration/
-https://github.com/munki
-create bootvolume on usb from downloaded macos installer script - https://github.com/veertuinc/getting-started#create-vm-templatebash
-https://tisgoud.nl/2019/11/fresh-install-of-macos/
-https://github.com/rkalis/dotfiles
-https://github.com/jessfraz/dotfiles
 https://github.com/kalkayan/dotfiles
 https://github.com/MikeMcQuaid/dotfiles
 https://github.com/ruimarinho/authy-client
@@ -151,6 +150,7 @@ https://github.com/atomantic/dotfiles
 
 #### other
 
+https://the.exa.website/
 https://homebrew-file.readthedocs.io/en/latest/
 https://github.com/joelparkerhenderson/brewfile
 https://dev.to/mattstratton/my-brewfile-1pob

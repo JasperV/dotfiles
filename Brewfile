@@ -26,6 +26,7 @@ brew 'trash'
 brew 'wget'
 brew 'wifi-password'
 brew 'zsh'
+brew 'zsh-syntax-highlighting'
 
 # Apps
 cask_args appdir: '~/Applications'
@@ -38,6 +39,7 @@ cask 'anka-virtualization'
 cask 'authy'
 cask 'appcleaner'
 cask 'balenaetcher'
+cask 'bitwarden'
 cask 'cakebrew'
 cask 'dozer'
 # cask 'eqmac' # TODO: requires attended install
