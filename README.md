@@ -99,21 +99,6 @@ https://github.com/mathiasbynens/dotfiles
 
 #### TODO
 
-https://github.com/paulirish/dotfiles
-https://github.com/rkalis/dotfiles
-https://github.com/sapegin/dotfiles
-https://github.com/hql287/dotfiles
-https://github.com/sapegin/dotfiles/blob/dd063f9c30de7d2234e8accdb5272a5cc0a3388b/includes/bash_prompt.bash
-https://github.com/sapegin/dotfiles/wiki/OS-X-Apps
-https://github.com/hql287/dotfiles
-https://github.com/Murderlon/dotfiles
-https://marcelkornblum.com/dotfiles-and-configuration-bf60510cdb93
-https://github.com/marcelkornblum/dotfiles
-https://github.com/sitaktif/dotfiles/tree/master
-https://github.com/camjackson/dotfiles
-https://github.com/rambleraptor/dotfiles
-https://github.com/atomantic/dotfiles
-
 set iterm to solarized dark - .macos idempotent!
 auto start when rebooted after update - https://stackoverflow.com/questions/6442364/running-script-upon-login-mac
 
@@ -123,30 +108,46 @@ anka base image sync in mackup
 verify all files in homedir - gitignore + vscode settings
 bitwarden git credential helper rewrite - make work in all cases - e.g. sod + calcas both on dev.azure.com
 
-https://github.com/antonmedv/fx
+https://github.com/antonmedv/fx - alias as json
 https://github.com/antonmedv/eat
 https://github.com/nvbn/thefuck
 pnpm
 gitty
+set vscode as editor for all git functions - https://github.com/sapegin/dotfiles/blob/master/tilde/.gitconfig
 https://github.com/sharkdp/bat ipv ccat
 https://htop.dev/
 https://the.exa.website/
 https://sindresorhus.com/utc-time
+https://github.com/paulirish/dotfiles
 https://getcaption.co/ - brew
 https://github.com/pock/pock - make cask
+https://numi.app/
 create bootvolume on usb from downloaded macos installer script - https://github.com/veertuinc/getting-started#create-vm-templatebash
 https://tisgoud.nl/2020/09/keyboard-redefined-part-2/
 solarized theme for everything
 https://gist.github.com/kevin-smets/8568070 - iterm colors
 https://github.com/MikeMcQuaid/dotfiles/blob/master/shrc.sh
+https://github.com/rambleraptor/dotfiles/blob/master/zsh/config.zsh
+https://github.com/marlonrichert/zsh-autocomplete
+https://github.com/zsh-users/zsh-apple-touchbar
+https://github.com/zsh-users/zsh-history-substring-search
+https://github.com/Murderlon/dotfiles/blob/main/zsh/.aliases
+https://github.com/marcelkornblum/dotfiles/blob/master/.utils
+https://github.com/marcelkornblum/dotfiles/blob/master/.builtins
+battery? https://github.com/sapegin/dotfiles/blob/master/setup/osx.sh
+echo "\* Follow the following tutorial if your display sucks"
+echo "https://www.mathewinkson.com/2013/03/force-rgb-mode-in-mac-os-x-to-fix-the-picture-quality-of-an-external-monitor"
+echo "The script to generate the right calibration is under resources/patch-screen.rb"
 https://github.com/wesbos/dotfiles/blob/master/.zshrc
+https://github.com/sapegin/dotfiles/blob/master/zsh/aliases.zsh
+https://github.com/atomantic/dotfiles/tree/main/configs
 https://github.com/webpro/dotfiles - github action testing!
 https://github.com/seebi/dircolors-solarized
+https://github.com/atomantic/dotfiles
 vscode plugins - by means of default project?\ helemaal goed en clean opzetten - handleiding lezen
 integrate vscode terminal with same font/theme/colors etc...
 support github codespaces
 
-https://homebrew-file.readthedocs.io/en/latest/
 https://github.com/joelparkerhenderson/brewfile
 https://dev.to/mattstratton/my-brewfile-1pob
 please
@@ -298,3 +299,5 @@ pretty-ms-cli
 npm-check
 fixpack
 node-gyp
+
+when all done, comment each and every line of code... And make a nice looking readme/repo githubpages site
