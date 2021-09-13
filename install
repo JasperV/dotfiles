@@ -73,7 +73,7 @@ git --git-dir=$HOME/.files --work-tree=$HOME pull origin $DF_BRANCH
 
 
 # Install other Homebrew packages
-brew bundle --quiet --no-lock
+brew bundle --quiet --no-lock # TODO: don't bail on install errors = || true https://github.com/webpro/dotfiles/commit/ac5e2bd34fda7d2737e995847a298d6da8a812c1
 
 UPDATE_STARTED=$(brew autoupdate status)
 

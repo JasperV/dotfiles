@@ -99,6 +99,21 @@ https://github.com/mathiasbynens/dotfiles
 
 #### TODO
 
+https://github.com/paulirish/dotfiles
+https://github.com/rkalis/dotfiles
+https://github.com/sapegin/dotfiles
+https://github.com/hql287/dotfiles
+https://github.com/sapegin/dotfiles/blob/dd063f9c30de7d2234e8accdb5272a5cc0a3388b/includes/bash_prompt.bash
+https://github.com/sapegin/dotfiles/wiki/OS-X-Apps
+https://github.com/hql287/dotfiles
+https://github.com/Murderlon/dotfiles
+https://marcelkornblum.com/dotfiles-and-configuration-bf60510cdb93
+https://github.com/marcelkornblum/dotfiles
+https://github.com/sitaktif/dotfiles/tree/master
+https://github.com/camjackson/dotfiles
+https://github.com/rambleraptor/dotfiles
+https://github.com/atomantic/dotfiles
+
 set iterm to solarized dark - .macos idempotent!
 auto start when rebooted after update - https://stackoverflow.com/questions/6442364/running-script-upon-login-mac
 
@@ -115,49 +130,27 @@ pnpm
 gitty
 https://github.com/sharkdp/bat ipv ccat
 https://htop.dev/
+https://the.exa.website/
+https://sindresorhus.com/utc-time
 https://getcaption.co/ - brew
 https://github.com/pock/pock - make cask
 create bootvolume on usb from downloaded macos installer script - https://github.com/veertuinc/getting-started#create-vm-templatebash
 https://tisgoud.nl/2020/09/keyboard-redefined-part-2/
 solarized theme for everything
 https://gist.github.com/kevin-smets/8568070 - iterm colors
+https://github.com/MikeMcQuaid/dotfiles/blob/master/shrc.sh
+https://github.com/wesbos/dotfiles/blob/master/.zshrc
+https://github.com/webpro/dotfiles - github action testing!
+https://github.com/seebi/dircolors-solarized
 vscode plugins - by means of default project?\ helemaal goed en clean opzetten - handleiding lezen
 integrate vscode terminal with same font/theme/colors etc...
 support github codespaces
 
-#### dotfiles examples/inspiration
-
-https://github.com/kalkayan/dotfiles
-https://github.com/MikeMcQuaid/dotfiles
-https://github.com/ruimarinho/authy-client
-https://github.com/wesbos/dotfiles
-https://github.com/webpro/dotfiles
-https://medium.com/@webprolific/getting-started-with-dotfiles-43c3602fd789
-https://github.com/paulirish/dotfiles
-https://github.com/rkalis/dotfiles
-https://github.com/sapegin/dotfiles
-https://github.com/hql287/dotfiles
-https://github.com/sapegin/dotfiles/blob/dd063f9c30de7d2234e8accdb5272a5cc0a3388b/includes/bash_prompt.bash
-https://github.com/sapegin/dotfiles/wiki/OS-X-Apps
-https://github.com/hql287/dotfiles
-https://github.com/Murderlon/dotfiles
-https://marcelkornblum.com/dotfiles-and-configuration-bf60510cdb93
-https://github.com/marcelkornblum/dotfiles
-https://github.com/sitaktif/dotfiles/tree/master
-https://github.com/camjackson/dotfiles
-https://github.com/rambleraptor/dotfiles
-https://github.com/atomantic/dotfiles
-
-#### other
-
-https://the.exa.website/
 https://homebrew-file.readthedocs.io/en/latest/
 https://github.com/joelparkerhenderson/brewfile
 https://dev.to/mattstratton/my-brewfile-1pob
 please
 fuck
-https://github.com/lukechilds/zsh-nvm
-https://github.com/lukechilds/zsh-better-npm-completion
 https://github.com/mafredri/zsh-async
 https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins/colorize
 https://dev.to/nickytonline/my-git-aliases-5dea
@@ -278,7 +271,7 @@ hotkeys
 spotify mini
 timezone
 
-npm packages:
+npm packages: - also add update all command somewhere
 diff-so-fancy
 emoj
 lock-cli
