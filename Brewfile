@@ -28,9 +28,6 @@ brew 'wifi-password'
 brew 'zsh'
 brew 'zsh-syntax-highlighting'
 
-# Apps
-cask_args appdir: '~/Applications'
-
 cask 'adobe-creative-cloud'
 cask 'aerial'
 cask 'alfred'
@@ -67,7 +64,6 @@ cask 'tiptoi-manager'
 cask 'vanilla'
 cask 'visual-studio-code'
 
-# Quicklook
 # TODO: sort
 cask 'qlmarkdown'
 cask 'quicklook-json'
@@ -77,30 +73,20 @@ cask 'qlprettypatch'
 cask 'quicklook-csv'
 cask 'qladdict'
 cask 'qlmobi'
-cask 'betterzipql'
 cask 'qlimagesize'
 cask 'suspicious-package'
 cask 'apparency'
 cask 'quicklookase'
 cask 'qlvideo'
 
-
-# Fonts
 # TODO: sort
 cask 'font-lato'
-cask 'font-open-sans'
-cask 'font-roboto'
-cask 'font-source-code-pro'
-cask 'font-source-serif-pro'
 cask 'font-fira-code-nerd-font'
 cask 'font-fira-code'
 cask 'font-fira-mono'
-cask 'font-fira-sans-condensed'
-cask 'font-fira-sans-extra-condensed'
 cask 'font-fira-sans'
 cask 'font-firago'
 
-# App Store
 # TODO: sort
 mas 'Microsoft PowerPoint', id: 462062816
 mas 'Keynote', id: 409183694
