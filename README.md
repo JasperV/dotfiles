@@ -13,7 +13,7 @@ This branch is for macOS systems. Other branches are used on other systems.
 ## Prepare
 
 Before the install script is run, remove all macOS default apps that you do not want. In my case these are:
-books, calculator, Calendar, chess, Contacts, dictionary, facetime, home, mail, maps, messages, music, news, photos, podcasts, reminders, stickies, stocks, textedit, time machine & voice memos. I also completely disable Siri and Spotlight.
+books, calculator, Calendar, chess, Contacts, dictionary, facetime, home, mail, maps, messages, news, photos, podcasts, reminders, stickies, stocks, textedit, time machine & voice memos. I also completely disable Siri and Spotlight.
 
 ### Instructions
 
@@ -147,7 +147,7 @@ https://github.com/atomantic/dotfiles
 vscode plugins - by means of default project?\ helemaal goed en clean opzetten - handleiding lezen
 integrate vscode terminal with same font/theme/colors etc...
 support github codespaces
-
+run monolingual regulary is there a cli? or use applescript/automater to automate
 https://github.com/joelparkerhenderson/brewfile
 https://dev.to/mattstratton/my-brewfile-1pob
 please
