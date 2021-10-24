@@ -112,7 +112,7 @@ https://github.com/antonmedv/fx - alias as json
 https://github.com/antonmedv/eat
 https://github.com/nvbn/thefuck
 pnpm
-gitty
+https://github.com/muesli/gitty
 set vscode as editor for all git functions - https://github.com/sapegin/dotfiles/blob/master/tilde/.gitconfig
 https://github.com/sharkdp/bat ipv ccat
 https://htop.dev/
@@ -120,7 +120,7 @@ https://the.exa.website/
 https://sindresorhus.com/utc-time
 https://github.com/paulirish/dotfiles
 https://getcaption.co/ - brew
-https://github.com/pock/pock - make cask
+https://github.com/pock/pock - no touchbar on new macbooks
 https://numi.app/
 create bootvolume on usb from downloaded macos installer script - https://github.com/veertuinc/getting-started#create-vm-templatebash
 https://tisgoud.nl/2020/09/keyboard-redefined-part-2/
@@ -129,7 +129,7 @@ https://gist.github.com/kevin-smets/8568070 - iterm colors
 https://github.com/MikeMcQuaid/dotfiles/blob/master/shrc.sh
 https://github.com/rambleraptor/dotfiles/blob/master/zsh/config.zsh
 https://github.com/marlonrichert/zsh-autocomplete
-https://github.com/zsh-users/zsh-apple-touchbar
+https://github.com/zsh-users/zsh-apple-touchbar - no touchbar on new macbooks
 https://github.com/zsh-users/zsh-history-substring-search
 https://github.com/Murderlon/dotfiles/blob/main/zsh/.aliases
 https://github.com/marcelkornblum/dotfiles/blob/master/.utils
@@ -295,7 +295,6 @@ is-camera-on-cli
 current-path-cli
 npm-user-cli
 pretty-ms-cli
-@bitwarden/cli
 npm-check
 fixpack
 node-gyp

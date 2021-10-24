@@ -99,6 +99,7 @@ fi
 # Install/update Antigen
 curl -L -s git.io/antigen > antigen.zsh
 
+mv ~/default-packages ~/.nvm/default-packages
 
 
 # configure macOS
