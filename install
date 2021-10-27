@@ -99,6 +99,7 @@ fi
 # Install/update Antigen
 curl -L -s git.io/antigen > antigen.zsh
 
+cp ~/default ~/.nvm/alias/default
 cp ~/default-packages ~/.nvm/default-packages
 
 

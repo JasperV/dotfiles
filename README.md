@@ -104,7 +104,7 @@ auto start when rebooted after update - https://stackoverflow.com/questions/6442
 
 configure all installed apps - save configs in mackup or in dotfiles - make that work from install again - vscode just in case also, also use that for sensitive files - .npmrc etc. which contain keys and such
 finder config as well?
-anka base image sync in mackup
+anka base image sync in mackup?
 verify all files in homedir - gitignore + vscode settings
 bitwarden git credential helper rewrite - make work in all cases - e.g. sod + calcas both on dev.azure.com
 
