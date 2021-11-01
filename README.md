@@ -107,6 +107,7 @@ finder config as well?
 anka base image sync in mackup?
 verify all files in homedir - gitignore + vscode settings
 bitwarden git credential helper rewrite - make work in all cases - e.g. sod + calcas both on dev.azure.com
+script for booting up and shutting down downloads
 
 https://github.com/antonmedv/fx - alias as json
 https://github.com/antonmedv/eat
@@ -152,6 +153,8 @@ https://github.com/joelparkerhenderson/brewfile
 https://dev.to/mattstratton/my-brewfile-1pob
 please
 fuck
+remove control center items from status bar
+set color profile to apple rgb
 https://github.com/mafredri/zsh-async
 https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins/colorize
 https://dev.to/nickytonline/my-git-aliases-5dea
