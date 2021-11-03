@@ -102,7 +102,7 @@ https://github.com/mathiasbynens/dotfiles
 .macos idempotent + errors/issues
 auto start when rebooted after update - https://stackoverflow.com/questions/6442364/running-script-upon-login-mac
 
-configure all installed apps - save configs in mackup or in dotfiles - make that work from install again - vscode just in case also, also use that for sensitive files - .npmrc etc. which contain keys and such
+configure all installed apps - save configs in mackup or in dotfiles - make that work from install again - vscode just in case also, also use that for sensitive files - .npmrc etc. which contain keys and such and also radarr and sonarr etc config!
 finder config as well?
 anka base image sync in mackup?
 verify all files in homedir - gitignore + vscode settings
