@@ -123,6 +123,8 @@ https://github.com/paulirish/dotfiles
 https://getcaption.co/ - brew
 https://github.com/pock/pock - no touchbar on new macbooks
 https://numi.app/
+gmvault?
+google photos backup?
 create bootvolume on usb from downloaded macos installer script - https://github.com/veertuinc/getting-started#create-vm-templatebash
 https://tisgoud.nl/2020/09/keyboard-redefined-part-2/
 solarized theme for everything
