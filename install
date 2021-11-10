@@ -72,7 +72,7 @@ git --git-dir=$HOME/.files --work-tree=$HOME pull origin $DF_BRANCH
 
 
 
-# Install other Homebrew packages
+# Install Homebrew packages
 brew bundle --quiet --no-lock || true
 
 UPDATE_STARTED=$(brew autoupdate status)
@@ -98,10 +98,6 @@ fi
 
 # Install/update Antigen
 curl -L -s git.io/antigen > antigen.zsh
-
-# cp ~/default ~/.nvm/alias/default
-# cp ~/default-packages ~/.nvm/default-packages
-
 
 
 # configure macOS

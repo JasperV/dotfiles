@@ -101,7 +101,6 @@ cask 'visual-studio-code'
 # mas 'Microsoft Word', id: 462054704
 # mas 'Numbers', id: 409203825
 # mas 'Speedtest', id: 1153157709
-# # mas 'SonicWall Mobile Connect', id: 822514576
 # mas 'Bitwarden', id: 1352778147
 # mas 'Speedtest by Ookla', id: 1153157709
 # mas 'WhatsApp Desktop', id: 1147396723
