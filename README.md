@@ -105,6 +105,12 @@ script for booting up and shutting down downloads
 .macos idempotent + errors/issues
 auto start when rebooted after update - https://stackoverflow.com/questions/6442364/running-script-upon-login-mac
 
+mackup apps todo:
+monolingual
+finder
+dotfiles files
+newly installed apps
+
 https://github.com/antonmedv/fx - alias as json
 https://github.com/antonmedv/eat
 https://github.com/nvbn/thefuck
