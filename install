@@ -99,14 +99,16 @@ fi
 # Install/update Antigen
 curl -L -s git.io/antigen > antigen.zsh
 
-cp ~/default ~/.nvm/alias/default
-cp ~/default-packages ~/.nvm/default-packages
+# cp ~/default ~/.nvm/alias/default
+# cp ~/default-packages ~/.nvm/default-packages
 
 
 
 # configure macOS
 ./.macos
 
+
+# TODO: make nvm runs, so that after reboot mackup restore can be run
 
 
 # Reboot

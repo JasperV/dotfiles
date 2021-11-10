@@ -102,6 +102,17 @@ https://github.com/mathiasbynens/dotfiles
 .macos idempotent + errors/issues
 auto start when rebooted after update - https://stackoverflow.com/questions/6442364/running-script-upon-login-mac
 
+mackup apps todo:
+nvm - default, default packages
+alfred
+bonsai?
+monolingual
+obsidian
+finder
+vanilla?
+dotfiles files
+
+
 configure all installed apps - save configs in mackup or in dotfiles - make that work from install again - vscode just in case also, also use that for sensitive files - .npmrc etc. which contain keys and such and also radarr and sonarr etc config!
 finder config as well?
 anka base image sync in mackup?
@@ -155,6 +166,7 @@ https://github.com/joelparkerhenderson/brewfile
 https://dev.to/mattstratton/my-brewfile-1pob
 please
 fuck
+https://starship.rs/ ipv pure?
 remove control center items from status bar
 set color profile to apple rgb
 https://github.com/mafredri/zsh-async
