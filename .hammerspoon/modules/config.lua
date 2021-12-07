@@ -1,8 +1,0 @@
--- hyper = {'cmd', 'alt'}
--- hyperShift = {'alt', 'cmd', 'shift'}
-
--- -- Reload hammerspoon configs
--- hs.hotkey.bind({"cmd", "ctrl"}, "R", function()
---   hs.reload()
--- end)
--- hs.alert.show("Config loaded")
