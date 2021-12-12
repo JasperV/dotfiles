@@ -1,1 +1,1 @@
-/Users/jasper/My Drive/Documenten/Mackup/.zprofile
+/Users/jasper/Insync/jasper@vermeulen.io/Google Drive/Documenten/Mackup/.zprofile
