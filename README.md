@@ -1,14 +1,8 @@
-# .files
+# .files [![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
 
-These are my dotfiles.
-
-Some things are automated, some things are not.
-
-Still a bit messy, but I will cleanup up as I go along.
+These are my dotfiles. Some things are automated, some things are not. Still a bit messy, but I will cleanup up as I go along.
 
 This branch is for macOS systems. Other branches are used on other systems, someday.
-
-[![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
 
 #### TODO: step by step instructions
 
