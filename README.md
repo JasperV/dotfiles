@@ -6,52 +6,15 @@ Some things are automated, some things are not.
 
 Still a bit messy, but I will cleanup up as I go along.
 
-This branch is for macOS systems. Other branches are used on other systems.
+This branch is for macOS systems. Other branches are used on other systems, someday.
 
 [![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
 
-## Prepare
-
-Before the install script is run, remove all macOS default apps that you do not want. In my case these are:
-books, calculator, Calendar, chess, Contacts, dictionary, facetime, home, mail, maps, messages, news, photos, podcasts, reminders, stickies, stocks, textedit, time machine & voice memos. I also completely disable Siri and Spotlight.
-
-### Instructions
-
-Boot into recovery mode (`⌘ Command + R`), then in the terminal, disable System Integrity Protection: `csrutil disable`. Reboot as admin, or login when not admin, then:
-
-```zsh
-# Disable Spotlight indexing
-sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.metadata.mds.plist
-sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.coreduetd.osx.plist
-
-# Disable Siri
-sudo plutil -replace Disabled -bool true /System/Library/LaunchAgents/com.apple.Siri.plist
-sudo plutil -replace Disabled -bool true /System/Library/LaunchAgents/com.apple.assistantd.plist
-
-# Disable "Ask Siri"
-defaults write com.apple.assistant.support "Assistant Enabled" -bool false
-
-# Remove Siri icon from status menu
-defaults write com.apple.Siri StatusMenuVisible -bool false
-
-# When not as admin
-login <username>
-
-sudo mount -uw / System / Applications
-
-cd /Applications/
-
-sudo rm -rf Mail.app/
-sudo rm -rf Stickies.app/
-sudo rm -rf Chess.app/
-# etc...
-```
-
-Reboot into recovery again (`⌘ Command+R`) and re-enable System Integrity Protection: `csrutil enable`. Reboot, disable Siri completely `sudo mdutil -a -i off` + via GUI and then start install as outlined below.
+#### TODO: step by step instructions
 
 ## Install
 
-For now; manually sign in to the App Store...
+Make sure you are signed in to the App Store.
 
 ```zsh
 echo | /bin/zsh -c "$(curl -fsSL https://raw.githubusercontent.com/JasperV/dotfiles/macos/install)"
@@ -59,18 +22,16 @@ echo | /bin/zsh -c "$(curl -fsSL https://raw.githubusercontent.com/JasperV/dotfi
 
 If there are macOS updates, it will reboot. Run the script again to continue.
 
-When done, run the following (Apps) to finalize the setup:
-
-- [Monolingual](https://ingmarstein.github.io/Monolingual/) to reclaim some disk space
+When done, run [Monolingual](https://ingmarstein.github.io/Monolingual/) to reclaim some disk space.
 
 ## Features
 
-- Idempotent install and update script
+- Idempotent install (and update) script
 - Branch based for different OS'es
 - [Anka](https://veertu.com/anka-develop/) to test on macOs virtual machines
-- [Mackup](https://github.com/lra/mackup) to sync configuration (with sensitive data)
-- [AppCleaner](https://freemacsoft.net/appcleaner/) for properly uninstalling apps
+- [Mackup](https://github.com/lra/mackup) to sync configuration files with sensitive/private data
 - [Alfred](https://www.alfredapp.com/) as a replacement for Spotlight and general swiss army knife
+- [AppCleaner](https://freemacsoft.net/appcleaner/) for properly uninstalling apps
 
 ### Inspired by
 
@@ -101,7 +62,7 @@ https://github.com/mathiasbynens/dotfiles
 
 verify all files in homedir - gitignore + vscode settings
 bitwarden git credential helper rewrite - make work in all cases - e.g. sod + calcas both on dev.azure.com
-script for booting up and shutting down downloads
+script for booting up and shutting down downloads apps
 .macos idempotent + errors/issues
 auto start when rebooted after update - https://stackoverflow.com/questions/6442364/running-script-upon-login-mac
 
@@ -127,6 +88,8 @@ https://github.com/pock/pock - no touchbar on new macbooks
 https://numi.app/
 gmvault?
 google photos backup?
+move files from ~/init to google drive and then link them later - iterm even needed? terminal needed at all?
+move more files from repo root to mackup -> .files config?
 create bootvolume on usb from downloaded macos installer script - https://github.com/veertuinc/getting-started#create-vm-templatebash
 https://tisgoud.nl/2020/09/keyboard-redefined-part-2/
 solarized theme for everything

@@ -16,7 +16,6 @@ brew 'git'
 brew 'glances'
 brew 'glow'
 brew 'httpie'
-# lua - hammmerspoon?
 brew 'jq'
 brew 'mackup'
 brew 'mkcert'
@@ -56,13 +55,11 @@ cask 'obsidian'
 cask 'private-internet-access'
 cask 'radarr'
 cask 'skype'
-# snap camera
 cask 'sonarr'
 cask 'spotify'
 cask 'teamviewer-host'
 cask 'transmission'
 cask 'tiptoi-manager'
-# cask 'vanilla'
 cask 'visual-studio-code'
 
 # TODO: sort
@@ -91,16 +88,12 @@ cask 'font-firago'
 # TODO: sort
 mas 'Microsoft PowerPoint', id: 462062816
 mas 'Keynote', id: 409183694
-mas 'Space Gremlin', id: 414515628 # space gremlin # http://www.spacegremlinapp.com/mac/modes.html
+mas 'Space Gremlin', id: 414515628 
 mas 'Microsoft Excel', id: 462058435
 mas 'Key Codes', id: 414568915
-# mas 'Microsoft Outlook', id: 985367838
 mas 'Pages', id: 409201541
 mas 'Microsoft Word', id: 462054704
 mas 'Numbers', id: 409203825
 mas 'Bitwarden', id: 1352778147
 mas 'Speedtest by Ookla', id: 1153157709
 mas 'WhatsApp Desktop', id: 1147396723
-mas 'ZOOM Cloud Meetings', id: 546505307
-mas 'Microsoft Teams', id: 1113153706
-# mas 'Parallels Desktop', id: 1085114709

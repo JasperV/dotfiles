@@ -1,10 +1,16 @@
-.files
-# TODO: how to do .npmrc partial? - use mackup! because senstive data or not in there at all...? but on per project basis - in case customer no problem
-.npmrc
-Brewfile.lock.json
+.angular-config.json
 .antigen
 .antigenrc.zwc
+.files
+.files.code-workspace
+.node_repl_history
+.npmrc
+.npm
+.nvm
+.z
 .zcompdump
+.zsh_history
 .zshrc.zwc
 antigen.zsh
-.node_repl_history
+Brewfile.lock.json
+Library
