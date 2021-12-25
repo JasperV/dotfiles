@@ -3,6 +3,7 @@
 .antigenrc.zwc
 .files
 .files.code-workspace
+.mackup
 .node_repl_history
 .npmrc
 .npm
