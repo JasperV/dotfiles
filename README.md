@@ -4,7 +4,7 @@ These are my dotfiles. Some things are automated, some things are not. Still a b
 
 This branch is for macOS systems. Other branches are used on other systems, someday.
 
-#### TODO: step by step instructions
+#### TODO: step by step instructions + reasoning for this setup
 
 ## Install
 
