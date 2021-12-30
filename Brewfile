@@ -64,38 +64,35 @@ cask 'transmission'
 cask 'tiptoi-manager'
 cask 'visual-studio-code'
 
-# TODO: sort
-cask 'qlmarkdown'
-cask 'quicklook-json'
-cask 'qlcolorcode'
-cask 'qlstephen'
-cask 'qlprettypatch'
-cask 'quicklook-csv'
-cask 'qladdict'
-cask 'qlmobi'
-cask 'qlimagesize'
-cask 'suspicious-package'
 cask 'apparency'
-cask 'quicklookase'
+cask 'qladdict'
+cask 'qlcolorcode'
+cask 'qlimagesize'
+cask 'qlmarkdown'
+cask 'qlmobi'
+cask 'qlprettypatch'
+cask 'qlstephen'
 cask 'qlvideo'
+cask 'quicklook-csv'
+cask 'quicklook-json'
+cask 'quicklookase'
+cask 'suspicious-package'
 
-# TODO: sort
-cask 'font-lato'
-cask 'font-fira-code-nerd-font'
 cask 'font-fira-code'
+cask 'font-fira-code-nerd-font'
 cask 'font-fira-mono'
 cask 'font-fira-sans'
 cask 'font-firago'
+cask 'font-lato'
 
-# TODO: sort
-mas 'Microsoft PowerPoint', id: 462062816
-mas 'Keynote', id: 409183694
-mas 'Space Gremlin', id: 414515628 
-mas 'Microsoft Excel', id: 462058435
+mas 'Bitwarden', id: 1352778147
 mas 'Key Codes', id: 414568915
-mas 'Pages', id: 409201541
+mas 'Keynote', id: 409183694
+mas 'Microsoft Excel', id: 462058435
+mas 'Microsoft PowerPoint', id: 462062816
 mas 'Microsoft Word', id: 462054704
 mas 'Numbers', id: 409203825
-mas 'Bitwarden', id: 1352778147
+mas 'Pages', id: 409201541
+mas 'Space Gremlin', id: 414515628
 mas 'Speedtest by Ookla', id: 1153157709
 mas 'WhatsApp Desktop', id: 1147396723

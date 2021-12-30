@@ -18,6 +18,8 @@ If there are macOS updates, it will reboot. Run the script again to continue.
 
 When done, run [Monolingual](https://ingmarstein.github.io/Monolingual/) to reclaim some disk space.
 
+Enable iTerm shell integration
+
 ## Features
 
 - Idempotent install (and update) script
