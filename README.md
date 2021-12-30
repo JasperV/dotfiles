@@ -22,8 +22,9 @@ When done, run [Monolingual](https://ingmarstein.github.io/Monolingual/) to recl
 
 - Idempotent install (and update) script
 - Branch based for different OS'es
+- Sets OS and User level configuration
 - [Anka](https://veertu.com/anka-develop/) to test on macOs virtual machines
-- [Mackup](https://github.com/lra/mackup) to sync configuration files with sensitive/private data
+- [Mackup](https://github.com/lra/mackup) to sync configuration files (with sensitive/private data)
 - [Alfred](https://www.alfredapp.com/) as a replacement for Spotlight and general swiss army knife
 - [AppCleaner](https://freemacsoft.net/appcleaner/) for properly uninstalling apps
 
