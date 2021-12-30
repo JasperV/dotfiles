@@ -88,7 +88,7 @@ sudo rm -rf "$(brew --cache)"
 
 
 
-# Change default shell to Homebrew installed zsh
+# Change default shell to Homebrew installed Zsh
 BREW_ZSH_LOCATION="$(brew --prefix)/bin/zsh"
 
 if ! fgrep -q $BREW_ZSH_LOCATION /etc/shells; then
