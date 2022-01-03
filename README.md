@@ -20,6 +20,14 @@ When done, run [Monolingual](https://ingmarstein.github.io/Monolingual/) to recl
 
 Enable iTerm shell integration
 
+Go through System Preferences (all 😉) > General, Desktop & Screen Saver, Dock & Menu Bar, Mission Control, Accessibility, Extensions, Security & Privacy, etc...
+
+Set bitwarden config
+
+set gmail, calendar, drive offline access - all profiles
+
+`mackup restore`
+
 ## Features
 
 - Idempotent install (and update) script
