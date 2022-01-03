@@ -18,15 +18,19 @@ If there are macOS updates, it will reboot. Run the script again to continue.
 
 When done, run [Monolingual](https://ingmarstein.github.io/Monolingual/) to reclaim some disk space.
 
-Enable iTerm shell integration
+setup insync
 
-Go through System Preferences (all 😉) > General, Desktop & Screen Saver, Dock & Menu Bar, Mission Control, Accessibility, Extensions, Security & Privacy, etc...
+Enable iTerm shell integration
 
 Set bitwarden config
 
 set gmail, calendar, drive offline access - all profiles
 
 `mackup restore`
+
+
+Go through System Preferences (all 😉) > General, Desktop & Screen Saver, Dock & Menu Bar, Mission Control, Accessibility, Extensions, Security & Privacy, etc...?
+
 
 ## Features
 
