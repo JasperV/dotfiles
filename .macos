@@ -750,52 +750,114 @@ defaults write com.google.Chrome.canary PMPrintingExpandedStateForPrint2 -bool t
 # Transmission.app                                                            #
 ###############################################################################
 
-# Use `~/Documents/Torrents` to store incomplete downloads
-defaults write org.m0k.transmission UseIncompleteDownloadFolder -bool true
-defaults write org.m0k.transmission IncompleteDownloadFolder -string "${HOME}/Documents/Torrents"
+# Auto resize window to fit all transfers
+defaults write org.m0k.transmission AutoSize 1
 
-# Use `~/Downloads` to store completed downloads
-defaults write org.m0k.transmission DownloadLocationConstant -bool true
+# Show upload and download rates in Dock icon
+defaults delete org.m0k.transmission BadgeUploadRate
+defaults delete org.m0k.transmission BadgeDownloadRate
 
+# Prompt user for:
+# Removal of active transfers
+defaults delete org.m0k.transmission CheckRemove
+# Only when downloading
+defaults write org.m0k.transmission CheckRemoveDownloading 1
+# Quit with active transfers
+defaults delete org.m0k.transmission CheckQuit
+# Only when downloading
+defaults write org.m0k.transmission CheckQuitDownloading 1
+
+# Check daily for updates
+defaults delete org.m0k.transmission SUEnableAutomaticChecks
+
+# Adding
+# Default location, Same as torrent file
+defaults write org.m0k.transmission DownloadLocationConstant 0
+# Start when added
+defaults delete org.m0k.transmission AutoStartDownload
+# Trash original torrent files
+defaults write org.m0k.transmission DeleteOriginalTorrent 1
+# Append .part to incomplete files
+defaults delete org.m0k.transmission RenamePartialFiles
 # Don’t prompt for confirmation before downloading
 defaults write org.m0k.transmission DownloadAsk -bool false
 defaults write org.m0k.transmission MagnetOpenAsk -bool false
 
-# Don’t prompt for confirmation before removing non-downloading active transfers
-defaults write org.m0k.transmission CheckRemoveDownloading -bool true
+# Management Limits
+# Stop seeding at ratio 0
+defaults write org.m0k.transmission RatioCheck 1
+defaults write org.m0k.transmission RatioLimit 0
+# Stop seeding when inactive for 30 minutes
+defaults write org.m0k.transmission IdleLimitCheck 1
+defaults write org.m0k.transmission IdleLimitMinutes 30
+# Remove from list when seeding complete
+defaults write org.m0k.transmission RemoveWhenFinishSeeding 1
 
-# Trash original torrent files
-defaults write org.m0k.transmission DeleteOriginalTorrent -bool true
+# Play sound when download and seeding completes
+defaults delete org.m0k.transmission PlayDownloadSound
+defaults write org.m0k.transmission PlaySeedingSound 1
+
+# Peers
+# Global maximum connections
+defaults write org.m0k.transmission PeersTotal 500
+# For new transfers
+defaults write org.m0k.transmission PeersTorrent 100
+# Use PEX for public torrents
+defaults delete org.m0k.transmission PEXGlobal
+# Use DHT for public torrents
+defaults delete org.m0k.transmission DHTGlobal
+
+# Prefer encrypted peers
+defaults delete org.m0k.transmission EncryptionPrefer
+
+# Blocklist
+# Prevent peers in blocklist from connecting
+defaults write org.m0k.transmission BlocklistNew 1
+# Blocklist URL
+defaults write org.m0k.transmission BlocklistURL -string "https://github.com/Naunter/BT_BlockLists/raw/master/bt_blocklists.gz"
+# Update weekly
+defaults write org.m0k.transmission BlocklistAutoUpdate 1
+
+# Network
+# Enable Micro Transport Protocol
+defaults delete org.m0k.transmission UTPGlobal
+# Randomize port on launch
+defaults write org.m0k.transmission RandomPort 1
+# Automatically map port
+defaults delete org.m0k.transmission NatTraversal
+# Prevent sleeping with active transfers
+defaults delete org.m0k.transmission SleepPrevent
+
+# Enable remote access
+defaults write org.m0k.transmission RPC 1
+# Require authentication
+defaults write org.m0k.transmission RPCAuthorize 1
+# Port
+defaults write org.m0k.transmission RPCPort 9091
+# Only allow this IP adres to connect
+defaults write org.m0k.transmission RPCUseWhitelist 1
+defaults write org.m0k.transmission RPCWhitelist '("127.0.0.1",)'
 
 # Hide the donate message
 defaults write org.m0k.transmission WarningDonate -bool false
 # Hide the legal disclaimer
 defaults write org.m0k.transmission WarningLegal -bool false
 
-# IP block list.
-# Source: https://giuliomac.wordpress.com/2014/02/19/best-blocklist-for-transmission/
-defaults write org.m0k.transmission BlocklistNew -bool true
-defaults write org.m0k.transmission BlocklistURL -string "http://john.bitsurge.net/public/biglist.p2p.gz"
-defaults write org.m0k.transmission BlocklistAutoUpdate -bool true
-
-# Randomize port on launch
-defaults write org.m0k.transmission RandomPort -bool true
-
 ###############################################################################
 # AppCleaner.app                                                              #
 ###############################################################################
 
 # Show protected apps
-defaults delete "net.freemacsoft.AppCleaner" "ShowProtectedApps"
+defaults delete net.freemacsoft.AppCleaner ShowProtectedApps
 
 # Protect default OS X apps
-defaults delete "net.freemacsoft.AppCleaner" "ProtectDefaultApps"
+defaults delete net.freemacsoft.AppCleaner ProtectDefaultApps
 
 # Protect running apps
-defaults delete "net.freemacsoft.AppCleaner" "ProtectOpenedApps"
+defaults delete net.freemacsoft.AppCleaner ProtectOpenedApps
 
 # Check updates automatically
-defaults write "net.freemacsoft.AppCleaner" "SUEnableAutomaticChecks" '1'
+defaults write net.freemacsoft.AppCleaner SUEnableAutomaticChecks 1
 
 # TODO
 # SmartDelete option

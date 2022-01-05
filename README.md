@@ -20,6 +20,8 @@ When done, run [Monolingual](https://ingmarstein.github.io/Monolingual/) to recl
 
 setup insync
 
+login to vscode
+
 Enable iTerm shell integration
 
 Set bitwarden config
@@ -28,6 +30,11 @@ set gmail, calendar, drive offline access - all profiles
 
 `mackup restore`
 
+set eqmac-2 equalizer to "electronic". statusbar, macos, login launch, sliders, auto-check, OTA
+
+add local files to spotify and set preferences
+
+configure dozer
 
 Go through System Preferences (all 😉) > General, Desktop & Screen Saver, Dock & Menu Bar, Mission Control, Accessibility, Extensions, Security & Privacy, etc...?
 
@@ -39,6 +46,7 @@ Go through System Preferences (all 😉) > General, Desktop & Screen Saver, Dock
 - Sets OS and User level configuration
 - [Anka](https://veertu.com/anka-develop/) to test on macOs virtual machines
 - [Mackup](https://github.com/lra/mackup) to sync configuration files (with sensitive/private data)
+- [PlistWatch](https://github.com/catilac/plistwatch) for reading app configurations
 - [Alfred](https://www.alfredapp.com/) as a replacement for Spotlight and general swiss army knife
 - [AppCleaner](https://freemacsoft.net/appcleaner/) for properly uninstalling apps
 
