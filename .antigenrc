@@ -20,8 +20,9 @@ antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle lukechilds/zsh-nvm
 antigen bundle lukechilds/zsh-better-npm-completion
+antigen bundle darrintisdale/zsh-aliases-exa
 
 # Tell Antigen that you're done
 antigen apply
 
-plugins=(git command-not-found sudo colored-man-pages common-aliases npm vscode z brew)
+plugins=(git command-not-found sudo colored-man-pages common-aliases npm zsh-aliases-exa vscode z brew)

@@ -50,6 +50,7 @@ cask 'iterm2'
 cask 'jackett'
 cask 'karabiner-elements'
 cask 'keka'
+cask 'kekaexternalhelper'
 cask 'monolingual'
 # cask 'ngrok' # TODO: does not seem to work right now
 cask 'obsidian'

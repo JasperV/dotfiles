@@ -36,7 +36,13 @@ add local files to spotify and set preferences
 
 configure dozer
 
+[login whatsapp](https://web.whatsapp.com/)
+
 Go through System Preferences (all 😉) > General, Desktop & Screen Saver, Dock & Menu Bar, Mission Control, Accessibility, Extensions, Security & Privacy, etc...?
+
+[setup keka context menu integration](https://github.com/aonez/Keka/wiki/Context-Menu)
+And give access to home folder and external volumes
+Run KekaExternalHelper and set as default for unzipping
 
 
 ## Features

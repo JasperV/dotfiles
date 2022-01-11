@@ -100,18 +100,24 @@ fi
 curl -L -s git.io/antigen > antigen.zsh
 
 
-# configure macOS
+# configure macOS and Applications
 ./.macos
 
 
+
+touch .hushlogin
+
+
+
 # TODO: make nvm runs, so that after reboot mackup restore can be run
+
 
 
 # Reboot
 if [[ " $@ " =~ " --no-reboot " ]]; then
 
   # Kill affected applications
-  # TODO: update list of applications
+  # TODO: update list of applications from .macos etc...
   for app in "Activity Monitor" \
     "cfprefsd" \
     "Dock" \
