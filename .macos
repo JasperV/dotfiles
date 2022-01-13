@@ -915,3 +915,19 @@ defaults write com.aone.keka UseParentName 1
 # Extraction
 defaults write com.aone.keka DeleteAfterExtraction 1
 defaults write com.aone.keka ExtractionExcludeMacForks 1
+
+###############################################################################
+# Monolingual.app                                                             #
+###############################################################################
+
+# Directories
+defaults write com.github.IngmarStein.Monolingual Roots '({Architectures=1;Languages=1;Path=/Applications;},{Architectures=1;Languages=1;Path=/Library;},)'
+
+# Move language files to the trash
+defaults write com.github.IngmarStein.Monolingual Trash -bool false
+
+# Automatically check for updates
+defaults write com.github.IngmarStein.Monolingual SUEnableAutomaticChecks -bool true
+
+# Strip debug info when removing architectures
+defaults write com.github.IngmarStein.Monolingual Strip -bool true
