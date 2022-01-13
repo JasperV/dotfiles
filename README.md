@@ -1,4 +1,7 @@
-# .files [![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active) [![It works on my machine](https://img.shields.io/badge/It%20works%20on%20my%20machine-%C2%AF%5C__(%E3%83%84)__%2F%C2%AF-brightgreen)](https://git.io/jasperv)
+# .files
+[![It works on my machine](https://img.shields.io/static/v1?label=It%20works%20on%20my%20machine&message=¯\_(ツ)_/¯&color=brightgreen&style=for-the-badge)](https://git.io/jasperv)
+[![GitHub Repo](https://img.shields.io/static/v1?label=github&message=jasperv/dotfiles&color=brightgreen&style=for-the-badge&logo=github)](https://github.com/JasperV/dotfiles)
+[![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](https://img.shields.io/static/v1?label=repo%20status&message=active&color=brightgreen&style=for-the-badge)](https://www.repostatus.org/#active)
 
 These are my dotfiles. Some things are automated, some things are not. Still a bit messy, but I will cleanup up as I go along.
 
