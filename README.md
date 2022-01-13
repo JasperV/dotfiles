@@ -22,6 +22,8 @@ If there are macOS updates, it will reboot. Run the script again to continue.
 disable all icloud syncing except find my mac
 
 set dynamic wallpaper on all desktops/spaces
+set screensaver 5 minutes, aerial
+set show battery percentage in menu bar
 
 When done, run [Monolingual](https://ingmarstein.github.io/Monolingual/) to reclaim some disk space.
 

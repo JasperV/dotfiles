@@ -259,8 +259,8 @@ sudo pmset -a displaysleep 15
 # Disable machine sleep while charging
 sudo pmset -c sleep 0
 
-# Set machine sleep to 5 minutes on battery
-sudo pmset -b sleep 5
+# Set machine sleep to 15 minutes on battery
+sudo pmset -b sleep 15
 
 # Set standby delay to 24 hours (default is 1 hour)
 # sudo pmset -a standbydelay 86400
@@ -445,11 +445,17 @@ defaults write com.apple.dock mouse-over-hilite-stack -bool true
 # Set the icon size of Dock items to 36 pixels
 defaults write com.apple.dock tilesize -int 36
 
+# Magnification
+defaults write com.apple.dock magnification -bool false
+
 # Set dock orientation to left
 defaults write com.apple.dock orientation left
 
 # Change minimize/maximize window effect
 defaults write com.apple.dock mineffect -string "scale"
+
+# Double-click a window's title bar to zoom
+defaults write NSGlobalDomain AppleActionOnDoubleClick -string "Maximize"
 
 # Minimize windows into their application’s icon
 defaults write com.apple.dock minimize-to-application -bool true
@@ -501,6 +507,12 @@ defaults write com.apple.dock showhidden -bool true
 # Don’t show recent applications in Dock
 defaults write com.apple.dock show-recents -bool false
 
+# Automatically hide and show the menu bar in full screen
+defaults write NSGlobalDomain AppleMenuBarVisibleInFullscreen -bool false
+
+# Automatically hide and show the menu bar on desktop
+defaults write NSGlobalDomain "_HIHideMenuBar" -bool false
+
 # Disable the Launchpad gesture (pinch with thumb and three fingers)
 #defaults write com.apple.dock showLaunchpadGestureEnabled -int 0
 
@@ -538,6 +550,49 @@ defaults write com.apple.dock persistent-others -array-add '{tile-data={}; tile-
 # Bottom left screen corner → Start screen saver
 # defaults write com.apple.dock wvous-bl-corner -int 5
 # defaults write com.apple.dock wvous-bl-modifier -int 0
+
+# Don't show Wi-Fi in menu bar
+defaults write com.apple.controlcenter "NSStatusItem Visible WiFi" -bool false
+
+# Don't show Bluetooth in menu bar
+defaults write com.apple.controlcenter "NSStatusItem Visible Bluetooth" -bool false
+
+# Don't show AirDrop in menu bar
+defaults write com.apple.controlcenter "NSStatusItem Visible AirDrop" -bool false
+
+# Don't show Keyboard Brightness in menu bar
+defaults write com.apple.controlcenter "NSStatusItem Visible KeyboardBrightness" -bool false
+
+# Don't show Screen Mirroring in menu bar
+defaults write "com.apple.airplay" '{showInMenuBarIfPresent=0;}'
+
+# Don't show Now Playing in menu bar
+defaults write com.apple.controlcenter "NSStatusItem Visible NowPlaying" -bool false
+
+# Don't show Accessibility in menu bar
+defaults write com.apple.controlcenter "NSStatusItem Visible AccessibilityShortcuts" -bool false
+
+# Show battery in menu bar
+defaults write com.apple.controlcenter "NSStatusItem Visible Battery" -bool true
+
+# Don't show Fast User Switching in menu bar
+defaults write com.apple.controlcenter "NSStatusItem Visible UserSwitcher" -bool false
+
+# Don't show Time Machine in menu bar
+defaults write com.apple.systemuiserver "NSStatusItem Visible com.apple.menuextra.TimeMachine" -bool false
+
+# Don't show Spotlight in menu bar
+defaults write com.apple.Spotlight "NSStatusItem Visible Item-0" -bool false
+
+# Don't show Siri in menu bar
+defaults write com.apple.Siri StatusMenuVisible -bool false
+
+# Show clock in menu bar
+defaults write com.apple.menuextra.clock ShowDayOfWeek -bool true
+defaults write com.apple.menuextra.clock ShowDayOfMonth -bool true
+defaults write com.apple.menuextra.clock DateFormat -string "EEE d MMM  HH:mm:ss"
+defaults write com.apple.menuextra.clock IsAnalog -bool false
+defaults write com.apple.menuextra.clock FlashDateSeparators -bool true
 
 ###############################################################################
 # Safari & WebKit                                                             #
