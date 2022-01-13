@@ -1,5 +1,5 @@
 # .files
-[![It works on my machine](https://img.shields.io/static/v1?label=It%20works%20on%20my%20machine&message=¯\_(ツ)_/¯&color=brightgreen&style=for-the-badge)](https://git.io/jasperv)
+[![It works on my machine](https://img.shields.io/static/v1?label=It%20works%20on%20my%20machine&message=¯\\_(ツ)_/¯&color=brightgreen&style=for-the-badge)](https://git.io/jasperv)
 [![GitHub Repo](https://img.shields.io/static/v1?label=github&message=jasperv/dotfiles&color=brightgreen&style=for-the-badge&logo=github)](https://github.com/JasperV/dotfiles)
 [![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](https://img.shields.io/static/v1?label=repo%20status&message=active&color=brightgreen&style=for-the-badge)](https://www.repostatus.org/#active)
 
@@ -40,6 +40,8 @@ add local files to spotify and set preferences
 configure dozer
 
 [login whatsapp](https://web.whatsapp.com/)
+
+configure finder sidebar
 
 Go through System Preferences (all 😉) > General, Desktop & Screen Saver, Dock & Menu Bar, Mission Control, Accessibility, Extensions, Security & Privacy, etc...?
 
