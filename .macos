@@ -72,6 +72,12 @@ sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.serve
 # Disable the sound effects on boot
 sudo nvram SystemAudioVolume=" "
 
+# Play user interface sound effects
+defaults write NSGlobalDomain com.apple.sound.uiaudio.enabled -bool true
+
+# Play feedback when volume is changed
+defaults write NSGlobalDomain com.apple.sound.beep.feedback -bool true
+
 # Disable transparency in the menu bar and elsewhere on Yosemite
 defaults write com.apple.universalaccess reduceTransparency -bool true
 
@@ -179,11 +185,58 @@ defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
 # Disable auto-correct
 defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 
+# Disable Touch Bar typing suggestions
+defaults write NSGlobalDomain NSAutomaticTextCompletionEnabled -bool false
+
 # Set a custom wallpaper image. `DefaultDesktop.jpg` is already a symlink, and
 # all wallpapers are in `/Library/Desktop Pictures/`. The default is `Wave.jpg`.
 #rm -rf ~/Library/Application Support/Dock/desktoppicture.db
 #sudo rm -rf /System/Library/CoreServices/DefaultDesktop.jpg
 #sudo ln -s /path/to/your/image /System/Library/CoreServices/DefaultDesktop.jpg
+
+###############################################################################
+# Accessibility                                                               #
+###############################################################################
+
+# VoiceOver Off
+defaults write com.apple.Accessibility VoiceOverTouchEnabled -bool false
+defaults write com.apple.Accessibility AccessibilityEnabled -bool false
+defaults write com.apple.Accessibility ApplicationAccessibilityEnabled -bool false
+defaults write com.apple.universalaccess voiceOverOnOffKey -bool false
+
+# Zoom
+defaults write com.apple.universalaccess closeViewHotkeysEnabled -bool true
+defaults write com.apple.AppleMultitouchTrackpad HIDScrollZoomModifierMask -string "262144"
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad HIDScrollZoomModifierMask -string "262144"
+defaults write com.apple.universalaccess closeViewPanningMode -bool true
+# Advanced
+defaults write com.apple.universalaccess closeViewFlashScreenOnNotificationEnabled -bool false
+defaults write com.apple.universalaccess closeViewRestoreZoomFactorOnStartup -bool false
+defaults write com.apple.universalaccess closeViewSmoothImages -bool true
+
+# Display
+defaults write com.apple.Accessibility EnhancedBackgroundContrastEnabled -bool true
+defaults write com.apple.universalaccess reduceTransparency -bool true
+defaults write com.apple.universalaccess increaseContrast -bool true
+defaults write com.apple.Accessibility DarkenSystemColors -bool true
+# Pointer
+defaults write NSGlobalDomain CGDisableCursorLocationMagnification -bool false
+
+# Pointer Control
+defaults write NSGlobalDomain com.apple.springing.enabled -bool true
+# Ignore trackpad when mouse connected
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad USBMouseStopsTrackpad -bool true
+# Trackpad Options
+defaults write com.apple.AppleMultitouchTrackpad TrackpadHorizScroll -bool true
+defaults write com.apple.AppleMultitouchTrackpad TrackpadScroll -bool true
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadHorizScroll -bool true
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadScroll -bool true
+# with inertia
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadMomentumScroll -bool true
+defaults write com.apple.AppleMultitouchTrackpad TrackpadMomentumScroll -bool true
+# Scrolling speed
+defaults write NSGlobalDomain com.apple.trackpad.scrolling -string "0.3125"
+defaults write NSGlobalDomain com.apple.scrollwheel.scaling -string "0.3125"
 
 ###############################################################################
 # Trackpad, mouse, keyboard, Bluetooth accessories, and input                 #
@@ -230,6 +283,9 @@ defaults write NSGlobalDomain AppleLanguages -array "en" "nl"
 defaults write NSGlobalDomain AppleLocale -string "en_GB@currency=EUR"
 defaults write NSGlobalDomain AppleMeasurementUnits -string "Centimeters"
 defaults write NSGlobalDomain AppleMetricUnits -bool true
+
+# Live Text
+defaults write NSGlobalDomain AppleLiveTextEnabled -bool true
 
 # Show language menu in the top right corner of the boot screen
 sudo defaults write /Library/Preferences/com.apple.loginwindow showInputMenu -bool true

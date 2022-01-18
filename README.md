@@ -49,7 +49,9 @@ configure dozer
 
 configure finder sidebar
 
-Go through System Preferences (all 😉) > General, Desktop & Screen Saver, Dock & Menu Bar, Mission Control, Accessibility, Extensions, Security & Privacy, etc...?
+Go through System Preferences: language, notifications, users -> login items (insync, iterm, alfred), extensions, security, software update, network (add wifi networks), bluetooth (add headphones), display
+
+install printer(s)
 
 [setup keka context menu integration](https://github.com/aonez/Keka/wiki/Context-Menu)
 And give access to home folder and external volumes
