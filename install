@@ -111,7 +111,7 @@ touch .hushlogin
 
 # TODO: make nvm runs, so that after reboot mackup restore can be run
 
-
+echo $@
 
 # Reboot
 if [[ " $@ " =~ " --no-reboot " ]]; then
