@@ -111,23 +111,23 @@ touch .hushlogin
 
 # TODO: make nvm runs, so that after reboot mackup restore can be run
 
-echo $@
+
 
 # Reboot
 if [[ " $@ " =~ " --no-reboot " ]]; then
 
   # Kill affected applications
   # TODO: update list of applications from .macos etc...
-  for app in "Activity Monitor" \
-    "cfprefsd" \
-    "Dock" \
-    "Finder" \
-    "Google Chrome" \
-    "SystemUIServer" \
-    "Terminal" \
-    "Transmission"; do
-    killall "${app}" &> /dev/null
-  done
+  # for app in "Activity Monitor" \
+  #   "cfprefsd" \
+  #   "Dock" \
+  #   "Finder" \
+  #   "Google Chrome" \
+  #   "SystemUIServer" \
+  #   "Terminal" \
+  #   "Transmission"; do
+  #   killall "${app}" &> /dev/null
+  # done
 
   echo "Done."
   exit
