@@ -49,7 +49,7 @@ configure dozer
 
 configure finder sidebar
 
-Go through System Preferences: language, notifications, users -> login items (insync, iterm, alfred), extensions, security, software update, network (add wifi networks), bluetooth (add headphones), display
+Go through System Preferences: language, notifications, users -> login items (insync, iterm, alfred), extensions, security, software update, network (add wifi networks), bluetooth (add headphones), display, battery
 
 install printer(s)
 

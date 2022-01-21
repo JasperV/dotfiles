@@ -39,6 +39,7 @@ cask 'balenaetcher'
 cask 'bitwarden'
 cask 'cakebrew'
 cask 'caption'
+cask 'clean-me'
 cask 'dozer'
 # cask 'eqmac' # TODO: requires attended install
 cask 'google-chrome'
