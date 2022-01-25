@@ -8,7 +8,7 @@ tap 'homebrew/core'
 tap 'homebrew/services'
 
 brew 'bitwarden-cli'
-brew 'ccat'
+brew 'bat'
 brew 'coreutils'
 brew 'duf'
 brew 'exa'
