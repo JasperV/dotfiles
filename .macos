@@ -23,8 +23,7 @@ sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setloggingmode on
 sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setstealthmode on
 
 # Disable SSH Daemon
-# TODO: requires full disk access privileges
-# sudo systemsetup -f -setremotelogin off
+sudo systemsetup -f -setremotelogin off
 
 # Disable Apache HTTPD auto-start
 sudo launchctl unload -w /System/Library/LaunchDaemons/org.apache.httpd.plist 2>/dev/null
