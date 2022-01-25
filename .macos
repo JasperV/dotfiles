@@ -1,9 +1,10 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
 # Close any open System Preferences panes, to prevent them from overriding
 # settings we’re about to change
 osascript -e 'tell application "System Preferences" to quit'
-# TODO: close other apps as well
+# TODO: close other apps as well, move killall to here
+# make function - used in advance and afterwards
 
 ###############################################################################
 # Security & Privacy                                                          #
@@ -49,8 +50,10 @@ cupsctl --no-share-printers
 sudo defaults write /Library/Preferences/com.apple.loginwindow LoginwindowText "Deze computer gevonden? Bel $PHONENUMBER. Bijvoorbaat dank!"
 
 # Enable full-disk encryption and write the recovery key to the Desktop
-if [[ ! -d "$(sudo fdesetup isactive)" && "$(id -un)" != "anka" ]]; then
-  sudo fdesetup enable -user "$USER" | tee ~/Desktop/"FileVault Recovery Key (Backup NOW!).txt"
+if [[ ! $(sudo fdesetup isactive) ]]; then #  && "$(id -un)" != "anka"
+  if [[ "$(id -un)" != "anka" ]]; then
+    sudo fdesetup enable -user "$USER" | tee ~/Desktop/"FileVault Recovery Key (Backup NOW!).txt"
+  fi
 fi
 
 ###############################################################################
@@ -77,9 +80,6 @@ defaults write NSGlobalDomain com.apple.sound.uiaudio.enabled -bool true
 
 # Play feedback when volume is changed
 defaults write NSGlobalDomain com.apple.sound.beep.feedback -bool true
-
-# Disable transparency in the menu bar and elsewhere on Yosemite
-defaults write com.apple.universalaccess reduceTransparency -bool true
 
 # Set highlight color to blue
 defaults write NSGlobalDomain AppleHighlightColor -string "0.698039 0.843137 1.000000 Blue"
@@ -202,22 +202,13 @@ defaults write NSGlobalDomain NSAutomaticTextCompletionEnabled -bool false
 defaults write com.apple.Accessibility VoiceOverTouchEnabled -bool false
 defaults write com.apple.Accessibility AccessibilityEnabled -bool false
 defaults write com.apple.Accessibility ApplicationAccessibilityEnabled -bool false
-defaults write com.apple.universalaccess voiceOverOnOffKey -bool false
 
 # Zoom
-defaults write com.apple.universalaccess closeViewHotkeysEnabled -bool true
 defaults write com.apple.AppleMultitouchTrackpad HIDScrollZoomModifierMask -string "262144"
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad HIDScrollZoomModifierMask -string "262144"
-defaults write com.apple.universalaccess closeViewPanningMode -bool true
-# Advanced
-defaults write com.apple.universalaccess closeViewFlashScreenOnNotificationEnabled -bool false
-defaults write com.apple.universalaccess closeViewRestoreZoomFactorOnStartup -bool false
-defaults write com.apple.universalaccess closeViewSmoothImages -bool true
 
 # Display
 defaults write com.apple.Accessibility EnhancedBackgroundContrastEnabled -bool true
-defaults write com.apple.universalaccess reduceTransparency -bool true
-defaults write com.apple.universalaccess increaseContrast -bool true
 defaults write com.apple.Accessibility DarkenSystemColors -bool true
 # Pointer
 defaults write NSGlobalDomain CGDisableCursorLocationMagnification -bool false
@@ -263,12 +254,6 @@ defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" -int
 # (e.g. enable Tab in modal dialogs)
 defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
 
-# Use scroll gesture with the Ctrl (^) modifier key to zoom
-defaults write com.apple.universalaccess closeViewScrollWheelToggle -bool true
-defaults write com.apple.universalaccess HIDScrollZoomModifierMask -int 262144
-# Follow the keyboard focus while zoomed in
-defaults write com.apple.universalaccess closeViewZoomFollowsFocus -bool true
-
 # Disable press-and-hold for keys in favor of key repeat
 defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
 
@@ -291,7 +276,7 @@ defaults write NSGlobalDomain AppleLiveTextEnabled -bool true
 sudo defaults write /Library/Preferences/com.apple.loginwindow showInputMenu -bool true
 
 # Set the timezone; see `sudo systemsetup -listtimezones` for other values
-sudo systemsetup -settimezone "Europe/Amsterdam" > /dev/null
+# sudo systemsetup -settimezone "Europe/Amsterdam" > /dev/null
 
 # Stop iTunes from responding to the keyboard media keys
 launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist 2> /dev/null
@@ -330,14 +315,15 @@ sudo pmset -b sleep 15
 #    power failure.
 sudo pmset -a hibernatemode 0
 
-# Remove the sleep image file to save disk space
-echo 1
-sudo rm /private/var/vm/sleepimage
-# Create a zero-byte file instead…
-echo 2
-sudo touch /private/var/vm/sleepimage
+if (( $(stat -f %z "/private/var/vm/sleepimage") > 0 )); then
+  # Remove the sleep image file to save disk space
+  sudo rm /private/var/vm/sleepimage
+
+  # Create a zero-byte file instead…
+  sudo touch /private/var/vm/sleepimage
+fi
+
 # …and make sure it can’t be rewritten
-echo 3
 sudo chflags uchg /private/var/vm/sleepimage
 
 ###############################################################################
@@ -467,7 +453,7 @@ defaults write com.apple.finder FXRemoveOldTrashItems -bool true
 defaults write com.apple.NetworkBrowser BrowseAllInterfaces -bool true
 
 # Show the ~/Library folder
-chflags nohidden ~/Library && xattr -d com.apple.FinderInfo ~/Library
+chflags nohidden ~/Library && [[ $(xattr "/Users/jasper/Library") = *com.apple.FinderInfo* ]] && xattr -d com.apple.FinderInfo "/Users/jasper/Library"
 
 # Show the /Volumes folder
 sudo chflags nohidden /Volumes
@@ -760,12 +746,11 @@ defaults write com.apple.Safari InstallExtensionUpdatesAutomatically -bool true
 ###############################################################################
 
 # Hide Spotlight tray-icon (and subsequent helper)
-# TODO: not allowed
 # sudo chmod 600 /System/Library/CoreServices/Search.bundle/Contents/MacOS/Search
 # Disable Spotlight indexing for any volume that gets mounted and has not yet
 # been indexed before.
 # Use `sudo mdutil -i off "/Volumes/foo"` to stop indexing any volume.
-sudo defaults write /.Spotlight-V100/VolumeConfiguration Exclusions -array "/Volumes"
+# sudo defaults write /.Spotlight-V100/VolumeConfiguration Exclusions -array "/Volumes"
 # Change indexing order and disable some search results
 # Yosemite-specific search results (remove them if you are using macOS 10.9 or older):
 # 	MENU_DEFINITION
@@ -933,7 +918,7 @@ defaults write com.google.Chrome.canary PMPrintingExpandedStateForPrint2 -bool t
 ###############################################################################
 
 # Auto resize window to fit all transfers
-defaults write org.m0k.transmission AutoSize 1
+defaults write org.m0k.transmission AutoSize -bool true
 
 # Show upload and download rates in Dock icon
 defaults delete org.m0k.transmission BadgeUploadRate
@@ -943,22 +928,22 @@ defaults delete org.m0k.transmission BadgeDownloadRate
 # Removal of active transfers
 defaults delete org.m0k.transmission CheckRemove
 # Only when downloading
-defaults write org.m0k.transmission CheckRemoveDownloading 1
+defaults write org.m0k.transmission CheckRemoveDownloading -bool true
 # Quit with active transfers
 defaults delete org.m0k.transmission CheckQuit
 # Only when downloading
-defaults write org.m0k.transmission CheckQuitDownloading 1
+defaults write org.m0k.transmission CheckQuitDownloading -bool true
 
 # Check daily for updates
 defaults delete org.m0k.transmission SUEnableAutomaticChecks
 
 # Adding
 # Default location, Same as torrent file
-defaults write org.m0k.transmission DownloadLocationConstant 0
+defaults write org.m0k.transmission DownloadLocationConstant -bool false
 # Start when added
 defaults delete org.m0k.transmission AutoStartDownload
 # Trash original torrent files
-defaults write org.m0k.transmission DeleteOriginalTorrent 1
+defaults write org.m0k.transmission DeleteOriginalTorrent -bool true
 # Append .part to incomplete files
 defaults delete org.m0k.transmission RenamePartialFiles
 # Don’t prompt for confirmation before downloading
@@ -967,17 +952,17 @@ defaults write org.m0k.transmission MagnetOpenAsk -bool false
 
 # Management Limits
 # Stop seeding at ratio 0
-defaults write org.m0k.transmission RatioCheck 1
-defaults write org.m0k.transmission RatioLimit 0
+defaults write org.m0k.transmission RatioCheck -bool true
+defaults write org.m0k.transmission RatioLimit -bool false
 # Stop seeding when inactive for 30 minutes
-defaults write org.m0k.transmission IdleLimitCheck 1
+defaults write org.m0k.transmission IdleLimitCheck -bool true
 defaults write org.m0k.transmission IdleLimitMinutes 30
 # Remove from list when seeding complete
-defaults write org.m0k.transmission RemoveWhenFinishSeeding 1
+defaults write org.m0k.transmission RemoveWhenFinishSeeding -bool true
 
 # Play sound when download and seeding completes
 defaults delete org.m0k.transmission PlayDownloadSound
-defaults write org.m0k.transmission PlaySeedingSound 1
+defaults write org.m0k.transmission PlaySeedingSound -bool true
 
 # Peers
 # Global maximum connections
@@ -994,30 +979,30 @@ defaults delete org.m0k.transmission EncryptionPrefer
 
 # Blocklist
 # Prevent peers in blocklist from connecting
-defaults write org.m0k.transmission BlocklistNew 1
+defaults write org.m0k.transmission BlocklistNew -bool true
 # Blocklist URL
 defaults write org.m0k.transmission BlocklistURL -string "https://github.com/Naunter/BT_BlockLists/raw/master/bt_blocklists.gz"
 # Update weekly
-defaults write org.m0k.transmission BlocklistAutoUpdate 1
+defaults write org.m0k.transmission BlocklistAutoUpdate -bool true
 
 # Network
 # Enable Micro Transport Protocol
 defaults delete org.m0k.transmission UTPGlobal
 # Randomize port on launch
-defaults write org.m0k.transmission RandomPort 1
+defaults write org.m0k.transmission RandomPort -bool true
 # Automatically map port
 defaults delete org.m0k.transmission NatTraversal
 # Prevent sleeping with active transfers
 defaults delete org.m0k.transmission SleepPrevent
 
 # Enable remote access
-defaults write org.m0k.transmission RPC 1
+defaults write org.m0k.transmission RPC -bool true
 # Require authentication
-defaults write org.m0k.transmission RPCAuthorize 1
+defaults write org.m0k.transmission RPCAuthorize -bool true
 # Port
 defaults write org.m0k.transmission RPCPort 9091
 # Only allow this IP adres to connect
-defaults write org.m0k.transmission RPCUseWhitelist 1
+defaults write org.m0k.transmission RPCUseWhitelist -bool true
 defaults write org.m0k.transmission RPCWhitelist '("127.0.0.1",)'
 
 # Hide the donate message
@@ -1030,13 +1015,13 @@ defaults write org.m0k.transmission WarningLegal -bool false
 ###############################################################################
 
 # Show protected apps
-defaults delete net.freemacsoft.AppCleaner ShowProtectedApps
+defaults write net.freemacsoft.AppCleaner ShowProtectedApps -bool true
 
 # Protect default OS X apps
-defaults delete net.freemacsoft.AppCleaner ProtectDefaultApps
+defaults write net.freemacsoft.AppCleaner ProtectDefaultApps -bool true
 
 # Protect running apps
-defaults delete net.freemacsoft.AppCleaner ProtectOpenedApps
+defaults write net.freemacsoft.AppCleaner ProtectOpenedApps -bool true
 
 # Check updates automatically
 defaults write net.freemacsoft.AppCleaner SUEnableAutomaticChecks 1

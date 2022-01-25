@@ -100,8 +100,9 @@ fi
 curl -L -s git.io/antigen > antigen.zsh
 
 
+
 # configure macOS and Applications
-# ./.macos
+./.macos
 
 
 
