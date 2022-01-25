@@ -921,31 +921,31 @@ defaults write com.google.Chrome.canary PMPrintingExpandedStateForPrint2 -bool t
 defaults write org.m0k.transmission AutoSize -bool true
 
 # Show upload and download rates in Dock icon
-defaults delete org.m0k.transmission BadgeUploadRate
-defaults delete org.m0k.transmission BadgeDownloadRate
+defaults write org.m0k.transmission BadgeUploadRate -bool true
+defaults write org.m0k.transmission BadgeDownloadRate -bool true
 
 # Prompt user for:
 # Removal of active transfers
-defaults delete org.m0k.transmission CheckRemove
+defaults write org.m0k.transmission CheckRemove -bool true
 # Only when downloading
 defaults write org.m0k.transmission CheckRemoveDownloading -bool true
 # Quit with active transfers
-defaults delete org.m0k.transmission CheckQuit
+defaults write org.m0k.transmission CheckQuit -bool true
 # Only when downloading
 defaults write org.m0k.transmission CheckQuitDownloading -bool true
 
 # Check daily for updates
-defaults delete org.m0k.transmission SUEnableAutomaticChecks
+defaults write org.m0k.transmission SUEnableAutomaticChecks -bool true
 
 # Adding
 # Default location, Same as torrent file
 defaults write org.m0k.transmission DownloadLocationConstant -bool false
 # Start when added
-defaults delete org.m0k.transmission AutoStartDownload
+defaults write org.m0k.transmission AutoStartDownload -bool true
 # Trash original torrent files
 defaults write org.m0k.transmission DeleteOriginalTorrent -bool true
 # Append .part to incomplete files
-defaults delete org.m0k.transmission RenamePartialFiles
+defaults write org.m0k.transmission RenamePartialFiles -bool true
 # Don’t prompt for confirmation before downloading
 defaults write org.m0k.transmission DownloadAsk -bool false
 defaults write org.m0k.transmission MagnetOpenAsk -bool false
@@ -961,7 +961,7 @@ defaults write org.m0k.transmission IdleLimitMinutes 30
 defaults write org.m0k.transmission RemoveWhenFinishSeeding -bool true
 
 # Play sound when download and seeding completes
-defaults delete org.m0k.transmission PlayDownloadSound
+defaults write org.m0k.transmission PlayDownloadSound -bool true
 defaults write org.m0k.transmission PlaySeedingSound -bool true
 
 # Peers
@@ -970,12 +970,12 @@ defaults write org.m0k.transmission PeersTotal 500
 # For new transfers
 defaults write org.m0k.transmission PeersTorrent 100
 # Use PEX for public torrents
-defaults delete org.m0k.transmission PEXGlobal
+defaults write org.m0k.transmission PEXGlobal -bool true
 # Use DHT for public torrents
-defaults delete org.m0k.transmission DHTGlobal
+defaults write org.m0k.transmission DHTGlobal -bool true
 
 # Prefer encrypted peers
-defaults delete org.m0k.transmission EncryptionPrefer
+defaults write org.m0k.transmission EncryptionPrefer -bool true
 
 # Blocklist
 # Prevent peers in blocklist from connecting
@@ -987,13 +987,13 @@ defaults write org.m0k.transmission BlocklistAutoUpdate -bool true
 
 # Network
 # Enable Micro Transport Protocol
-defaults delete org.m0k.transmission UTPGlobal
+defaults write org.m0k.transmission UTPGlobal -bool true
 # Randomize port on launch
 defaults write org.m0k.transmission RandomPort -bool true
 # Automatically map port
-defaults delete org.m0k.transmission NatTraversal
+defaults write org.m0k.transmission NatTraversal -bool true
 # Prevent sleeping with active transfers
-defaults delete org.m0k.transmission SleepPrevent
+defaults write org.m0k.transmission SleepPrevent -bool true
 
 # Enable remote access
 defaults write org.m0k.transmission RPC -bool true
@@ -1001,7 +1001,7 @@ defaults write org.m0k.transmission RPC -bool true
 defaults write org.m0k.transmission RPCAuthorize -bool true
 # Port
 defaults write org.m0k.transmission RPCPort 9091
-# Only allow this IP adres to connect
+# Only allow local IP adres to connect
 defaults write org.m0k.transmission RPCUseWhitelist -bool true
 defaults write org.m0k.transmission RPCWhitelist '("127.0.0.1",)'
 
