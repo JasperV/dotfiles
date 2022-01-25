@@ -7,7 +7,6 @@ antigen use oh-my-zsh
 antigen bundle git
 antigen bundle command-not-found
 antigen bundle sudo
-antigen bundle colored-man-pages
 antigen bundle common-aliases
 antigen bundle npm
 antigen bundle vscode
@@ -25,4 +24,4 @@ antigen bundle darrintisdale/zsh-aliases-exa
 # Tell Antigen that you're done
 antigen apply
 
-plugins=(git command-not-found sudo colored-man-pages common-aliases npm zsh-aliases-exa vscode z brew)
+plugins=(git command-not-found sudo common-aliases npm zsh-aliases-exa vscode z brew)
