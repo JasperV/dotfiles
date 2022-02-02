@@ -22,10 +22,21 @@ groups | grep -q $Q -E "\b(admin)\b" || abort "Add $USER to the admin group."
 caffeinate -s -w $$ &
 
 # Set some variables to use during install
-vared -p "Phonenumber for lock screen message: " -c PHONENUMBER
-vared -p "Computer network name: " -c PCNAME
-export PHONENUMBER=$PHONENUMBER
-export PCNAME=$PCNAME
+# TODO: OR commandline argument override - install/reset = run all update/upgrade not
+export LOCKSCREEN_MESSAGE=$(defaults read /Library/Preferences/com.apple.loginwindow LoginwindowText)
+export COMPUTERNAME=$(scutil --get ComputerName)
+
+if test "${LOCKSCREEN_MESSAGE#*Deze computer gevonden?}" = "$LOCKSCREEN_MESSAGE"
+then
+  vared -p "Phonenumber for lock screen message: " -c PHONENUMBER
+  export PHONENUMBER=$PHONENUMBER
+fi
+
+if test "${COMPUTERNAME#*MacBook Pro}" != "$COMPUTERNAME"
+then
+  vared -p "Computer network name: " -c PCNAME
+  export PCNAME=$PCNAME
+fi
 
 
 
