@@ -4,24 +4,25 @@
 antigen use oh-my-zsh
 
 # Load bundles from the default repo (oh-my-zsh)
-antigen bundle git
+antigen bundle brew
 antigen bundle command-not-found
-antigen bundle sudo
 antigen bundle common-aliases
+antigen bundle git
 antigen bundle npm
+antigen bundle sudo
 antigen bundle vscode
 antigen bundle z
-antigen bundle brew
 
 # Load bundles from external repos
-antigen bundle zsh-users/zsh-completions
-antigen bundle zsh-users/zsh-autosuggestions
-antigen bundle zsh-users/zsh-syntax-highlighting
+antigen bundle darrintisdale/zsh-aliases-exa
 antigen bundle lukechilds/zsh-nvm
 antigen bundle lukechilds/zsh-better-npm-completion
-antigen bundle darrintisdale/zsh-aliases-exa
+antigen bundle paulirish/git-open
+antigen bundle zsh-users/zsh-autosuggestions
+antigen bundle zsh-users/zsh-completions
+antigen bundle zsh-users/zsh-syntax-highlighting
 
 # Tell Antigen that you're done
 antigen apply
 
-plugins=(git command-not-found sudo common-aliases npm zsh-aliases-exa vscode z brew)
+plugins=(git git-open command-not-found sudo common-aliases npm zsh-aliases-exa vscode z brew)
