@@ -16,11 +16,13 @@ brew 'fx'
 brew 'git'
 brew 'glances'
 brew 'glow'
+brew 'htop'
 brew 'httpie'
 brew 'jq'
 brew 'mackup'
 brew 'mkcert'
 brew 'mono'
+brew 'pnpm'
 brew 'starship'
 brew 'thefuck'
 brew 'trash'
@@ -95,5 +97,7 @@ mas 'Microsoft Word', id: 462054704
 mas 'Numbers', id: 409203825
 mas 'Pages', id: 409201541
 mas 'Space Gremlin', id: 414515628
+mas 'Speediness', id: 1596706466
 mas 'Speedtest by Ookla', id: 1153157709
+mas 'UTC Time', id: 1538245904
 mas 'WhatsApp Desktop', id: 1147396723

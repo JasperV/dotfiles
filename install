@@ -49,6 +49,7 @@ sudo softwareupdate -i -a -R --agree-to-license
 HOMEBREW_NO_ANALYTICS=1
 HOMEBREW_BUNDLE_NO_LOCK=1
 HOMEBREW_CLEANUP_MAX_AGE_DAYS=0
+HOMEBREW_NO_ENV_HINTS=1
 
 if ! brew -v 2>/dev/null; then
   echo | /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
