@@ -6,7 +6,7 @@ set -e
 echo -n -e "\033]0;Install & update dotfiles for macOS\007"
 
 # Navigate to home directory
-cd ~
+cd ~ # or $HOME???
 
 # Ask for the administrator password upfront
 sudo -v -B -p "Password for unattended install: "

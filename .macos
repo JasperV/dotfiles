@@ -1,12 +1,5 @@
 #!/bin/bash
 
-
-# TODO:
-# check that env vars are set, otherwise exit
-# PHONENUMBER
-# PCNAME
-
-
 # Close any open System Preferences panes, to prevent them from overriding
 # settings we’re about to change
 osascript -e 'tell application "System Preferences" to quit'
@@ -53,7 +46,7 @@ sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.captive.c
 cupsctl --no-share-printers
 
 # Set a lost & found message on the login window
-sudo defaults write /Library/Preferences/com.apple.loginwindow LoginwindowText "Deze computer gevonden? Bel $PHONENUMBER. Bijvoorbaat dank!"
+[ -n "$PHONENUMBER" ] && sudo defaults write /Library/Preferences/com.apple.loginwindow LoginwindowText "Deze computer gevonden? Bel $PHONENUMBER. Bijvoorbaat dank!"
 
 # Enable full-disk encryption and write the recovery key to the Desktop
 if [[ ! $(sudo fdesetup isactive) ]]; then #  && "$(id -un)" != "anka"
@@ -73,10 +66,12 @@ fi
 ###############################################################################
 
 # Set computer name (as done via System Preferences → Sharing)
-sudo scutil --set ComputerName "$PCNAME"
-sudo scutil --set HostName "$PCNAME"
-sudo scutil --set LocalHostName "$PCNAME"
-sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "$PCNAME"
+if [ -n "$PCNAME" ]; then
+  sudo scutil --set ComputerName "$PCNAME"
+  sudo scutil --set HostName "$PCNAME"
+  sudo scutil --set LocalHostName "$PCNAME"
+  sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "$PCNAME"
+fi
 
 # Disable the sound effects on boot
 sudo nvram SystemAudioVolume=" "
