@@ -29,6 +29,10 @@ When done, run [Monolingual](https://ingmarstein.github.io/Monolingual/) to recl
 
 setup insync
 
+`mackup restore`
+
+login to teamviewer host
+
 login to vscode
 
 Enable iTerm shell integration
@@ -36,8 +40,6 @@ Enable iTerm shell integration
 Set bitwarden config
 
 set gmail, calendar, drive offline access - all profiles
-
-`mackup restore`
 
 set eqmac-2 equalizer to "electronic". statusbar, macos, login launch, sliders, auto-check, OTA
 

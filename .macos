@@ -283,7 +283,7 @@ sudo defaults write /Library/Preferences/com.apple.loginwindow showInputMenu -bo
 launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist 2> /dev/null
 
 ###############################################################################
-# Energy saving                                                               #
+# Battery                                                                     #
 ###############################################################################
 
 # Enable lid wakeup
@@ -305,7 +305,7 @@ sudo pmset -c sleep 0
 sudo pmset -b sleep 15
 
 # Set standby delay to 24 hours (default is 1 hour)
-# sudo pmset -a standbydelay 86400
+sudo pmset -a standbydelay 60
 
 # Never go into computer sleep mode
 # sudo systemsetup -setcomputersleep Off > /dev/null

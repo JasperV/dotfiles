@@ -40,6 +40,22 @@ fi
 
 
 
+# Set energy options for unattended install
+# These are re-configured in .macos after install
+# Sleep the display after 5 hours
+sudo pmset -a displaysleep 300
+
+# Disable machine sleep while charging
+sudo pmset -c sleep 0
+
+# Set machine sleep to 5 hours on battery
+sudo pmset -b sleep 300
+
+# Set standby delay to 24 hours
+sudo pmset -a standbydelay 86400
+
+
+
 # Check for macOS updates
 sudo softwareupdate -i -a -R --agree-to-license
 
