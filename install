@@ -5,6 +5,24 @@ set -e
 # Install/update script
 echo -n -e "\033]0;Install & update dotfiles for macOS\007"
 
+
+killallapps() {
+  osascript -e 'tell application "System Preferences" to quit'
+
+  for app in "Activity Monitor" \
+    "cfprefsd" \
+    "Dock" \
+    "Finder" \
+    "Google Chrome" \
+    "Safari" \
+    "SystemUIServer" \
+    "Terminal" \
+    "Transmission"; do
+      sudo killall -9 "${app}" &> /dev/null || echo "$app not running for user $USER"
+  done
+}
+
+
 # Navigate to home directory
 cd ~ # or $HOME???
 
@@ -42,14 +60,15 @@ fi
 
 # Set energy options for unattended install
 # These are re-configured in .macos after install
-# Sleep the display after 5 hours
-sudo pmset -a displaysleep 300
+# Sleep the display after 2 hours
+# TODO: configure properly
+sudo pmset -a displaysleep 120
 
 # Disable machine sleep while charging
 sudo pmset -c sleep 0
 
-# Set machine sleep to 5 hours on battery
-sudo pmset -b sleep 300
+# Set machine sleep to 3 hours on battery
+sudo pmset -b sleep 180
 
 # Set standby delay to 24 hours
 sudo pmset -a standbydelay 86400
@@ -145,18 +164,7 @@ touch .hushlogin
 # Reboot
 if [[ " $@ " =~ " --no-reboot " ]]; then
 
-  # Kill affected applications
-  # TODO: update list of applications from .macos etc...
-  # for app in "Activity Monitor" \
-  #   "cfprefsd" \
-  #   "Dock" \
-  #   "Finder" \
-  #   "Google Chrome" \
-  #   "SystemUIServer" \
-  #   "Terminal" \
-  #   "Transmission"; do
-  #   killall "${app}" &> /dev/null
-  # done
+  killallapps
 
   echo "Done."
   exit

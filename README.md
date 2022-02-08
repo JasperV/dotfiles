@@ -39,6 +39,7 @@ Enable iTerm shell integration
 
 Set bitwarden config
 
+add all chrome profiles
 set gmail, calendar, drive offline access - all profiles
 
 set eqmac-2 equalizer to "electronic". statusbar, macos, login launch, sliders, auto-check, OTA
@@ -62,7 +63,7 @@ Run KekaExternalHelper and set as default for unzipping
 
 ## Features
 
-- Idempotent install (and update) script
+- Idempotent install script (with update function)
 - Branch based for different OS'es
 - Sets OS and User level configuration
 - [Anka](https://veertu.com/anka-develop/) to test on macOs virtual machines
