@@ -151,9 +151,6 @@ if ! fgrep -q $BREW_ZSH_LOCATION /etc/shells; then
   sudo chsh -s $BREW_ZSH_LOCATION $USER
 fi
 
-# Install/update Antigen
-curl -L -s git.io/antigen > antigen.zsh
-
 
 
 # configure macOS and Applications

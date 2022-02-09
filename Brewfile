@@ -8,6 +8,7 @@ tap 'homebrew/cask-fonts'
 tap 'homebrew/core'
 tap 'homebrew/services'
 
+brew 'antibody'
 brew 'bitwarden-cli'
 brew 'bat'
 brew 'coreutils'

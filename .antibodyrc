@@ -1,0 +1,16 @@
+ohmyzsh/ohmyzsh path:plugins/brew
+ohmyzsh/ohmyzsh path:plugins/command-not-found
+ohmyzsh/ohmyzsh path:plugins/common-aliases
+ohmyzsh/ohmyzsh path:plugins/sudo
+ohmyzsh/ohmyzsh path:plugins/vscode
+ohmyzsh/ohmyzsh path:plugins/z
+
+darrintisdale/zsh-aliases-exa
+lukechilds/zsh-nvm
+lukechilds/zsh-better-npm-completion
+paulirish/git-open
+zsh-users/zsh-autosuggestions
+zsh-users/zsh-completions
+zsh-users/zsh-syntax-highlighting
+
+https://gist.github.com/JasperV/371552b3b2d2326c5dfbf490183b39cd
