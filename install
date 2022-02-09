@@ -10,13 +10,17 @@ killallapps() {
   osascript -e 'tell application "System Preferences" to quit'
 
   for app in "Activity Monitor" \
+    "AppCleaner" \
     "cfprefsd" \
     "Dock" \
     "Finder" \
     "Google Chrome" \
+    # "iTerm2" \
+    "Keka" \
+    "Monolingual" \
     "Safari" \
     "SystemUIServer" \
-    "Terminal" \
+    # "Terminal" \
     "Transmission"; do
       sudo killall -9 "${app}" &> /dev/null || echo "$app not running for user $USER"
   done
@@ -55,6 +59,10 @@ then
   vared -p "Computer network name: " -c PCNAME
   export PCNAME=$PCNAME
 fi
+
+
+
+killallapps
 
 
 
@@ -149,6 +157,7 @@ curl -L -s git.io/antigen > antigen.zsh
 
 
 # configure macOS and Applications
+# killallapps
 ./.macos
 
 
@@ -164,7 +173,7 @@ touch .hushlogin
 # Reboot
 if [[ " $@ " =~ " --no-reboot " ]]; then
 
-  killallapps
+  # killallapps
 
   echo "Done."
   exit

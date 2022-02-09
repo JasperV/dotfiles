@@ -1,11 +1,5 @@
 #!/bin/bash
 
-# Close any open System Preferences panes, to prevent them from overriding
-# settings we’re about to change
-osascript -e 'tell application "System Preferences" to quit'
-# TODO: close other apps as well, move killall to here
-# make function - used in advance and afterwards
-
 ###############################################################################
 # Security & Privacy                                                          #
 ###############################################################################
@@ -279,7 +273,7 @@ sudo defaults write /Library/Preferences/com.apple.loginwindow showInputMenu -bo
 # Set the timezone; see `sudo systemsetup -listtimezones` for other values
 # sudo systemsetup -settimezone "Europe/Amsterdam" > /dev/null
 
-# Stop iTunes from responding to the keyboard media keys
+# Stop Music from responding to the keyboard media keys
 launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist 2> /dev/null
 
 ###############################################################################
