@@ -36,6 +36,8 @@ login to teamviewer host
 login to vscode
 
 Enable iTerm shell integration
+load iterm profiles
+start fig
 
 Set bitwarden config
 
