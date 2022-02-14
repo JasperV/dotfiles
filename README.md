@@ -27,9 +27,12 @@ set show battery percentage in menu bar
 
 When done, run [Monolingual](https://ingmarstein.github.io/Monolingual/) to reclaim some disk space.
 
-setup insync
+setup insync - jasper, luminis, marieke - gmail
 
 `mackup restore`
+
+setup gmvault: gmvault sync -d ./Files/Google\ Drive/Gmail jas***@***.io
+and other accounts
 
 login to teamviewer host
 
