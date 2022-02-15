@@ -39,7 +39,6 @@ brew 'trash'
 brew 'wget'
 brew 'wifi-password'
 brew 'zsh'
-brew 'zsh-syntax-highlighting'
 
 cask 'adobe-creative-cloud'
 cask 'aerial'
