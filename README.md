@@ -1,5 +1,6 @@
 # .files
-[![It works on my machine](https://img.shields.io/static/v1?label=It%20works%20on%20my%20machine&message=¯\\_(ツ)_/¯&color=brightgreen&style=for-the-badge)](https://git.io/jasperv)
+
+[![It works on my machine](<https://img.shields.io/static/v1?label=It%20works%20on%20my%20machine&message=¯_(ツ)_/¯&color=brightgreen&style=for-the-badge>)](https://git.io/jasperv)
 [![GitHub Repo](https://img.shields.io/static/v1?label=github&message=jasperv/dotfiles&color=brightgreen&style=for-the-badge&logo=github)](https://github.com/JasperV/dotfiles)
 [![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](https://img.shields.io/static/v1?label=repo%20status&message=active&color=brightgreen&style=for-the-badge)](https://www.repostatus.org/#active)
 
@@ -14,7 +15,7 @@ This branch is for macOS systems. Other branches are used on other systems, some
 Make sure you are signed in to the App Store.
 
 ```zsh
-echo | /bin/zsh -c "$(curl -fsSL https://raw.githubusercontent.com/JasperV/dotfiles/macos/install)"
+export $REPO=JasperV && echo | /bin/zsh -c "$(curl -fsSL https://raw.githubusercontent.com/$REPO/dotfiles/macos/install)"
 ```
 
 If there are macOS updates, it will reboot. Run the script again to continue.
@@ -27,11 +28,11 @@ set show battery percentage in menu bar
 
 When done, run [Monolingual](https://ingmarstein.github.io/Monolingual/) to reclaim some disk space.
 
-setup insync - jasper, luminis, marieke - gmail
+setup insync - j + l + m - gmail
 
 `mackup restore`
 
-setup gmvault: gmvault sync -d ./Files/Google\ Drive/Gmail jas***@***.io
+setup gmvault: gmvault sync -d ./Files/Google\ Drive/Gmail jas**_@_**.io
 and other accounts
 
 login to teamviewer host
@@ -65,7 +66,6 @@ install printer(s)
 And give access to home folder and external volumes
 Run KekaExternalHelper and set as default for unzipping
 
-
 ## Features
 
 - Idempotent install script (with update function)
@@ -90,5 +90,3 @@ https://github.com/kalkayan/dotfiles
 https://github.com/MikeMcQuaid/strap
 
 https://github.com/mathiasbynens/dotfiles
-
-
