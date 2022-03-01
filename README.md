@@ -15,7 +15,7 @@ This branch is for macOS systems. Other branches are used on other systems, some
 Make sure you are signed in to the App Store.
 
 ```zsh
-export $REPO=JasperV && echo | /bin/zsh -c "$(curl -fsSL https://raw.githubusercontent.com/$REPO/dotfiles/macos/install)"
+export REPO=JasperV && echo | /bin/zsh -c "$(curl -fsSL https://raw.githubusercontent.com/$REPO/dotfiles/macos/install)"
 ```
 
 If there are macOS updates, it will reboot. Run the script again to continue.
