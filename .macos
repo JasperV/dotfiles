@@ -43,10 +43,8 @@ cupsctl --no-share-printers
 [ -n "$PHONENUMBER" ] && sudo defaults write /Library/Preferences/com.apple.loginwindow LoginwindowText "Deze computer gevonden? Bel $PHONENUMBER. Bijvoorbaat dank!"
 
 # Enable full-disk encryption and write the recovery key to the Desktop
-if [[ ! $(sudo fdesetup isactive) ]]; then #  && "$(id -un)" != "anka"
-  if [[ "$(id -un)" != "anka" ]]; then
-    sudo fdesetup enable -user "$USER" | tee ~/Desktop/"FileVault Recovery Key (Backup NOW!).txt"
-  fi
+if [[ ! $(sudo fdesetup isactive) && "$(id -un)" != "anka" ]]; then
+  sudo fdesetup enable -user "$USER" | tee "~/Desktop/FileVault Recovery Key Backup NOW.txt"
 fi
 
 ###############################################################################
@@ -310,7 +308,7 @@ sudo pmset -a standbydelay 60
 #    power failure.
 sudo pmset -a hibernatemode 0
 
-if (( $(stat -f %z "/private/var/vm/sleepimage") > 0 )); then
+if [[ ! -f "/private/var/vm/sleepimage" || $(stat -f %z "/private/var/vm/sleepimage" ) > 0 ]]; then
   # Remove the sleep image file to save disk space
   sudo rm /private/var/vm/sleepimage
 
