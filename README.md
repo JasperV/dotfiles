@@ -50,7 +50,9 @@ set gmail, calendar, drive offline access - all profiles
 
 set eqmac-2 equalizer to "electronic". statusbar, macos, login launch, sliders, auto-check, OTA
 
-add local files to spotify and set preferences
+add local files (sets) to spotify and set preferences
+
+set login items: iterm alfred insync dozer eqmac utctime
 
 configure dozer
 
