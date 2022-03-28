@@ -32,55 +32,7 @@ export REPO=JasperV && echo | /bin/zsh -c "$(curl -fsSL https://raw.githubuserco
 
 If there are macOS updates, it will reboot automatically. Run the script again to continue.
 
-When all done, there are still some things left that need to be done manually. These are:
-
-disable all icloud syncing except find my mac
-
-set dynamic wallpaper on all desktops/spaces
-set screensaver 5 minutes, aerial
-set show battery percentage in menu bar
-
-When done, run [Monolingual](https://ingmarstein.github.io/Monolingual/) to reclaim some disk space.
-
-setup insync - j + l + m - gmail
-
-`mackup restore`
-
-setup gmvault: gmvault sync -d ./Files/Google\ Drive/Gmail jas**_@_**.io
-and other accounts
-
-login to teamviewer host
-
-login to vscode
-
-Enable iTerm shell integration
-load iterm profiles
-start fig
-
-Set bitwarden config
-
-add all chrome profiles
-set gmail, calendar, drive offline access - all profiles
-
-set eqmac-2 equalizer to "electronic". statusbar, macos, login launch, sliders, auto-check, OTA
-
-add local files (sets) to spotify and set preferences
-
-set login items: iterm alfred insync dozer eqmac utctime
-
-configure dozer
-
-[login whatsapp](https://web.whatsapp.com/)
-
-configure finder sidebar
-
-Go through System Preferences: language, notifications, users -> login items (insync, iterm, alfred), extensions, security, software update, network (add wifi networks), bluetooth (add headphones), display, battery
-
-install printer(s)
-
-[setup keka context menu integration](https://github.com/aonez/Keka/wiki/Context-Menu)
-And give access to home folder and external volumes
-Run KekaExternalHelper and set as default for unzipping
+When all done, there are still some things left that need to be done manually (like configuring file syncing). These are mostly personal and can be found in [postinstall.md](./POSTINSTALL.md)
 
 ### Inspired by
 
