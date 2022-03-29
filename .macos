@@ -39,6 +39,10 @@ sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.captive.c
 # Disable printer sharing
 cupsctl --no-share-printers
 
+# TODO:
+# 2022-03-29 00:37:26.887 defaults[779:6282]
+# The domain/default pair of (/Library/Preferences/com.apple.loginwindow, LoginwindowText) does not exist
+
 # Set a lost & found message on the login window
 [ -n "$PHONENUMBER" ] && sudo defaults write /Library/Preferences/com.apple.loginwindow LoginwindowText "Deze computer gevonden? Bel $PHONENUMBER. Bijvoorbaat dank!"
 
