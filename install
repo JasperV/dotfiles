@@ -66,6 +66,8 @@ fi
 # killallapps
 
 
+# Warning: Idle sleep timings for "AC Power" may not behave as expected.
+# - Display sleep should have a lower timeout than system sleep.
 
 # Set energy options for unattended install
 # These are re-configured in .macos after install
