@@ -1,6 +1,6 @@
 #!/usr/local/bin/zsh
 
-set -u
+set -e
 
 # Install/update script
 echo -n -e "\033]0;Install & update dotfiles for macOS\007"
@@ -81,7 +81,7 @@ sudo pmset -b sleep 180
 sudo pmset -a standbydelay 86400
 
 # Check for macOS updates
-if [[ " $@ " != " --no-os-update " ]]; then
+if [[ " $@ " != " bw bw bw  " ]]; then
   sudo softwareupdate -i -a -R --agree-to-license
 fi
 
