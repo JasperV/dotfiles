@@ -1,6 +1,6 @@
 #!/usr/local/bin/zsh
 
-set -e
+set -u
 
 # Install/update script
 echo -n -e "\033]0;Install & update dotfiles for macOS\007"
@@ -81,7 +81,9 @@ sudo pmset -b sleep 180
 sudo pmset -a standbydelay 86400
 
 # Check for macOS updates
-sudo softwareupdate -i -a -R --agree-to-license
+if [[ " $@ " != " --no-os-update " ]]; then
+  sudo softwareupdate -i -a -R --agree-to-license
+fi
 
 # Make sure we run in zsh, on new macOS this should be the default
 chsh -s /bin/zsh
@@ -159,7 +161,7 @@ touch .hushlogin
 
 # TODO: make sure nvm runs, so that after reboot mackup restore can be run
 
-# Reboot
+# Do not reboot
 if [[ " $@ " =~ " --no-reboot " ]]; then
 
   # killallapps
@@ -168,5 +170,6 @@ if [[ " $@ " =~ " --no-reboot " ]]; then
   exit
 fi
 
+# Reboot
 echo "Done. Scheduling reboot!"
 sudo shutdown -r +1
