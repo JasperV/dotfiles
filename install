@@ -81,7 +81,7 @@ sudo pmset -b sleep 180
 sudo pmset -a standbydelay 86400
 
 # Check for macOS updates
-if [[ " $@ " != " bw bw bw  " ]]; then
+if [[ " $@ " != " --no-os-update " ]]; then
   sudo softwareupdate -i -a -R --agree-to-license
 fi
 
