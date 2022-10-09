@@ -1,10 +1,10 @@
 - Setup Insync
 
   - 3 accounts
-  - /Users/jasper/Files/
-    - Google Drive
+  - /Users/jasper/Documents/
+    - Drive
     - OneDrive
-    - M Google Drive Gmail
+    - Gmail
 
 - Run `mackup restore`
 
@@ -43,6 +43,9 @@
 
 - Install printers (home and at work)
 
+- Set Aerial options
+  TODO: store them here
+
 - Configure Finder Sidebar and Toolbar
 
 - Login to Chrome
@@ -56,12 +59,6 @@
   - statusbar, macos, login launch, sliders, auto-check, OTA
 
 - Login to teamviewer host
-
-- Setup Keka integration
-
-  - https://github.com/aonez/Keka/wiki/Context-Menu
-  - Allow Home folder + External volume access
-  - Run KekaExternalHelper and set as default for unzipping
 
 - Configure Dozer
 

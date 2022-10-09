@@ -5,12 +5,13 @@ set -e
 # Install/update script
 echo -n -e "\033]0;Install & update dotfiles for macOS\007"
 
-
+# Quit a specific set of applications
 killallapps() {
   osascript -e 'tell application "System Preferences" to quit'
 
-  # "iTerm2" \
-  # "Terminal" \
+  # TODO: Only kill these when function param present!
+  # "terminal"
+  # "iTerm2"
 
   for app in "Activity Monitor" \
     "AppCleaner" \
@@ -18,7 +19,6 @@ killallapps() {
     "Dock" \
     "Finder" \
     "Google Chrome" \
-    "Keka" \
     "Monolingual" \
     "Safari" \
     "SystemUIServer" \
@@ -27,9 +27,8 @@ killallapps() {
   done
 }
 
-
 # Navigate to home directory
-cd ~ # or $HOME???
+cd ~
 
 # Ask for the administrator password upfront
 sudo -v -B -p "Password for unattended install: "
@@ -61,10 +60,7 @@ then
   export PCNAME=$PCNAME
 fi
 
-
-
-# killallapps
-
+killallapps
 
 # Warning: Idle sleep timings for "AC Power" may not behave as expected.
 # - Display sleep should have a lower timeout than system sleep.
@@ -84,12 +80,14 @@ sudo pmset -b sleep 180
 # Set standby delay to 24 hours
 sudo pmset -a standbydelay 86400
 
-
-
 # Check for macOS updates
 sudo softwareupdate -i -a -R --agree-to-license
 
+# Make sure we run in zsh, on new macOS this should be the default
+chsh -s /bin/zsh
 
+# Restart shell
+exec zsh -l
 
 # Install/update Homebrew
 HOMEBREW_NO_ANALYTICS=1
@@ -103,32 +101,18 @@ else
   echo "Homebrew already installed. Updating..."
 fi
 
+# Disable brew analytics
 brew analytics off
 
 # Update brew to latest available version
 brew update --quiet && brew upgrade --quiet && brew cleanup --quiet
 
-
-
-# Install dotfiles
 DF_BRANCH="macos"
 
-brew install git --quiet
-
-if [ ! -d "$HOME/.files" ]; then
-  git clone --bare "https://github.com/$REPO/dotfiles.git" $HOME/.files
-
-  # Reset the unstaged changes before updating
-  git --git-dir=$HOME/.files --work-tree=$HOME reset --hard
-
-  # Set flag to ignore untracked files
-  git --git-dir=$HOME/.files --work-tree=$HOME config --local status.showUntrackedFiles no
+# Download Brewfile if not exists
+if [ ! -d "~/Brewfile" ]; then
+  curl -o Brewfile -fsSL https://raw.githubusercontent.com/$REPO/$DF_BRANCH/Brewfile
 fi
-
-git --git-dir=$HOME/.files --work-tree=$HOME checkout $DF_BRANCH
-git --git-dir=$HOME/.files --work-tree=$HOME pull origin $DF_BRANCH
-
-
 
 # Install Homebrew packages
 brew bundle --quiet --no-lock || true
@@ -144,7 +128,19 @@ brew cleanup --prune=all
 brew bundle cleanup --quiet --no-lock --force
 sudo rm -rf "$(brew --cache)"
 
+# Install dotfiles
+if [ ! -d "~/.files" ]; then
+  git clone --bare "https://github.com/$REPO.git" ~/.files
 
+  # Reset the unstaged changes before updating
+  git --git-dir=~/.files --work-tree=~ reset --hard
+
+  # Set flag to ignore untracked files
+  git --git-dir=~/.files --work-tree=~ config --local status.showUntrackedFiles no
+fi
+
+git --git-dir=~/.files --work-tree=~ checkout $DF_BRANCH
+git --git-dir=~/.files --work-tree=~ pull origin $DF_BRANCH
 
 # Change default shell to Homebrew installed Zsh
 BREW_ZSH_LOCATION="$(brew --prefix)/bin/zsh"
@@ -152,23 +148,16 @@ BREW_ZSH_LOCATION="$(brew --prefix)/bin/zsh"
 if ! fgrep -q $BREW_ZSH_LOCATION /etc/shells; then
   echo $BREW_ZSH_LOCATION | sudo tee -a /etc/shells
   sudo chsh -s $BREW_ZSH_LOCATION $USER
+  exec zsh -l
 fi
 
-
-
 # configure macOS and Applications
-# killallapps
+# killallapps TODO: is this needed here???
 ./.macos
-
-
 
 touch .hushlogin
 
-
-
-# TODO: make nvm runs, so that after reboot mackup restore can be run
-
-
+# TODO: make sure nvm runs, so that after reboot mackup restore can be run
 
 # Reboot
 if [[ " $@ " =~ " --no-reboot " ]]; then

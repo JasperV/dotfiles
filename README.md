@@ -27,8 +27,10 @@ This is a different take on dotfiles. After browsing dozens and dozens of other 
 Make sure you are signed in to the App Store.
 
 ```zsh
-export REPO=JasperV && echo | /bin/zsh -c "$(curl -fsSL https://raw.githubusercontent.com/$REPO/dotfiles/macos/install)"
+export REPO="jasperv/dotfiles" && echo | /bin/zsh -c "$(curl -fsSL https://raw.githubusercontent.com/$REPO/macos/install)"
 ```
+
+// TODO: verify -fsSL params + shorter url somehow???
 
 If there are macOS updates, it will reboot automatically. Run the script again to continue.
 
