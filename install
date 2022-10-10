@@ -60,7 +60,7 @@ then
   export PCNAME=$PCNAME
 fi
 
-killallapps
+# killallapps
 
 # Warning: Idle sleep timings for "AC Power" may not behave as expected.
 # - Display sleep should have a lower timeout than system sleep.
