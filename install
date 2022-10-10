@@ -93,7 +93,7 @@ sudo pmset -a standbydelay 86400
 # fi
 
 # Restart shell
-exec zsh -l
+# exec zsh -l
 
 # Install/update Homebrew
 HOMEBREW_NO_ANALYTICS=1
