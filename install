@@ -87,10 +87,10 @@ sudo pmset -a standbydelay 86400
 # fi
 
 # Make sure we run in zsh, on new macOS this should be the default
-if $0 != "zsh"
-then
-  sudo chsh -s /bin/zsh $USER
-fi
+# if $0 != "zsh"
+# then
+#   sudo chsh -s /bin/zsh $USER
+# fi
 
 # Restart shell
 exec zsh -l
@@ -154,7 +154,7 @@ BREW_ZSH_LOCATION="$(brew --prefix)/bin/zsh"
 if ! fgrep -q $BREW_ZSH_LOCATION /etc/shells; then
   echo $BREW_ZSH_LOCATION | sudo tee -a /etc/shells
   sudo chsh -s $BREW_ZSH_LOCATION $USER
-  exec zsh -l
+  # exec zsh -l
 fi
 
 # configure macOS and Applications
