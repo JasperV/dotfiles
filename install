@@ -87,7 +87,10 @@ sudo pmset -a standbydelay 86400
 # fi
 
 # Make sure we run in zsh, on new macOS this should be the default
-chsh -s /bin/zsh
+if $0 != "zsh"
+then
+  sudo chsh -s /bin/zsh $USER
+fi
 
 # Restart shell
 exec zsh -l
