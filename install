@@ -81,10 +81,10 @@ sudo pmset -b sleep 180
 sudo pmset -a standbydelay 86400
 
 # Check for macOS updates
-# read -q "OS_UPDATE?Check for macOS updates? y/n:"
-if [[ "$OS_UPDATE" == "y" ]]; then
-  sudo softwareupdate -i -a -R --agree-to-license
-fi
+# read -q "OS_UPDATE?Check for macOS updates? y/n:" TODO: use vared
+# if [[ "$OS_UPDATE" == "y" ]]; then
+#   sudo softwareupdate -i -a -R --agree-to-license
+# fi
 
 # Make sure we run in zsh, on new macOS this should be the default
 chsh -s /bin/zsh
