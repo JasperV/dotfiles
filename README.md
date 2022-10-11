@@ -36,6 +36,8 @@ For testing use:
 export REPO="jasperv/dotfiles" && echo | /bin/zsh -c "$(curl -fsSL https://raw.githubusercontent.com/$REPO/macos/install)?$(date +%s)"
 ```
 
+This disables cache and as a side effect disables rebooting after installing as well.
+
 // TODO: verify -fsSL params + shorter url somehow???
 
 If there are macOS updates, it will reboot automatically. Run the script again to continue.
