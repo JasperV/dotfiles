@@ -113,7 +113,11 @@ brew analytics off
 # Update brew to latest available version
 brew update --quiet && brew upgrade --quiet && brew cleanup --quiet
 
-DF_BRANCH="macos"
+if [[ -v SOME_VARIABLE ]]; then
+  REPO=jasperv
+fi
+
+DF_BRANCH=macos
 
 # Download Brewfile if not exists
 if [ ! -d "$HOME/Brewfile" ]; then
