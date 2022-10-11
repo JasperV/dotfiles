@@ -113,14 +113,17 @@ brew analytics off
 # Update brew to latest available version
 brew update --quiet && brew upgrade --quiet && brew cleanup --quiet
 
-if [[ -v SOME_VARIABLE ]]; then
-  REPO=jasperv
+if [[ -v REPO ]]; then
+  REPO="jasperv/dotfiles"
+  REBOOT=0
+else
+  REBOOT=1
 fi
 
 DF_BRANCH=macos
 
 # Download Brewfile if not exists
-if [ ! -d "$HOME/Brewfile" ]; then
+if [ ! -f "$HOME/Brewfile" ]; then
   curl -o Brewfile -fsSL https://raw.githubusercontent.com/$REPO/$DF_BRANCH/Brewfile
 fi
 
@@ -172,7 +175,7 @@ touch .hushlogin
 # TODO: make sure nvm runs, so that after reboot mackup restore can be run
 
 # Do not reboot
-if [[ " $@ " =~ " --no-reboot " ]]; then
+if [[ $REBOOT -eq 0 ]]; then
 
   # killallapps
 
