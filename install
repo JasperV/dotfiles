@@ -6,26 +6,26 @@ set -e
 echo -n -e "\033]0;Dotfiles for macOS\007"
 
 # Quit a specific set of applications
-killallapps() {
-  osascript -e 'tell application "System Preferences" to quit'
+# killallapps() {
+#   osascript -e 'tell application "System Preferences" to quit'
 
-  # TODO: Only kill these when function param present!
-  # "terminal"
-  # "iTerm2"
+#   # TODO: Only kill these when function param present!
+#   # "terminal"
+#   # "iTerm2"
 
-  for app in "Activity Monitor" \
-    "AppCleaner" \
-    "cfprefsd" \
-    "Dock" \
-    "Finder" \
-    "Google Chrome" \
-    "Monolingual" \
-    "Safari" \
-    "SystemUIServer" \
-    "Transmission"; do
-      sudo killall -9 "${app}" &> /dev/null || echo "$app not running for user $USER"
-  done
-}
+#   for app in "Activity Monitor" \
+#     "AppCleaner" \
+#     "cfprefsd" \
+#     "Dock" \
+#     "Finder" \
+#     "Google Chrome" \
+#     "Monolingual" \
+#     "Safari" \
+#     "SystemUIServer" \
+#     "Transmission"; do
+#       sudo killall -9 "${app}" &> /dev/null || echo "$app not running for user $USER"
+#   done
+# }
 
 # Navigate to home directory
 cd ~
