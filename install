@@ -3,7 +3,7 @@
 set -e
 
 # Install/update script
-echo -n -e "\033]0;Install & update dotfiles for macOS\007"
+echo -n -e "\033]0;Dotfiles for macOS\007"
 
 # Quit a specific set of applications
 killallapps() {
@@ -159,7 +159,7 @@ fi
 
 # configure macOS and Applications
 # killallapps TODO: is this needed here???
-./.macos
+# ./.macos
 
 touch .hushlogin
 
