@@ -28,7 +28,7 @@ echo -n -e "\033]0;Dotfiles for macOS\007"
 # }
 
 # Navigate to home directory
-cd ~
+cd $HOME
 
 # Ask for the administrator password upfront
 sudo -v -B -p "Password for unattended install: "
@@ -116,12 +116,14 @@ brew update --quiet && brew upgrade --quiet && brew cleanup --quiet
 DF_BRANCH="macos"
 
 # Download Brewfile if not exists
-if [ ! -d "~/Brewfile" ]; then
+if [ ! -d "$HOME/Brewfile" ]; then
   curl -o Brewfile -fsSL https://raw.githubusercontent.com/$REPO/$DF_BRANCH/Brewfile
 fi
 
 # Install Homebrew packages
 brew bundle --quiet --no-lock || true
+
+mkdir -p $HOME/Library/LaunchAgents
 
 UPDATE_STARTED=$(brew autoupdate status)
 
@@ -135,18 +137,18 @@ brew bundle cleanup --quiet --no-lock --force
 sudo rm -rf "$(brew --cache)"
 
 # Install dotfiles
-if [ ! -d "~/.files" ]; then
-  git clone --bare "https://github.com/$REPO.git" ~/.files
+if [ ! -d "$HOME/.files" ]; then
+  git clone --bare "https://github.com/$REPO.git" $HOME/.files
 
   # Reset the unstaged changes before updating
-  git --git-dir=~/.files --work-tree=~ reset --hard
+  git --git-dir=$HOME/.files --work-tree=$HOME reset --hard
 
   # Set flag to ignore untracked files
-  git --git-dir=~/.files --work-tree=~ config --local status.showUntrackedFiles no
+  git --git-dir=$HOME/.files --work-tree=$HOME config --local status.showUntrackedFiles no
 fi
 
-git --git-dir=~/.files --work-tree=~ checkout $DF_BRANCH
-git --git-dir=~/.files --work-tree=~ pull origin $DF_BRANCH
+git --git-dir=$HOME/.files --work-tree=$HOME checkout $DF_BRANCH
+git --git-dir=$HOME/.files --work-tree=$HOME pull origin $DF_BRANCH
 
 # Change default shell to Homebrew installed Zsh
 BREW_ZSH_LOCATION="$(brew --prefix)/bin/zsh"
