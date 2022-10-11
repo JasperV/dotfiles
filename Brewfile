@@ -1,7 +1,7 @@
 # TODO: order everything in this file by preference
 tap 'buo/cask-upgrade' # brew cu
 # tap 'git-friendly/homebrew-git-friendly'
-# tap 'homebrew/autoupdate'
+tap 'homebrew/autoupdate'
 tap 'homebrew/bundle'
 tap 'homebrew/cask'
 # tap 'homebrew/cask-drivers'
