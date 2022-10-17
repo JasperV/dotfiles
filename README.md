@@ -30,12 +30,6 @@ Make sure you are signed in to the App Store.
 export REPO="jasperv/dotfiles" && echo | /bin/zsh -c "$(curl -fsSL https://raw.githubusercontent.com/$REPO/macos/install)"
 ```
 
-For testing use:
-
-```zsh
-export REPO="jasperv/dotfiles" && echo | /bin/zsh -c "$(curl -fsSL https://raw.githubusercontent.com/$REPO/macos/install)?$(date +%s)"
-```
-
 This disables cache and as a side effect disables rebooting after installing as well.
 
 // TODO: verify -fsSL params + shorter url somehow???

@@ -107,7 +107,7 @@ sudo rm -rf "$(brew --cache)"
 
 # Install dotfiles
 if [ ! -d "$HOME/.files" ]; then
-  git clone --bare "https://github.com/$REPO.git" $HOME/.files
+  git clone --bare "https://github.com/$REPO.git" "$HOME/.files"
 
   # Reset the unstaged changes before updating
   git --git-dir=$HOME/.files --work-tree=$HOME reset --hard
