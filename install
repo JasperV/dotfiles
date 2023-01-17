@@ -135,6 +135,8 @@ fi
 # ./.macos
 
 touch .hushlogin
+mkdir -p Files/Google\ Drive
+mkdir -p Files/Gmail
 
-echo "Done."
+echo "Done." # TODO: add nice emoji here!
 
