@@ -1,4 +1,4 @@
-#!/usr/local/bin/zsh
+#!/bin/zsh
 
 set -e
 
@@ -18,7 +18,7 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 groups | grep -q $Q -E "\b(admin)\b" || abort "Add $USER to the admin group."
 
 # Prevent sleeping during script execution, as long as the machine is on AC power
-caffeinate -s -w $$ &
+caffeinate -d -s -w $$ &
 
 # Set some variables to use during install
 HOMEBREW_NO_ANALYTICS=1
@@ -56,17 +56,17 @@ fi
 # Set energy options for unattended install
 # These are re-configured in .macos after install
 
-# Sleep the display after 2 hours
-sudo pmset -a displaysleep 120
+# # Sleep the display after 2 hours
+# sudo pmset -a displaysleep 120
 
-# Disable machine sleep while charging
-sudo pmset -c sleep 0
+# # Disable machine sleep while charging
+# sudo pmset -c sleep 0
 
-# Set machine sleep to 3 hours on battery
-sudo pmset -b sleep 180
+# # Set machine sleep to 3 hours on battery
+# sudo pmset -b sleep 180
 
-# Set standby delay to 24 hours
-sudo pmset -a standbydelay 86400
+# # Set standby delay to 24 hours
+# sudo pmset -a standbydelay 86400
 
 # Install/update Homebrew
 if ! brew -v 2>/dev/null; then
@@ -136,11 +136,5 @@ fi
 
 touch .hushlogin
 
-# To reboot or not reboot? That is the question
-if [[ $REBOOT -eq 0 ]]; then
-  echo "Done."
-  exit
-else
-  echo "Done. Scheduling reboot!"
-  sudo shutdown -r +1
-fi
+echo "Done."
+
