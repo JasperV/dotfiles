@@ -135,7 +135,7 @@ fi
 # ./.macos
 
 touch .hushlogin
-mkdir src
+mkdir -p src
 mkdir -p Files/Google\ Drive
 mkdir -p Files/Gmail
 
