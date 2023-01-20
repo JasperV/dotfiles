@@ -1,71 +1,27 @@
-- Setup Insync
+### Main Install
+- (re)Install macOS (via HDD wipe or use Anka).
+- Go through initial setup. Do login to iCloud.
+- Update macOS.
+- Install dotfiles via Terminal command.
+- Login to Bitwarden.
+- Login to Insync, but only add personal account and only sync mackup directory.
+- Run `mackup restore`.
+- Run and configure Alfred. Disable Spotlight default shortcut key.
+- Run and configure Teamviewer. Connect account.
+- Reboot!
 
-  - 3 accounts
-  - /Users/jasper/Documents/
-    - Drive
-    - OneDrive
-    - Gmail
-
-- Run `mackup restore`
-
-- Set Bitwarden config??? and login
-
-- Run gmvault (`backup` command)
-
-- Run Alfred
-
-- Disable all iCloud syncing except Find My Mac
-
-- Enable iTerm shell integration
-
-- Load iTerm profiles
-
-- Start Fig
-
-- System Preferences
-
-  - Language, Notifications
-  - Set all Login items
-
-    - UTC Time
-    - iTerm
-    - Spotify
-    - Alfred 4
-    - Insync
-    - Dozer
-    - Fig
-    - eqMac
-
-  - Extensions, Security, Software Update, Network (add WiFi networks), bluetooth (add headphones), Display
-  - Set dynamic wallpaper on all desktops/spaces
-  - Set screensaver to start after 5 minutes, use Aerial - configure Aerial
-  - Set show battery percentage in menu bar
-
-- Install printers (home and at work)
-
-- Set Aerial options
-  TODO: store them here
-
-- Configure Finder Sidebar and Toolbar
-
-- Login to Chrome
-
-  - Add all profiles
-  - Setup offline options for Gmail, Calendar & Drive
-
-- Setup eqMac
-
-  - equalizer: electronic
-  - statusbar, macos, login launch, sliders, auto-check, OTA
-
-- Login to teamviewer host
-
-- Configure Dozer
-
-- Login to vscode
-
-- Set Spotify preferences
-
-- Login to Whatsapp, both web and app
-
-- Run [Monolingual](https://ingmarstein.github.io/Monolingual/) to reclaim some disk space.
+### Additional Setup/Configuration
+- Run Karabiner Elements.
+- Configure Insync with remaining accounts and remaining directories to sync.
+- Login to Bitwarden CLI. Verify Alfred plugin behaviour.
+- Launch andf configure Dozer.
+- Launch eqMac. Equalizer preset: Electronic.
+- Launch, login and configure to Spotify.
+- Run Monolingual.
+- Go through all System Settings.
+- Configure Finder.
+- Add Chrome Profiles. And configure offline options for Gmail, Drive and Calendar.
+- Login to WhatsApp.
+- Login to VSCode.
+- Add hardware: Mouse, keyboard, earbuds, printer, speaker(s). 
+- Reboot to verify start on login behaviour of eqMac, Teamviewer, Alfred, Insync, Karabiner and Dozer.
