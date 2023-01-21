@@ -25,3 +25,4 @@
 - Login to VSCode.
 - Add hardware: Mouse, keyboard, earbuds, printer, speaker(s). 
 - Reboot to verify start on login behaviour of eqMac, Teamviewer, Alfred, Insync, Karabiner and Dozer.
+- Install devenv: https://devenv.sh/getting-started/
