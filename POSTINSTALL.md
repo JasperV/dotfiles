@@ -1,15 +1,3 @@
-### Main Install
-- (re)Install macOS (via HDD wipe or use Anka).
-- Go through initial setup. Do login to iCloud.
-- Update macOS.
-- Install dotfiles via Terminal command.
-- Login to Bitwarden.
-- Login to Insync, but only add personal account and only sync mackup directory.
-- Run `mackup restore`.
-- Run and configure Alfred. Disable Spotlight default shortcut key.
-- Run and configure Teamviewer. Connect account.
-- Reboot!
-
 ### Additional Setup/Configuration
 - Run Karabiner Elements.
 - Configure Insync with remaining accounts and remaining directories to sync.

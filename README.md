@@ -14,9 +14,7 @@ These are my dotfiles. Some things are automated, some things are not. Still a b
 - Sets OS and User level configuration
 - [Anka](https://veertu.com/anka-develop/) to test on macOs virtual machines
 - [Mackup](https://github.com/lra/mackup) to sync configuration files (with sensitive/private data)
-- [PlistWatch](https://github.com/catilac/plistwatch) for reading app configurations
 - [Alfred](https://www.alfredapp.com/) as a replacement for Spotlight and general swiss army knife
-- [AppCleaner](https://freemacsoft.net/appcleaner/) for properly uninstalling apps
 
 This branch is for macOS systems. Other branches are used on other systems, someday.
 
@@ -24,19 +22,24 @@ This is a different take on dotfiles. After browsing dozens and dozens of other 
 
 ## Install
 
-Make sure you are signed in to the App Store.
+- (re)Install macOS (via HDD wipe or use Anka).
+- Go through initial setup. Do login to iCloud.
+- Update macOS.
+- Install dotfiles via Terminal command;
 
 ```zsh
 export REPO="jasperv/dotfiles" && echo | /bin/zsh -c "$(curl -fsSL https://raw.githubusercontent.com/$REPO/macos/install)"
 ```
-
-This disables cache and as a side effect disables rebooting after installing as well.
-
 // TODO: verify -fsSL params + shorter url somehow???
 
-If there are macOS updates, it will reboot automatically. Run the script again to continue.
+- Login to Bitwarden.
+- Login to Insync, but only add personal account and only sync [Mackup](https://github.com/lra/mackup) directory.
+- Run `mackup restore`.
+- Run and configure [Alfred](https://www.alfredapp.com/). Disable Spotlight default shortcut key.
+- Run and configure Teamviewer. Connect account.
+- Reboot!
 
-When all done, there are still some things left that need to be done manually (like configuring file syncing). These are mostly personal and can be found in [postinstall.md](./POSTINSTALL.md)
+When all done, there are still some things left to check [postinstall.md](./POSTINSTALL.md)
 
 ### Inspired by
 
