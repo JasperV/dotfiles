@@ -2,8 +2,6 @@
 
 set -e
 
-echo -n -e "\033]0;dotfiles for macOS\007"
-
 # Navigate to home directory
 cd $HOME
 
@@ -49,24 +47,6 @@ then
   vared -p "Computer network name: " -c PCNAME
   export PCNAME=$PCNAME
 fi
-
-# TODO: Warning: Idle sleep timings for "AC Power" may not behave as expected.
-# - Display sleep should have a lower timeout than system sleep.
-
-# Set energy options for unattended install
-# These are re-configured in .macos after install
-
-# # Sleep the display after 2 hours
-# sudo pmset -a displaysleep 120
-
-# # Disable machine sleep while charging
-# sudo pmset -c sleep 0
-
-# # Set machine sleep to 3 hours on battery
-# sudo pmset -b sleep 180
-
-# # Set standby delay to 24 hours
-# sudo pmset -a standbydelay 86400
 
 # Install/update Homebrew
 if ! brew -v 2>/dev/null; then
@@ -139,5 +119,5 @@ mkdir -p src
 mkdir -p Files/Google\ Drive
 mkdir -p Files/Gmail
 
-echo "Done." # TODO: add nice emoji here!
+echo "✔ Done." # TODO: colorize emoji
 

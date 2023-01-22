@@ -31,7 +31,7 @@ brew 'mackup'
 # # brew 'mono'
 # brew 'ncdu'
 # brew 'prettyping'
-# brew 'starship'
+brew 'starship'
 brew 'terminal-notifier'
 # brew 'thefuck'
 # brew 'topgrade'
@@ -53,7 +53,6 @@ cask 'appcleaner'
 cask 'corelocationcli'
 cask 'dozer'
 cask 'eqmac'
-# cask 'fig'
 cask 'gmvault'
 cask 'google-chrome'
 cask 'insync'
@@ -88,16 +87,6 @@ cask 'font-fira-code'
 cask 'font-fira-code-nerd-font'
 cask 'font-fira-mono'
 cask 'font-fira-sans'
-# cask 'font-firago'
-# cask 'font-lato'
-# cask "font-fira-code"
-# cask "font-firacode-nerd-font"
-# cask "font-firacode-nerd-font-mono"
-# cask "font-firamono-nerd-font"
-# cask "font-firamono-nerd-font-mono"
-# cask "font-hack-nerd-font"
-# cask "font-sourcecodepro-nerd-font"
-# cask "font-sourcecodepro-nerd-font-mono"
 
 mas 'Bitwarden', id: 1352778147
 # # mas 'Key Codes', id: 414568915
@@ -110,5 +99,3 @@ mas 'Bitwarden', id: 1352778147
 # mas 'Space Gremlin', id: 414515628
 # mas 'Speediness', id: 1596706466
 # mas 'Speedtest by Ookla', id: 1153157709
-# # mas 'UTC Time', id: 1538245904
-# mas 'WhatsApp Desktop', id: 1147396723
