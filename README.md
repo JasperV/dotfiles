@@ -14,7 +14,6 @@ These are my dotfiles. Some things are automated, some things are not. Still a b
 - Sets OS and User level configuration
 - [Anka](https://veertu.com/anka-develop/) to test on macOs virtual machines
 - [Mackup](https://github.com/lra/mackup) to sync configuration files (with sensitive/private data)
-- [Alfred](https://www.alfredapp.com/) as a replacement for Spotlight and general swiss army knife
 
 This branch is for macOS systems. Other branches are used on other systems, someday.
 
@@ -22,7 +21,7 @@ This is a different take on dotfiles. After browsing dozens and dozens of other 
 
 ## Install
 
-- (re)Install macOS (via HDD wipe or use Anka).
+- (re)Install macOS (via HDD wipe or in case of Anka usage).
 - Go through initial setup. Do login to iCloud.
 - Update macOS.
 - Install dotfiles via Terminal command;

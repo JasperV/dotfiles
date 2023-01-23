@@ -120,4 +120,3 @@ mkdir -p Files/Google\ Drive
 mkdir -p Files/Gmail
 
 echo "✔ Done." # TODO: colorize emoji
-
