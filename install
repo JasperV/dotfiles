@@ -76,7 +76,7 @@ mkdir -p $HOME/Library/LaunchAgents
 UPDATE_STARTED=$(brew autoupdate status)
 
 if [[ $UPDATE_STARTED != *"installed"* ]]; then
-  brew autoupdate start --upgrade --cleanup --enable-notification
+  brew autoupdate start --upgrade --cleanup
 fi
 
 # Cleanup after brew
