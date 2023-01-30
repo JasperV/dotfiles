@@ -562,7 +562,7 @@ defaults write com.apple.dock show-recents -bool false
 defaults write NSGlobalDomain AppleMenuBarVisibleInFullscreen -bool false
 
 # Automatically hide and show the menu bar on desktop
-defaults write NSGlobalDomain "_HIHideMenuBar" -bool false
+defaults write NSGlobalDomain "_HIHideMenuBar" -bool true
 
 # Disable the Launchpad gesture (pinch with thumb and three fingers)
 #defaults write com.apple.dock showLaunchpadGestureEnabled -int 0
