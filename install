@@ -112,11 +112,13 @@ if ! fgrep -q $BREW_ZSH_LOCATION /etc/shells; then
 fi
 
 # configure macOS and Applications
-# ./.macos
+./.macos
 
 touch .hushlogin
 mkdir -p src
 mkdir -p Files/Google\ Drive
 mkdir -p Files/Gmail
 
-echo "✔ Done." # TODO: colorize emoji
+echo "✔ Done. 🎉" # TODO: colorize emoji and make more nice!
+
+exit

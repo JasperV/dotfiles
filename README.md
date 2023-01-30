@@ -22,7 +22,7 @@ This is a different take on dotfiles. After browsing dozens and dozens of other 
 ## Install
 
 - (re)Install macOS (via HDD wipe or in case of Anka usage).
-- Go through initial setup. Do login to iCloud.
+- Go through initial setup; Do login to iCloud; Use iCloud as recovery for FileVault.
 - Update macOS.
 - Install dotfiles via Terminal command;
 
