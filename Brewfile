@@ -91,4 +91,4 @@ mas 'Bitwarden', id: 1352778147
 # mas 'Pages', id: 409201541
 # mas 'Space Gremlin', id: 414515628
 # mas 'Speediness', id: 1596706466
-# mas 'Speedtest by Ookla', id: 1153157709
+mas 'Speedtest by Ookla', id: 1153157709
