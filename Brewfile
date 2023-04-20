@@ -80,6 +80,7 @@ cask 'warp'
 cask 'font-fira-code'
 cask 'font-fira-code-nerd-font'
 cask 'font-fira-mono'
+cask 'font-open-dyslexic'
 cask 'font-fira-sans'
 
 mas 'Bitwarden', id: 1352778147
@@ -87,7 +88,7 @@ mas 'Bitwarden', id: 1352778147
 # mas 'Keynote', id: 409183694
 # mas 'Microsoft Excel', id: 462058435
 # mas 'Microsoft PowerPoint', id: 462062816
-# mas 'Microsoft Word', id: 462054704
+mas 'Microsoft Word', id: 462054704
 # mas 'Numbers', id: 409203825
 # mas 'Pages', id: 409201541
 # mas 'Space Gremlin', id: 414515628
