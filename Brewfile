@@ -1,6 +1,6 @@
 # TODO: order everything in this file by preference
 tap 'buo/cask-upgrade'
-tap 'git-friendly/homebrew-git-friendly'
+# tap 'git-friendly/homebrew-git-friendly'
 tap 'homebrew/autoupdate'
 tap 'homebrew/bundle'
 tap 'homebrew/cask'
