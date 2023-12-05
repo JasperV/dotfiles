@@ -168,8 +168,8 @@ fi
 # Configure macOS and Applications
 # TODO: only run this on initial install otherwise via explicit command
 # Then also log to use that a reboot is required, also "say" it
-ohai "Configure macOS and Applications"
-./.macos
+# ohai "Configure macOS and Applications"
+# ./.macos
 
 # Silence the default terminal welcome message
 touch .hushlogin
