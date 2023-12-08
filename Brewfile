@@ -1,11 +1,9 @@
-# TODO: order everything in this file by preference
+# TODO: order everything in this file by preference and alphabetically
 tap 'buo/cask-upgrade'
 # tap 'git-friendly/homebrew-git-friendly'
 tap 'homebrew/autoupdate'
 tap 'homebrew/bundle'
-tap 'homebrew/cask'
 tap 'homebrew/cask-fonts'
-tap 'homebrew/core'
 
 brew 'bitwarden-cli'
 brew 'bat'
