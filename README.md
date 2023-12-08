@@ -7,49 +7,55 @@
 
 These are my dotfiles. Some things are automated, some things are not. Still a bit messy, but I will cleanup up as I go along.
 
-## Features
-
+## Should be/have
 - Idempotent install script (with update function)
 - Branch based for different OS'es
-- Sets OS and User level configuration
-- [Anka](https://veertu.com/anka-develop/) to test on macOs virtual machines
-- [Mackup](https://github.com/lra/mackup) to sync configuration files (with sensitive/private data)
-
-This branch is for macOS systems. Other branches are used on other systems, someday.
-
-This is a different take on dotfiles. After browsing dozens and dozens of other people's dotfiles. And looking at tools like Boxen, Strap, etc... This one works a little different. Most of the stuff is synced using Mackup via Google Drive. This means I can have keys and other private data in there. It means I do not have commit things when I change a little thing every now and then. Also it keeps most of the stuff that is not relevant for others out of this repo. So it is easier to adopt for yourself. Since most other dotfiles repo's are either very specific unique snowflakes, which make them difficult to adapt, since you have to switch completely to someone else's way of working, or they are way to generic, which in term makes them hard to tailor to your own needs as well.
-
+- Sets OS and User level configuration a.k.a. as much as possible
+- [Mackup](https://github.com/lra/mackup) to sync files
+  
 ## Install
-
-- (re)Install macOS (via HDD wipe or in case of Anka usage).
+- (re)Install macOS (or get a new Mac).
 - Go through initial setup; Do login to iCloud; Use iCloud as recovery for FileVault.
 - Update macOS.
+- Allow terminal to update or delete other applications
 - Install dotfiles via Terminal command;
 
 ```zsh
 export REPO="jasperv/dotfiles" && echo | /bin/zsh -c "$(curl -fsSL https://raw.githubusercontent.com/$REPO/macos/install)"
 ```
-// TODO: verify -fsSL params + shorter url somehow???
 
 - Login to Bitwarden.
-- Login to Insync, but only add personal account and only sync [Mackup](https://github.com/lra/mackup) directory.
+- Login to Insync, but only add personal account and only sync `Mackup` folder.
 - Run `mackup restore`.
 - Run and configure [Alfred](https://www.alfredapp.com/). Disable Spotlight default shortcut key.
 - Run and configure Teamviewer. Connect account.
 - Reboot!
-
-When all done, there are still some things left to check [postinstall.md](./POSTINSTALL.md)
+- Run Karabiner Elements.
+- Configure Insync with remaining accounts and remaining directories to sync.
+- Login to Bitwarden CLI. Verify Alfred plugin behaviour.
+- Launch and configure Dozer.
+- Launch eqMac. Equalizer preset: Electronic.
+- Launch, login and configure to Spotify.
+- Run Monolingual.
+- Go through all System Settings.
+- Configure Finder.
+- Add Chrome Profiles. And configure offline options for Gmail, Drive and Calendar.
+- Login to WhatsApp.
+- Login to VSCode.
+- Add hardware: Mouse, keyboard, earbuds, printer, speaker(s). 
+- Reboot to verify start on login behaviour of eqMac, Teamviewer, Alfred, Insync, Karabiner and Dozer.
 
 ### Inspired by
-
 https://www.atlassian.com/git/tutorials/dotfiles
-
 https://medium.com/@webprolific/getting-started-with-dotfiles-43c3602fd789
 
 ### Build based on
-
 https://github.com/kalkayan/dotfiles
-
 https://github.com/MikeMcQuaid/strap
-
 https://github.com/mathiasbynens/dotfiles
+
+## TODO:
+- [Anka](https://veertu.com/anka-develop/) to test on macOs virtual machines
+- verify -fsSL params + shorter url somehow???
+- stuff from obisidian file
+- automate as much as possible
