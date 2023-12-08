@@ -47,11 +47,14 @@ export REPO="jasperv/dotfiles" && echo | /bin/zsh -c "$(curl -fsSL https://raw.g
 
 ### Inspired by
 https://www.atlassian.com/git/tutorials/dotfiles
+
 https://medium.com/@webprolific/getting-started-with-dotfiles-43c3602fd789
 
 ### Build based on
 https://github.com/kalkayan/dotfiles
+
 https://github.com/MikeMcQuaid/strap
+
 https://github.com/mathiasbynens/dotfiles
 
 ## TODO:
@@ -59,3 +62,4 @@ https://github.com/mathiasbynens/dotfiles
 - verify -fsSL params + shorter url somehow???
 - stuff from obisidian file
 - automate as much as possible
+  
