@@ -28,7 +28,8 @@ export REPO="jasperv/dotfiles" && echo | /bin/zsh -c "$(curl -fsSL https://raw.g
 - Login to Chrome, only personal account.
 - Login to Insync, but only add personal account and only sync `Mackup` folder.
 - Run `mackup restore`.
-- Run and configure [Alfred](https://www.alfredapp.com/). Disable Spotlight default shortcut key.
+- Disable Spotlight default shortcut key; Settings -> Keyboard -> Keyboard Shortcuts -> Spotlight
+- Run and configure [Alfred](https://www.alfredapp.com/).
 - Run and configure Teamviewer. Connect account.
 - Reboot!
 - Run Karabiner Elements.
