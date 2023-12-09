@@ -7,7 +7,7 @@
 
 These are my dotfiles. Some things are automated, some things are not. Still a bit messy, but I will cleanup up as I go along.
 
-## Should be/have
+## Should be/should have
 - Idempotent [install](./install) script (with update function)
 - [Branch](https://github.com/JasperV/dotfiles/branches) based for different OS'es
 - Sets [OS and User level configuration](./.macos) a.k.a. as much as possible
@@ -28,9 +28,9 @@ export REPO="jasperv/dotfiles" && echo | /bin/zsh -c "$(curl -fsSL https://raw.g
 - Login to Chrome, only personal account.
 - Login to Insync, but only add personal account and only sync `Mackup` folder.
 - Run `mackup restore`.
-- Disable Spotlight default shortcut key; Settings -> Keyboard -> Keyboard Shortcuts -> Spotlight
+- Disable Spotlight default shortcut key; Settings -> Keyboard -> Keyboard Shortcuts -> Spotlight.
 - Run and configure [Alfred](https://www.alfredapp.com/).
-- Run and configure Teamviewer. Connect account.
+- Run and configure Teamviewer -> Connect to personal account.
 - Reboot!
 - Run Karabiner Elements.
 - Configure Insync with remaining accounts and remaining directories to sync.
