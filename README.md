@@ -25,6 +25,7 @@ export REPO="jasperv/dotfiles" && echo | /bin/zsh -c "$(curl -fsSL https://raw.g
 ```
 
 - Login to Bitwarden.
+- Login to Authy.
 - Login to Chrome, only personal account.
 - Login to Insync, but only add personal account and only sync `Mackup` folder.
 - Run `mackup restore`.
