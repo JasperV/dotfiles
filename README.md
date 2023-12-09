@@ -8,16 +8,16 @@
 These are my dotfiles. Some things are automated, some things are not. Still a bit messy, but I will cleanup up as I go along.
 
 ## Should be/have
-- Idempotent install script (with update function)
-- Branch based for different OS'es
-- Sets OS and User level configuration a.k.a. as much as possible
+- Idempotent [install](./install) script (with update function)
+- [Branch](https://github.com/JasperV/dotfiles/branches) based for different OS'es
+- Sets [OS and User level configuration](./.macos) a.k.a. as much as possible
 - [Mackup](https://github.com/lra/mackup) to sync files
   
-## Install
+## To get started/installation
 - (re)Install macOS (or get a new Mac).
-- Go through initial setup; Do login to iCloud; Use iCloud as recovery for FileVault.
+- Go through initial macOS setup; Login to iCloud; Use iCloud as recovery for FileVault.
 - Update macOS.
-- Allow terminal to update or delete other applications
+- Allow terminal to update or delete other applications; Settings -> Privacy & Security -> App Management
 - Install dotfiles via Terminal command;
 
 ```zsh
@@ -25,6 +25,7 @@ export REPO="jasperv/dotfiles" && echo | /bin/zsh -c "$(curl -fsSL https://raw.g
 ```
 
 - Login to Bitwarden.
+- Login to Chrome, only personal account.
 - Login to Insync, but only add personal account and only sync `Mackup` folder.
 - Run `mackup restore`.
 - Run and configure [Alfred](https://www.alfredapp.com/). Disable Spotlight default shortcut key.
@@ -62,4 +63,5 @@ https://github.com/mathiasbynens/dotfiles
 - verify -fsSL params + shorter url somehow???
 - stuff from obisidian file
 - automate as much as possible
+- dev mode uninstall script
   
