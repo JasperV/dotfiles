@@ -37,6 +37,7 @@ export REPO="jasperv/dotfiles" && echo | /bin/zsh -c "$(curl -fsSL https://raw.g
 - Configure Insync with remaining accounts and remaining directories to sync.
 - Login to Bitwarden CLI. Verify Alfred plugin behaviour.
 - Launch and configure Dozer.
+- Launch xbar.
 - Launch eqMac. Equalizer preset: Electronic.
 - Launch, login and configure to Spotify.
 - Run Monolingual.
