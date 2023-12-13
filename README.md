@@ -46,6 +46,7 @@ export REPO="jasperv/dotfiles" && echo | /bin/zsh -c "$(curl -fsSL https://raw.g
 - Add Chrome Profiles. And configure offline options for Gmail, Drive and Calendar.
 - Login to WhatsApp.
 - Login to VSCode.
+- Connect Messages to iPhone.
 - Add hardware: Mouse, keyboard, earbuds, printer, speaker(s). 
 - Reboot to verify start on login behaviour of eqMac, Teamviewer, Alfred, Insync, Karabiner and Dozer.
 
