@@ -1,138 +1,65 @@
-#!/bin/zsh
+#!/bin/bash
 
 set -e
 
-if [[ -t 1 ]]
-then
-  tty_escape() { printf "\033[%sm" "$1"; }
-else
-  tty_escape() { :; }
+if [[ -z "$NAMESERVER" ]]; then
+  echo "set name server to 1.1.1.1"
+  NAMESERVER="1.1.1.1"
 fi
-
-tty_mkbold() { tty_escape "1;$1"; }
-
-tty_underline="$(tty_escape "4;39")"
-tty_blue="$(tty_mkbold 34)"
-tty_green="$(tty_mkbold 32)"
-tty_red="$(tty_mkbold 31)"
-tty_bold="$(tty_mkbold 39)"
-tty_reset="$(tty_escape 0)"
-
-shell_join() {
-  local arg
-  printf "%s" "$1"
-  shift
-  for arg in "$@"
-  do
-    printf " "
-    printf "%s" "${arg// /\ }"
-  done
-}
-
-chomp() {
-  printf "%s" "${1/"$'\n'"/}"
-}
-
-ohai() {
-  printf "${tty_blue}==>${tty_bold} %s${tty_reset}\n" "$(shell_join "$@")"
-}
-
-success() {
-  printf "${tty_green}==> %s${tty_reset} 🎉\n" "$(shell_join "$@")"
-}
-
-warn() {
-  printf "${tty_red}Warning${tty_reset}: %s\n" "$(chomp "$1")"
-}
-
-ohai "This script will install dotfiles in ${HOME}"
-
-# Navigate to home directory
-cd $HOME
-
-ohai "To do so, please input your"
-# Ask for the administrator password upfront
-sudo -v -B -p "Password: "
-
-# Keep sudo session alive until we're done
-while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
-
-# Validate yourself and as admin
-[ "$USER" = "root" ] && abort "Run this script as yourself, not as root"
-groups | grep -q $Q -E "\b(admin)\b" || abort "Add $USER to the admin group"
-
-# Prevent sleeping during script execution, as long as the machine is on AC power
-caffeinate -d -s -w $$ &
-
-# Set some variables to use during install
-NONINTERACTIVE=1
-HOMEBREW_NO_ANALYTICS=1
-HOMEBREW_BUNDLE_NO_LOCK=1
-HOMEBREW_CLEANUP_MAX_AGE_DAYS=0
-HOMEBREW_NO_ENV_HINTS=1
 
 if [[ -z "$REPO" ]]; then
   REPO="jasperv/dotfiles"
-  REBOOT=0
-else
-  REBOOT=1
 fi
 
-DF_BRANCH=macos
+DF_BRANCH="wsl-ubuntu"
 
-export LOCKSCREEN_MESSAGE=$(defaults read /Library/Preferences/com.apple.loginwindow LoginwindowText)
-export COMPUTERNAME=$(scutil --get ComputerName)
+if [[ $(lsattr /etc/resolv.conf | awk '$1 !~ "i"') ]]; then
+  echo "do remove resolve.conf"
+  sudo rm -f /etc/resolv.conf
 
-if test "${LOCKSCREEN_MESSAGE#*Deze computer gevonden?}" = "$LOCKSCREEN_MESSAGE"
-then
-  vared -p "Phonenumber for lock screen message: " -c PHONENUMBER
-  export PHONENUMBER=$PHONENUMBER
+  echo "nameserver $NAMESERVER" | sudo tee /etc/resolv.conf > /dev/null
+
+  echo "[network]" | sudo tee /etc/wsl.conf > /dev/null
+  echo "generateResolvConf = false" | sudo tee -a /etc/wsl.conf > /dev/null
+
+  echo "set attr +i on resolve.conf"
+  sudo chattr +i /etc/resolv.conf
 fi
 
-if test "${COMPUTERNAME#*MacBook Pro}" != "$COMPUTERNAME"
-then
-  vared -p "Computer network name: " -c PCNAME
-  export PCNAME=$PCNAME
-fi
+# Update and upgrade
+sudo apt-get update -y && sudo apt-get upgrade -y
 
 # Install Homebrew
 if ! brew -v 2>/dev/null; then
-  ohai "Install Homebrew"
+  # ohai "Install Homebrew"
   echo | /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-  (echo; echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') >> /Users/jasper/.zprofile
-  eval "$(/opt/homebrew/bin/brew shellenv)"
+  (echo; echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"') >> /home/jasper/.bashrc
+  eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
+  sudo apt-get install build-essential
+
+  brew install gcc
 fi
 
 # Disable brew analytics
 brew analytics off
 
 # Update brew to latest available version
-ohai "Update Homebrew"
+# ohai "Update Homebrew"
 brew update --quiet && brew upgrade --quiet && brew cleanup --quiet
 
 # Download Brewfile if not exists
 if [ ! -f "$HOME/Brewfile" ]; then
-  ohai "Downloading Brewfile"
+  # ohai "Downloading Brewfile"
   curl -o Brewfile -fsSL https://raw.githubusercontent.com/$REPO/$DF_BRANCH/Brewfile
 fi
 
 # Install Homebrew packages
-ohai "Install Homebrew packages"
+# ohai "Install Homebrew packages"
 brew bundle --quiet --no-lock || true
 
-# Create LaunchAgents directory for brew autoupdate to work in
-mkdir -p $HOME/Library/LaunchAgents
-
-# Set brew to autoupdate
-UPDATE_STARTED=$(brew autoupdate status)
-
-if [[ $UPDATE_STARTED != *"installed"* ]]; then
-  ohai "Auto-update Homebrew and packages"
-  brew autoupdate start --upgrade --cleanup
-fi
-
 # Cleanup after brew
-ohai "Cleanup after Homebrew"
+# ohai "Cleanup after Homebrew"
 brew cu -a -y -q
 brew cleanup --prune=all
 brew bundle cleanup --quiet --no-lock --force
@@ -140,7 +67,7 @@ sudo rm -rf "$(brew --cache)"
 
 # Install dotfiles
 if [ ! -d "$HOME/.files" ]; then
-  ohai "Clone $REPO into $HOME/.files"
+  # ohai "Clone $REPO into $HOME/.files"
 
   git clone --bare "https://github.com/$REPO.git" "$HOME/.files"
 
@@ -152,7 +79,8 @@ if [ ! -d "$HOME/.files" ]; then
 fi
 
 if [[ `git --git-dir=$HOME/.files --work-tree=$HOME status --porcelain` ]]; then
-  warn "local changes to dotfiles found, not updating from origin"
+  # warn "local changes to dotfiles found, not updating from origin"
+  echo "local changes!"
 else
   git --git-dir=$HOME/.files --work-tree=$HOME checkout $DF_BRANCH
   git --git-dir=$HOME/.files --work-tree=$HOME pull origin $DF_BRANCH
@@ -162,25 +90,17 @@ fi
 BREW_ZSH_LOCATION="$(brew --prefix)/bin/zsh"
 
 if ! fgrep -q $BREW_ZSH_LOCATION /etc/shells; then
-  ohai "Use Homebrew installed ZSH"
+  # ohai "Use Homebrew installed ZSH"
   echo $BREW_ZSH_LOCATION | sudo tee -a /etc/shells
   sudo chsh -s $BREW_ZSH_LOCATION $USER
 fi
 
-# Configure macOS and Applications
-# TODO: only run this on initial install otherwise via explicit command
-# Then also log to use that a reboot is required, also "say" it
-# ohai "Configure macOS and Applications"
-# ./.macos
+# TODO: Configure Ubuntu and Applications
 
 # Silence the default terminal welcome message
 touch .hushlogin
 
-# TODO: move to insync since this is personal
-# Prepare folders to use for Insync
+# TODO: Prepare folders to use for Insync
 mkdir -p src
-mkdir -p Files/Google\ Drive
-mkdir -p Files/Gmail
 
-success "✔ Done!"
-say 'The installation for dotfiles is done!'
+success "✔  Done!"
