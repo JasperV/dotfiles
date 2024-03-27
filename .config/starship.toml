@@ -1,0 +1,27 @@
+continuation_prompt = "❯❯❯ "
+
+[character]
+success_symbol = "[✓](green) [❯](red)[❯](yellow)[❯](green)"
+error_symbol = "[ⅹ](red) [❯](red)[❯](red)[❯](red)"
+
+[directory]
+read_only = "  "
+
+[git_branch]
+symbol = " "
+
+[git_metrics]
+format = '[+$added]($added_style)/[-$deleted]($deleted_style) '
+disabled = false
+added_style="green"
+
+[git_state]
+style = "yellow"
+
+[package]
+symbol = " "
+disabled = true
+
+[sudo]
+symbol = "🧑🏼‍💻"
+disabled = false

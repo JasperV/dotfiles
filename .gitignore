@@ -1,0 +1,14 @@
+.cache/
+.files/
+.local/
+.vscode-server/
+src/
+.bash_history
+.bash_logout
+.bashrc
+.hushlogin
+.motd_shown
+.profile
+.sudo_as_admin_successful
+.wget-hsts
+.zcompdump

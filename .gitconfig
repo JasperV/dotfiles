@@ -1,0 +1,28 @@
+[user]
+
+	name = JasperV
+	email = 1297464+JasperV@users.noreply.github.com
+
+[credential]
+
+  helper = bitwarden
+
+[init]
+
+	defaultBranch = main
+
+[difftool "vscode"]
+
+	cmd = code --wait --diff $LOCAL $REMOTE
+
+[mergetool "vscode"]
+
+	cmd = code --wait $MERGED
+
+[sequence]
+
+  editor = code --wait
+
+[diff "lfs"]
+
+	textconv = cat

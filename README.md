@@ -11,44 +11,19 @@ These are my dotfiles. Some things are automated, some things are not. Still a b
 - Idempotent [install](./install) script (with update function)
 - [Branch](https://github.com/JasperV/dotfiles/branches) based for different OS'es
 - Sets [OS and User level configuration](./.macos) a.k.a. as much as possible
-- [Mackup](https://github.com/lra/mackup) to sync files
   
 ## To get started/installation
-- (re)Install macOS (or get a new Mac).
-- Go through initial macOS setup; Login to iCloud; Use iCloud as recovery for FileVault.
-- Update macOS.
-- Allow terminal to update or delete other applications; Settings -> Privacy & Security -> App Management
+- (re)Install Ubuntu on WSL.
 - Install dotfiles via Terminal command;
 
 ```zsh
-export REPO="jasperv/dotfiles" && echo | /bin/zsh -c "$(curl -fsSL https://raw.githubusercontent.com/$REPO/macos/install)"
+export REPO="jasperv/dotfiles" && echo | /bin/zsh -c "$(curl -fsSL https://raw.githubusercontent.com/$REPO/wsl-ubuntu/install)"
 ```
 
-- Login to Bitwarden.
-- Login to Authy.
-- Login to Chrome, only personal account.
-- Login to Insync, but only add personal account and only sync `Mackup` folder.
-- Run `mackup restore`.
-- Disable Spotlight default shortcut key; Settings -> Keyboard -> Keyboard Shortcuts -> Spotlight.
-- Run and configure [Alfred](https://www.alfredapp.com/).
-- Run and configure Teamviewer -> Connect to personal account.
 - Reboot!
-- Run Karabiner Elements.
-- Configure Insync with remaining accounts and remaining directories to sync.
-- Login to Bitwarden CLI. Verify Alfred plugin behaviour.
-- Launch and configure Dozer.
-- Launch xbar.
-- Launch eqMac. Equalizer preset: Electronic.
-- Launch, login and configure to Spotify.
-- Run Monolingual.
-- Go through all System Settings.
-- Configure Finder.
-- Add Chrome Profiles. And configure offline options for Gmail, Drive and Calendar.
-- Login to WhatsApp.
-- Login to VSCode.
-- Connect Messages to iPhone.
-- Add hardware: Mouse, keyboard, earbuds, printer, speaker(s). 
-- Reboot to verify start on login behaviour of eqMac, Teamviewer, Alfred, Insync, Karabiner and Dozer.
+- Login to Bitwarden CLI.
+- Open VSCode with with alias `dotcodes`.
+- Checkout first repo `gsrc <REPO_URL>`.
 
 ### Inspired by
 https://www.atlassian.com/git/tutorials/dotfiles
@@ -63,9 +38,7 @@ https://github.com/MikeMcQuaid/strap
 https://github.com/mathiasbynens/dotfiles
 
 ## TODO:
-- [Anka](https://veertu.com/anka-develop/) to test on macOs virtual machines
 - verify -fsSL params + shorter url somehow???
 - stuff from obisidian file
 - automate as much as possible
-- dev mode uninstall script
-  
+- dev mode uninstall script  
