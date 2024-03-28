@@ -11,15 +11,9 @@ alias cd..='cd ..'
 alias dir='l'
 
 # Replace ls with exa
-# alias l='exa -lhgaF --icons --git'
-# alias ll=l
-# alias ls=exa
-
-# TODO: until exa works
-# some more ls aliases
-alias l='ls -alF'
-alias la='ls -A'
-alias ll='ls -CF'
+alias l='exa -lhgaF --icons'
+alias ll=l
+alias ls=exa
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert

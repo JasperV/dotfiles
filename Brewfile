@@ -23,8 +23,6 @@ brew 'starship'
 # brew 'tldr'
 brew 'zsh'
 
-# cask 'visual-studio-code'
-
 cask 'font-fira-code'
 cask 'font-fira-code-nerd-font'
 cask 'font-fira-mono'
