@@ -1,8 +1,27 @@
 {
-	"folders": [
-		{
-			"path": "."
-		}
-	],
-	"settings": {}
+  "folders": [
+    {
+      "path": "."
+    }
+  ],
+  "settings": {
+    "files.exclude": {
+      ".cache": true,
+      ".dotnet": true,
+      ".files": true,
+      ".local": true,
+      ".vscode-server": true,
+      "src": true,
+      ".bash_history": true,
+      ".bash_logout": true,
+      ".bashrc": true,
+      ".hushlogin": true,
+      ".lesshst": true,
+      ".motd_shown": true,
+      ".profile": true,
+      ".sudo_as_admin_successful": true,
+      ".wget-hsts": true,
+      ".zcompdump": true,
+    }
+  }
 }
