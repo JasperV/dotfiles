@@ -57,7 +57,7 @@ eval "$(starship init zsh)"
 # source <(ng completion script)
 
 # TODO: temp code shortcut
-alias '.code'='GIT_DIR=~/.files GIT_WORK_TREE=~ code .'
+alias '.code'='GIT_DIR=~/.files GIT_WORK_TREE=~ code .files.code-workspace'
 
 
 
